@@ -43,7 +43,7 @@ async function getRotationFromDpsReport(logUrl) {
 //Return the noteType to the song note
 //Ex: Weapon_1, Utility, Profession_1, etc
 function getSkillType(abilityId, utilitySlots) {
-    var retval = null;
+    var retval = "Unknown";
 
     // Check the customSkills to see if the abilityID exists as a key
     // If it's in there, that means the gw2 API did not have the abilityID,
@@ -161,7 +161,7 @@ async function generateSong(
         var noteType = getSkillType(rotation[i][1], utilitySlots);
 
         //Drop all empty noteTypes and create song notes with non-empty noteTypes
-        if (noteType !== "") {
+        if (noteType !== null) {
             notes.push({
                 "time": Math.floor(rotation[i][0] * 1000), //convert seconds to milliseconds
                 "duration": rotation[i][2], // duration is already in ms
@@ -185,5 +185,5 @@ async function generateSong(
         "notes" : notes
     };
 
-    return JSON.stringify(song, null, 4);
+    return song;
 }
