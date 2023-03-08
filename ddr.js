@@ -5,6 +5,7 @@
 // var allSkills (loaded from data/AllSkills.js)
 // var customSkills (loaded from data/CustomSkills.js)
 // var skillToPaletteLookup (loaded from data/PaletteSkills.js)
+// var toolbeltIdToSlot (loaded from data/ToolbeltToSlots.js)
 
 /*
  * Makes a GET request for the logUrl and then parses the results to find the rotation
@@ -109,6 +110,27 @@ function getSkillType(abilityId, utilitySlots) {
             retval = "ProfessionSkill6";
         } else if (slot === "Profession_7") {
             retval = "ProfessionSkill7";
+        } else if (slot === "Toolbelt") {
+            // Special: These are skills from the Engineer. The slot has to be looked up from that lookup table
+            slot = toolbeltIdToSlot[abilityId];
+            if (slot == "Heal") {
+                retval = "ProfessionSkill1";
+            } else if (slot == "Utility") {
+                // The same special treatment has to be done for the utility lookup
+                // Except it will now link to the profession skills 2-4
+                retval = "Unknown"; // Value used if the lookup fails
+                var paletteId = skillToPaletteLookup[abilityId];
+                for (var i = 0; i < utilitySlots.length; i++) {
+                    if (utilitySlots[i] === paletteId) {
+                        retval = "ProfessionSkill" + (i + 2);
+                        break;
+                    }
+                }
+            } else if (slot == "Elite") {
+                retval = "ProfessionSkill5";
+            } else {
+                retval = "Unknown"; // Value used if the lookup fails
+            }
         }
     }
 
