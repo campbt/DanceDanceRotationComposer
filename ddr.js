@@ -67,15 +67,16 @@ function getSkillType(abilityId, utilitySlots) {
     if (abilityId in allSkills) {
         const skill = allSkills[abilityId];
         var slot = skill.slot;
-        if (slot === "Weapon_1") {
+        // Special: Yes, Downed_ is a slot and shares the same note. This is just for "down-state" ele training, it's used in Shroud on Reaper, and Holosmith Sword
+        if (slot === "Weapon_1" || slot === "Downed_1") {
             retval = "Weapon1";
-        } else if (slot === "Weapon_2") {
+        } else if (slot === "Weapon_2" || slot === "Downed_2") {
             retval = "Weapon2";
-        } else if (slot === "Weapon_3") {
+        } else if (slot === "Weapon_3" || slot === "Downed_3") {
             retval = "Weapon3";
-        } else if (slot === "Weapon_4") {
+        } else if (slot === "Weapon_4" || slot === "Downed_4") {
             retval = "Weapon4";
-        } else if (slot === "Weapon_5") {
+        } else if (slot === "Weapon_5" || slot === "Downed_5") {
             retval = "Weapon5";
         } else if (slot === "Utility") {
             // Special: Utility skills simply have "Utility" for their slot,

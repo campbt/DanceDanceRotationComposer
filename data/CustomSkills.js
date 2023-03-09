@@ -49,6 +49,14 @@ var customSkills = {
 	"31600": {
 		"isNote": false
 	},
+    // Revenant - Trait: Call of the Demon
+    "46856": {
+        "isNote": false
+    },
+    // Revenant - Trait: Call of the Dragon
+    "46857": {
+        "isNote": false
+    },
     // Weaver - Dual Fire
 	"43470": {
 		"isNote": true,
@@ -69,10 +77,175 @@ var customSkills = {
 		"isNote": true,
 		"noteType": "ProfessionSkill4"
 	},
+
+    // Firebrand Bundles are not in API for some reason
+
+    // Tome of Justice:
+    "41258": { // Chapter 1: Searing Spell
+        "isNote": true,
+        "noteType": "Weapon1",
+    },
+    "40635": { // Chapter 2: Igniting Burst
+        "isNote": true,
+        "noteType": "Weapon2",
+    },
+    "42449": { // Chapter 3: Heated Rebuke
+        "isNote": true,
+        "noteType": "Weapon3",
+    },
+    "40015": { // Chapter 4: Scorched Aftermath
+        "isNote": true,
+        "noteType": "Weapon4",
+    },
+    "42898": { // Epilogue: Ashes of the Just
+        "isNote": true,
+        "noteType": "Weapon5",
+    },
+
+    // Tome of Resolve:
+    "45022": { // Chapter 1: Desert Bloom
+        "isNote": true,
+        "noteType": "Weapon1",
+    },
+    "40679": { // Chapter 2: Radiant Recovery
+        "isNote": true,
+        "noteType": "Weapon2",
+    },
+    "45128": { // Chapter 3: Azure Sun
+        "isNote": true,
+        "noteType": "Weapon3",
+    },
+    "42008": { // Chapter 4: Shining River
+        "isNote": true,
+        "noteType": "Weapon4",
+    },
+    "42925": { // Epilogue: Eternal Oasis
+        "isNote": true,
+        "noteType": "Weapon5",
+    },
+
+    // Tome of Courage:
+    "42986": { // Chapter 1: Unflinching Charge
+        "isNote": true,
+        "noteType": "Weapon1",
+    },
+    "41968": { // Chapter 2: Daring Challenge
+        "isNote": true,
+        "noteType": "Weapon2",
+    },
+    "41836": { // Chapter 3: Valiant Bulwark
+        "isNote": true,
+        "noteType": "Weapon3",
+    },
+    "40988": { // Chapter 4: Stalwart Stand
+        "isNote": true,
+        "noteType": "Weapon4",
+    },
+    "44455": { // Epilogue: Unbroken Lines
+        "isNote": true,
+        "noteType": "Weapon5",
+    },
+
     // Elementalist - Trait: Sunspot
 	"56883": {
 		"isNote": false
 	},
+    // Elementalist - Trait: Earthen Blast
+    "56885": {
+        "isNote": false
+    },
+    // Engineer - Trait: Explosive Entrance
+    "59562": {
+        "isNote": false
+    },
+    // Thief - Trait: Invoke Torment
+    "59591": {
+        "isNote": false
+    },
+    // Willbender - Part of Rushing Justice (there is a real note at start)
+    "62624": {
+        "isNote": false
+    },
+    // Vindicator - Trait: Forerunner of Death
+    "62693": {
+        "isNote": false
+    },
+    // Vindicator - Part of Phantom's Onslaught (there is a real note at start)
+    "62713": {
+        "isNote": false
+    },
+    // Vindicator - Forerunner of Death
+    "62730": {
+        "isNote": true,
+        "noteType": "Dodge"
+    },
+    // Bladesworn - Trait: Unseen Sword
+    "62847": {
+        "isNote": false
+    },
+
+    // Bladesworn Bundles are not in API for some reason
+
+    // Bladesworn - Dragon Trigger
+    "62797": { // Dragon Slash - Force
+        "isNote": true,
+        "noteType": "Weapon1"
+    },
+    "62980": { // Dragon Slash - Boost
+        "isNote": true,
+        "noteType": "Weapon2"
+    },
+    "62951": { // Dragon Slash - Reach
+        "isNote": true,
+        "noteType": "Weapon3"
+    },
+    "62893": { // Triggerguard
+        "isNote": true,
+        "noteType": "Weapon4"
+    },
+    "62926": { // Flicker Step
+        "isNote": true,
+        "noteType": "Weapon5"
+    },
+
+    // Bladesworn - Gunsaber
+    "62966": { // Swift Cut
+        "isNote": true,
+        "noteType": "Weapon1"
+    },
+    "62772": { // Steel Divide
+        "isNote": true,
+        "noteType": "Weapon1"
+    },
+    "62918": { // Explosive Thrust
+        "isNote": true,
+        "noteType": "Weapon1"
+    },
+    "62930": { // Blooming Fire
+        "isNote": true,
+        "noteType": "Weapon2"
+    },
+    "62732": { // Artillery Slash
+        "isNote": true,
+        "noteType": "Weapon3"
+    },
+    "62789": { // Cyclone Trigger
+        "isNote": true,
+        "noteType": "Weapon4"
+    },
+    "62885": { // Break Step
+        "isNote": true,
+        "noteType": "Weapon5"
+    },
+
+    // Specter - Part of Twilight Combo
+    "63181": {
+        "isNote": false
+    },
+    // Untamed - Part of Overbearing Smash
+    "63201": {
+        "isNote": false
+    },
     // Ability Code for all weapon swaps
 	"-2": {
 		"isNote": true,
