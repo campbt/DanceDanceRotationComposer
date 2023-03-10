@@ -43,7 +43,7 @@ async function getRotationFromDpsReport(logUrl) {
 
 //Return the noteType to the song note
 //Ex: Weapon_1, Utility, Profession_1, etc
-function getSkillType(abilityId, utilitySlots) {
+function getNoteType(abilityId, utilitySlots) {
     var retval = "Unknown";
 
     // Check the customSkills to see if the abilityID exists as a key
@@ -163,6 +163,232 @@ function fixTimeOffset(notes) {
     }
 }
 
+/**
+ * Post-Process Step: Fix Weapon Swaps
+ *
+ * Some classes have mechanics that trigger "weapon swaps" in the rotation files,
+ * but are not relevant for notes
+ *
+ * Elementalist: Conjure Weapons have a Weapon Swap during the cast. Entering is unnecessary.
+ * Engineer: Kits have it when entering and exiting. Entering's is unnecessary.
+ * Holosmith: Photon Forge has a weapon swap for enter and exit, which are both unnecessary as it uses a ProfessionSkill5 for this.
+ * Fire Brand: Happens when entering a tome (no rotation entry is made for the profession skill, so it needs to be swapped to that)
+ * Bladesworn: Used when entering and existing, but seems completely unnecessary as there is a profession skill to do this.
+ */
+function fixWeaponSwaps(build, notes) {
+    var retval = notes;
+    var profession = build["profession"];
+
+    function hasSpec(id) {
+        var specializations = build["specializations"]
+        for (var i = 0; i < specializations.length; i++) {
+            if (specializations[i]["id"] == id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    if (profession == 1) {
+        // Guardian
+
+        if (hasSpec(62)) {
+            // Firebrand
+            // This one is tricky.
+            // Firebrand tome skills show up in the log, but *entering* the tome
+            // shows up as just a WeaponSwap. So, the WeaponSwap note needs to be changed
+            // to the tome skill, rather than just removed outright.
+            // Also, closing a tome also shows up as a WeaponSwap, so it needs to be swapped as well.
+            // These tome skills are marked with "tomeSkill" in CustomSkills.js
+
+            function findNextTomeEnter(startIndex) {
+                for (var index = startIndex; index < notes.length; index++) {
+                    var note = notes[index];
+                    var abilityId = note.abilityId;
+                    if (abilityId in customSkills) {
+                        var customInfo = customSkills[abilityId];
+                        if ("tomeSkill" in customInfo) {
+                            // Index is now at the next tome skill
+                            // Walk *backward* to find the weapon swap that caused this
+                            for (var reverseIndex = index - 1; reverseIndex >= 0; reverseIndex--) {
+                                var reverseNote = notes[j];
+                                if (reverseNote.noteType == "WeaponSwap") {
+                                    return reverseIndex;
+                                }
+                            }
+                        }
+                    }
+                }
+                return notes.length;
+            }
+
+            retval = [];
+            var lastWeaponSwapIndex = -1
+            var currentTomeSkill = null
+            for (var index = 0; index < notes.length; index++) {
+                var note = notes[index];
+
+                retval.push(note);
+
+                var abilityName = "";
+                if (note.abilityId in allSkills) {
+                    abilityName = allSkills[note.abilityId]["name"];
+                }
+                // console.log("Note: " + index + " : " + note.time + " " + note.duration + "ms " + note.noteType + " | " + abilityName);
+
+                if (note.noteType == "WeaponSwap") {
+                    lastWeaponSwapIndex = index;
+                }
+
+                // Only care to check for tome skills and not-in-tome skills, which are all Weapon1-5
+                if (
+                    note.noteType == "Weapon1" ||
+                    note.noteType == "Weapon2" ||
+                    note.noteType == "Weapon3" ||
+                    note.noteType == "Weapon4" ||
+                    note.noteType == "Weapon5"
+                ) {
+                    var tomeSkill = null
+                    var abilityId = note.abilityId;
+                    if (abilityId in customSkills) {
+                        var customInfo = customSkills[abilityId];
+                        if ("tomeSkill" in customInfo) {
+                            tomeSkill = customInfo["tomeSkill"];
+                        }
+                    }
+
+                    if (tomeSkill != currentTomeSkill) {
+                        // The last weapon swap must have been a tome open/close
+                        if (tomeSkill != null) {
+                            // Must have opened the tome
+                            retval[lastWeaponSwapIndex]["abilityId"] = tomeSkill
+                            retval[lastWeaponSwapIndex]["noteType"] = getNoteType(tomeSkill, []);
+                            console.log("Firebrand: WeaponSwap at " + lastWeaponSwapIndex + " swapping to open tome skill: " + retval[lastWeaponSwapIndex]["noteType"]);
+                        } else {
+                            // Must have closed the tome
+                            retval[lastWeaponSwapIndex]["abilityId"] = currentTomeSkill
+                            retval[lastWeaponSwapIndex]["noteType"] = getNoteType(currentTomeSkill, []);
+                            console.log("Firebrand: WeaponSwap at " + lastWeaponSwapIndex + " swapping to close tome skill: " + retval[lastWeaponSwapIndex]["noteType"]);
+                        }
+                    }
+                    currentTomeSkill = tomeSkill;
+                    // console.log("Firebrand: " + index + " : " + currentTomeSkill + " last=" + lastWeaponSwapIndex + ", " + currentTomeSkill);
+                }
+            }
+
+        }
+    } else if (profession == 2) {
+        // Warrior
+
+        if (hasSpec(68)) {
+            // Bladesworn
+            // Ignore ALL weapon swaps. Bladesworn swaps using profession skill 1
+            retval = notes.filter( (note) => {
+                return note.noteType != "WeaponSwap";
+            });
+        }
+    } else if (profession == 3) {
+        // Engineer
+
+        // Kits sometimes have a category, but some don't
+        // So, we'll check if there are bundle skills
+        function isKitAbility(abilityId) {
+            if ((abilityId in allSkills) == false) {
+                return false;
+            }
+            var skillInfo = allSkills[abilityId];
+            if (("bundle_skills" in skillInfo) == false) {
+                return false;
+            }
+            var bundleSkills = allSkills[abilityId]["bundle_skills"];
+            return bundleSkills.length > 0;
+        }
+
+        retval = [];
+
+        var isHolosmith = hasSpec(57);
+        for (var index = 0; index < notes.length; index++) {
+            var note = notes[index];
+
+            if (
+                // Holosmith - Remove WeaponSwaps caused by Photon Forge
+                isHolosmith &&
+                note.noteType == "WeaponSwap" &&
+                (
+                    // If this weapon swap is caused by PhotonForge, then photon forge
+                    // should appear right next to it.
+                    // It seems it is not 100% consistent which side it will be on
+                    (index > 0 && (notes[index-1].noteType == "ProfessionSkill5")) ||
+                    (index + 1 < notes.length && (notes[index+1].noteType == "ProfessionSkill5"))
+                )
+            ) {
+                // Ignore. Don't add note
+            } else if (
+                // All Engineer's - Remove WeaponSwaps caused by Kits
+                note.noteType == "WeaponSwap" &&
+                (
+                    // If this weapon swap is caused by a Hit, then the kit skill
+                    // should appear right next to it.
+                    // It seems it is not 100% consistent which side it will be on
+                    (index > 0 && isKitAbility(notes[index-1].abilityId)) ||
+                    (index + 1 < notes.length && isKitAbility(notes[index+1].abilityId))
+                )
+            ) {
+                // Ignore. Don't add note
+                console.log("Removing WeaponSwap caused by Kit")
+            } else {
+                retval.push(note);
+            }
+        }
+    } else if (profession == 6) {
+        // Elementalist
+        // If the abilityId of the note is for a conjured weapon, search forward and remove the next weapon swap
+
+        function isConjureAbility(abilityId) {
+            if ((abilityId in allSkills) == false) {
+                return false;
+            }
+            var skillInfo = allSkills[abilityId];
+            if (("categories" in skillInfo) == false) {
+                return false;
+            }
+            var categories = allSkills[abilityId]["categories"];
+            for (var index = 0; index < categories.length; index++) {
+                if (categories[index] == "Conjure") {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        retval = [];
+        for (var index = 0; index < notes.length; index++) {
+            var note = notes[index];
+            if (isConjureAbility(note.abilityId)) {
+                // Conjure ability is added
+                retval.push(note);
+
+                for (var j = 1; j < notes.length; j++) {
+                    var nextNote = notes[index+j];
+                    if (nextNote.noteType != "WeaponSwap") {
+                        // Some instant cast ability was cast while conjure was being cast
+                        retval.push(nextNote);
+                    } else {
+                        // Hit the weapon swap. Don't add this.
+                        index = index + j;
+                        break;
+                    }
+                }
+            } else {
+                retval.push(note);
+            }
+        }
+    }
+
+
+    return retval;
+}
+
 async function generateSong(
     name,
     description,
@@ -181,7 +407,7 @@ async function generateSong(
     for (var i = 0; i < rotation.length; i++) {
         //Try to get the noteType (weaponType) from the manuallyMappedSkills array or the allSkills array
         //If the abilityID doesn't appear in either of those tables, return ""
-        var noteType = getSkillType(rotation[i][1], utilitySlots);
+        var noteType = getNoteType(rotation[i][1], utilitySlots);
 
         //Drop all empty noteTypes and create song notes with non-empty noteTypes
         if (noteType !== null) {
@@ -196,6 +422,9 @@ async function generateSong(
 
     // Post Process Step: Fix Time Offset
     fixTimeOffset(notes);
+
+    // Post Process Step: Fix Weapon Issues for some professions
+    notes = fixWeaponSwaps(build, notes);
 
     //Build the song object
     var song = {

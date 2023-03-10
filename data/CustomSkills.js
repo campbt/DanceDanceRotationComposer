@@ -84,66 +84,81 @@ var customSkills = {
     "41258": { // Chapter 1: Searing Spell
         "isNote": true,
         "noteType": "Weapon1",
+        "tomeSkill": "44364",
     },
     "40635": { // Chapter 2: Igniting Burst
         "isNote": true,
         "noteType": "Weapon2",
+        "tomeSkill": "44364",
     },
     "42449": { // Chapter 3: Heated Rebuke
         "isNote": true,
         "noteType": "Weapon3",
+        "tomeSkill": "44364",
     },
     "40015": { // Chapter 4: Scorched Aftermath
         "isNote": true,
         "noteType": "Weapon4",
+        "tomeSkill": "44364",
     },
     "42898": { // Epilogue: Ashes of the Just
         "isNote": true,
         "noteType": "Weapon5",
+        "tomeSkill": "44364",
     },
 
     // Tome of Resolve:
     "45022": { // Chapter 1: Desert Bloom
         "isNote": true,
         "noteType": "Weapon1",
+        "tomeSkill": "41780",
     },
     "40679": { // Chapter 2: Radiant Recovery
         "isNote": true,
         "noteType": "Weapon2",
+        "tomeSkill": "41780",
     },
     "45128": { // Chapter 3: Azure Sun
         "isNote": true,
         "noteType": "Weapon3",
+        "tomeSkill": "41780",
     },
     "42008": { // Chapter 4: Shining River
         "isNote": true,
         "noteType": "Weapon4",
+        "tomeSkill": "41780",
     },
     "42925": { // Epilogue: Eternal Oasis
         "isNote": true,
         "noteType": "Weapon5",
+        "tomeSkill": "41780",
     },
 
     // Tome of Courage:
     "42986": { // Chapter 1: Unflinching Charge
         "isNote": true,
         "noteType": "Weapon1",
+        "tomeSkill": "42259",
     },
     "41968": { // Chapter 2: Daring Challenge
         "isNote": true,
         "noteType": "Weapon2",
+        "tomeSkill": "42259",
     },
     "41836": { // Chapter 3: Valiant Bulwark
         "isNote": true,
         "noteType": "Weapon3",
+        "tomeSkill": "42259",
     },
     "40988": { // Chapter 4: Stalwart Stand
         "isNote": true,
         "noteType": "Weapon4",
+        "tomeSkill": "42259",
     },
     "44455": { // Epilogue: Unbroken Lines
         "isNote": true,
         "noteType": "Weapon5",
+        "tomeSkill": "42259",
     },
 
     // Elementalist - Trait: Sunspot
