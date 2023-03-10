@@ -41,9 +41,56 @@ async function getRotationFromDpsReport(logUrl) {
     });
 }
 
+/**
+ * Revent utility skills are a bit more complicated because there are inactive utilities
+ * All rev heal/utility/heal skills share the same paletteId.
+ * In order to determine which slot the utility is in:
+ *     + Check the Legend that the skill belongs to,
+ *     + Determine if that legend is Primary or Inactive legend
+ *       + If primary, look for that utility in main utility slots of the build
+ *       + If inactive, look for that utility in inactive utility slots of the build (found in profession specific bytes)
+ */
+function getRevenantUtilityNoteType(abilityId, utilitySlots, revenantInfo) {
+    var retval = "Unknown";
+
+    var legend = -1;
+    if (abilityId in revenantSkillToLegend) {
+        legend = revenantSkillToLegend[abilityId];
+    } else {
+        // If lookup fails, default to the primary legend so it uses the main utilities
+        console.log("Warning: AbilityID not in revenantSkillToLegend: " + abilityId);
+        legend = revenantInfo.primaryLegend;
+    }
+
+    if (legend == revenantInfo.primaryLegend) {
+        // Check utility skills of the build
+        var paletteId = skillToPaletteLookup[abilityId];
+        for (var i = 0; i < utilitySlots.length; i++) {
+            if (utilitySlots[i] === paletteId) {
+                retval = "UtilitySkill" + (i + 1);
+                break;
+            }
+        }
+    } else if (legend == revenantInfo.inactiveLegend) {
+        // Check inactive utility skills of the build
+        var paletteId = skillToPaletteLookup[abilityId];
+        for (var i = 0; i < revenantInfo.inactiveUtilities.length; i++) {
+            if (revenantInfo.inactiveUtilities[i] === paletteId) {
+                retval = "UtilitySkill" + (i + 1);
+                break;
+            }
+        }
+    } else {
+        console.log("Warning: AbilityID, " + abilityId + ", belongs to legend " + legend + " but the revanant info doesn't have that legend for some reason. primary=" + revenantInfo.primaryLegend + " inactive=" + revenantInfo.inactiveLegend);
+        return "Unknown";
+    }
+
+    return retval;
+}
+
 //Return the noteType to the song note
 //Ex: Weapon_1, Utility, Profession_1, etc
-function getNoteType(abilityId, utilitySlots) {
+function getNoteType(abilityId, utilitySlots, revenantInfo) {
     var retval = "Unknown";
 
     // Check the customSkills to see if the abilityID exists as a key
@@ -79,19 +126,24 @@ function getNoteType(abilityId, utilitySlots) {
         } else if (slot === "Weapon_5" || slot === "Downed_5") {
             retval = "Weapon5";
         } else if (slot === "Utility") {
-            // Special: Utility skills simply have "Utility" for their slot,
-            //          and can be placed in any Utility slot (1, 2, 3).
-            //          Use the BuildTemplate to find out which slot a utility skill is in
-            //          BuildTemlate skills are stored with their palette ID, so the abilityId
-            //          must first be converted to that.
+            if (revenantInfo == null) {
+                // Special: Utility skills simply have "Utility" for their slot,
+                //          and can be placed in any Utility slot (1, 2, 3).
+                //          Use the BuildTemplate to find out which slot a utility skill is in
+                //          BuildTemlate skills are stored with their palette ID, so the abilityId
+                //          must first be converted to that.
 
-            retval = "Unknown"; // Value used if the lookup fails
-            var paletteId = skillToPaletteLookup[abilityId];
-            for (var i = 0; i < utilitySlots.length; i++) {
-                if (utilitySlots[i] === paletteId) {
-                    retval = "UtilitySkill" + (i + 1);
-                    break;
+                retval = "Unknown"; // Value used if the lookup fails
+                var paletteId = skillToPaletteLookup[abilityId];
+                for (var i = 0; i < utilitySlots.length; i++) {
+                    if (utilitySlots[i] === paletteId) {
+                        retval = "UtilitySkill" + (i + 1);
+                        break;
+                    }
                 }
+            } else {
+                // Extra Special: Revenant needs more love here
+                retval = getRevenantUtilityNoteType(abilityId, utilitySlots, revenantInfo);
             }
         } else if (slot === "Heal") {
             retval = "HealingSkill";
@@ -201,27 +253,6 @@ function fixWeaponSwaps(build, notes) {
             // Also, closing a tome also shows up as a WeaponSwap, so it needs to be swapped as well.
             // These tome skills are marked with "tomeSkill" in CustomSkills.js
 
-            function findNextTomeEnter(startIndex) {
-                for (var index = startIndex; index < notes.length; index++) {
-                    var note = notes[index];
-                    var abilityId = note.abilityId;
-                    if (abilityId in customSkills) {
-                        var customInfo = customSkills[abilityId];
-                        if ("tomeSkill" in customInfo) {
-                            // Index is now at the next tome skill
-                            // Walk *backward* to find the weapon swap that caused this
-                            for (var reverseIndex = index - 1; reverseIndex >= 0; reverseIndex--) {
-                                var reverseNote = notes[j];
-                                if (reverseNote.noteType == "WeaponSwap") {
-                                    return reverseIndex;
-                                }
-                            }
-                        }
-                    }
-                }
-                return notes.length;
-            }
-
             retval = [];
             var lastWeaponSwapIndex = -1
             var currentTomeSkill = null
@@ -257,19 +288,21 @@ function fixWeaponSwaps(build, notes) {
                         }
                     }
 
-                    if (tomeSkill != currentTomeSkill) {
+                    if (lastWeaponSwapIndex >= 0 && tomeSkill != currentTomeSkill) {
                         // The last weapon swap must have been a tome open/close
                         if (tomeSkill != null) {
                             // Must have opened the tome
                             retval[lastWeaponSwapIndex]["abilityId"] = tomeSkill
-                            retval[lastWeaponSwapIndex]["noteType"] = getNoteType(tomeSkill, []);
+                            retval[lastWeaponSwapIndex]["noteType"] = getNoteType(tomeSkill, [], null);
                             console.log("Firebrand: WeaponSwap at " + lastWeaponSwapIndex + " swapping to open tome skill: " + retval[lastWeaponSwapIndex]["noteType"]);
                         } else {
                             // Must have closed the tome
                             retval[lastWeaponSwapIndex]["abilityId"] = currentTomeSkill
-                            retval[lastWeaponSwapIndex]["noteType"] = getNoteType(currentTomeSkill, []);
+                            retval[lastWeaponSwapIndex]["noteType"] = getNoteType(currentTomeSkill, [], null);
                             console.log("Firebrand: WeaponSwap at " + lastWeaponSwapIndex + " swapping to close tome skill: " + retval[lastWeaponSwapIndex]["noteType"]);
                         }
+                        // Prevent swapping multiple times
+                        lastWeaponSwapIndex = -1;
                     }
                     currentTomeSkill = tomeSkill;
                     // console.log("Firebrand: " + index + " : " + currentTomeSkill + " last=" + lastWeaponSwapIndex + ", " + currentTomeSkill);
@@ -402,12 +435,41 @@ async function generateSong(
     var build = new Buildtemplate(buildChatCode);
     var utilitySlots = build["skills"]["terrestrial"]["utilities"];
 
+    // Special: Revenant can have inactive utility slots and inactive legendary stored in the profession specific bytes
+    var revenantInfo = null;
+    if (build["profession"] == 9) {
+        var specific = build["specific"];
+
+        // Small lookup table for legendaries
+        // var legendToSkillId = {
+        //     "3": 28419, // Dwarf
+        //     "4": 28494, // Demon
+        //     "6": 28159, // Centaur
+        //     "2": 28134, // Assassin
+        //     "1": 28085, // Dragon
+        //     "5": 41858, // Renegade
+        //     "7": 62891 // Alliance
+        // };
+
+        // Calculate the inactive utility palette IDs
+        var inactiveUtilitySlots = [];
+        for (var i = 0; i < 3; i++) {
+            var offset = i * 2 + 4;
+            inactiveUtilitySlots.push(specific[offset] + (specific[offset+1] << 8));
+        }
+        revenantInfo = {
+            "primaryLegend" : specific[0],
+            "inactiveLegend" : specific[1],
+            "inactiveUtilities" : inactiveUtilitySlots
+        };
+    }
+
     //Convert the DPS rotation into notes
     var notes = [];
     for (var i = 0; i < rotation.length; i++) {
         //Try to get the noteType (weaponType) from the manuallyMappedSkills array or the allSkills array
         //If the abilityID doesn't appear in either of those tables, return ""
-        var noteType = getNoteType(rotation[i][1], utilitySlots);
+        var noteType = getNoteType(rotation[i][1], utilitySlots, revenantInfo);
 
         //Drop all empty noteTypes and create song notes with non-empty noteTypes
         if (noteType !== null) {
