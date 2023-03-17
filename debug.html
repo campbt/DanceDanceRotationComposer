@@ -11,6 +11,8 @@
         <script language="javascript" src="data/PaletteSkills.js"></script>
         <script language="javascript" src="data/ToolbeltToSlots.js"></script>
         <script language="javascript" src="ddr.js"></script>
+        <script language="javascript" src="ddrEdit.js"></script>
+        <script language="javascript" src="ddrSongGeneration.js"></script>
     </head>
     <body style="max-width: 1280px; margin-left: auto; margin-right: auto">
         <nav id="navigation"></nav>
@@ -28,11 +30,27 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <label for="generate">Generate and Download all songs:</label>
+            <button class="btn btn-primary" type="generate" id="generate" style="margin-left: 5%; margin-right: auto">Generate All Songs</button>
+            <button class="btn btn-primary" id="generateDownload" style="margin-left: 5%; margin-right: auto">Download</button>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <textarea class="form-control" id="generateOutput" name="generateOutput" rows="5" cols="10" style="margin-top: 2%"></textarea>
+                </div>
+            </div>
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
         <script>
+            if ($("#generateOutput").val().length == 0) {
+                $('#generateDownload').hide();
+            }
+
             async function findUnknownNotes() {
                 const builds = [
                     {logUrl: "https://dps.report/yDtd-20230214-221732_golem", buildUrl: "https://snowcrows.com/en/builds/thief/deadeye/power-deadeye", buildChatCode: "[&DQUcPSMbOh0MAQAAMwEAAB8WAAAgFwAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]"},
@@ -162,6 +180,43 @@
                         var jsonOutput = JSON.stringify(result, null, 4);
                         $("#output").val(jsonOutput);
                     });
+            });
+
+            // This test runs a bunch of builds through the generate and looks for any returned songs with an Unknown note type
+            $('#generate').on('click', function() {
+                generateSongs()
+                    .then((result) => {
+                        if (result == null) {
+                            $("#generateOutput").val("Generation Failed. See Log");
+                            return
+                        }
+
+                        console.log("All Songs Generated");
+
+                        // Allow these to be downloaded now
+                        $('#generateDownload').show();
+
+                        var json = JSON.stringify(result, null, 4);
+                        $("#generateOutput").val(json);
+                    });
+            });
+
+            $('#generateDownload').on('click', function() {
+                console.log("Downloading Songs");
+                var rawJson = $("#generateOutput").val();
+                var songs = JSON.parse(rawJson);
+                for (var index = 0; index < songs.length; index++) {
+                    var song = songs[index];
+                    var songJson = JSON.stringify(song, null, 4);
+                    var blob = new Blob([songJson], {
+                        type: "application/json"
+                    });
+
+                    var link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = song.name + ".json";
+                    link.click();
+                }
             });
 
         </script>
