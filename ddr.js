@@ -1,5 +1,3 @@
-// const https = require('https');
-
 // MARK: Data Lookups for Generation (loaded in html)
 
 // var allSkills (loaded from data/AllSkills.js)
@@ -422,6 +420,73 @@ function fixWeaponSwaps(build, notes) {
     return retval;
 }
 
+/**
+ * Post-Profess: Elemenalist Specific
+ */
+function fixElementalist(build, notes) {
+    var originalNoteSize = notes.length;
+
+    for (var index = 0; index < notes.length; index++) {
+        var note = notes[index];
+
+        // "Rock Barrier" -> "Hurl" |
+        // Hurl doesn't show up in logs for some reason. Add it in automatically
+        // a little after rock barrier
+        if (note.abilityId == 5695)
+        {
+            notes.push({
+                "time": note.time + 759,
+                "duration": 0,
+                "noteType": "Weapon2",
+                "abilityId": 5780
+            });
+        }
+    }
+    // If the Fire Elemental Elite is used, then add in casts for the ult. Assume precast.
+    if (build["skills"]["terrestrial"]["elite"] == 38) {
+        for (var time = 300; time < 120000; time += 12100) {
+            notes.push({
+                "time": time,
+                "duration": 0,
+                "noteType": "EliteSkill",
+                "abilityId": 25499
+            });
+        }
+    }
+}
+
+/**
+ * Post-Profess: Mesmer Specific
+ */
+function fixMesmer(build, notes) {
+    var originalNoteSize = notes.length;
+
+    for (var index = 0; index < notes.length; index++) {
+        var note = notes[index];
+
+        // Ambush - This note should actually be Weapon1 for when the ambush is *cast*
+        //          This requires manually hitting Weapon1, even if auto hits are on.
+        //          So, "overrideAuto" is applied to the note.
+        if (note.abilityId == -17)
+        {
+            notes[index] = {
+                "time": note.time,
+                "duration": 0,
+                "noteType": "Weapon1",
+                "abilityId": -17,
+                "overrideAuto": true
+            };
+            // A dodge could be added, but it's not guarenteed that a dodge triggered it.
+            // notes.push({
+            //     "time": note.time-100,
+            //     "duration": 0,
+            //     "noteType": "Dodge",
+            //     "abilityId": 23275
+            // });
+        }
+    }
+}
+
 async function generateSong(
     name,
     description,
@@ -487,6 +552,29 @@ async function generateSong(
 
     // Post Process Step: Fix Weapon Issues for some professions
     notes = fixWeaponSwaps(build, notes);
+
+    // Fix profession specific edge cases
+    //     01 – Guardian
+    //     02 – Warrior
+    //     03 – Engineer
+    //     04 – Ranger
+    //     05 – Thief
+    //     06 – Elementalist
+    //     07 – Mesmer
+    //     08 – Necromancer
+    //     09 – Revenant
+    if (build["profession"] == 6) {
+        fixElementalist(build, notes);
+    } else if (build["profession"] == 7) {
+        fixMesmer(build, notes);
+    }
+
+    // Absolutely make sure everything is sorted by time
+    notes.sort(
+        function(a,b) {
+            return a.time-b.time;
+        }
+    );
 
     //Build the song object
     var song = {
