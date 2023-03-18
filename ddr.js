@@ -434,11 +434,12 @@ function fixElementalist(build, notes) {
         // a little after rock barrier
         if (note.abilityId == 5695)
         {
+            var flipSkill = allSkills[note.abilityId]["flip_skill"]
             notes.push({
                 "time": note.time + 759,
                 "duration": 0,
-                "noteType": "Weapon2",
-                "abilityId": 5780
+                "noteType": note.nodeType,
+                "abilityId": flipSkill
             });
         }
     }
@@ -450,6 +451,45 @@ function fixElementalist(build, notes) {
                 "duration": 0,
                 "noteType": "EliteSkill",
                 "abilityId": 25499
+            });
+        }
+    }
+}
+
+/**
+ * Post-Profess: Engineer Specific
+ */
+function fixEngineer(build, notes) {
+    var originalNoteSize = notes.length;
+
+    for (var index = 0; index < notes.length; index++) {
+        var note = notes[index];
+
+        // "Throw Mine" -> "Detonate" |
+        // Detonate doesn't show up in logs for some reason. Add it in automatically
+        // a little after
+        if (note.abilityId == 6161 || note.abilityId == 30337)
+        {
+            var flipSkill = allSkills[note.abilityId]["flip_skill"]
+            notes.push({
+                "time": note.time + 750,
+                "duration": 0,
+                "noteType": note.noteType,
+                "abilityId": flipSkill
+            });
+        }
+
+        // "Throw Field Mine" -> "Detonate" |
+        // Detonate doesn't show up in logs for some reason. Add it in automatically
+        // a little after
+        if (note.abilityId == 6164)
+        {
+            var flipSkill = 6166 // flip_skill not on this for some reason, so hard coded
+            notes.push({
+                "time": note.time + 750,
+                "duration": 0,
+                "noteType": note.noteType,
+                "abilityId": flipSkill
             });
         }
     }
@@ -563,9 +603,11 @@ async function generateSong(
     //     07 – Mesmer
     //     08 – Necromancer
     //     09 – Revenant
-    if (build["profession"] == 6) {
+    if (build.profession == 3) {
+        fixEngineer(build, notes);
+    } else if (build.profession == 6) {
         fixElementalist(build, notes);
-    } else if (build["profession"] == 7) {
+    } else if (build.profession == 7) {
         fixMesmer(build, notes);
     }
 
