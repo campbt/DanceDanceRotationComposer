@@ -88,6 +88,53 @@ var songMetasActual = [
         ]
     },
     {
+        "name": "Condi Alacrity Mirage (StAxe) [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Mar 8, 2023",
+        "logUrl": "https://dps.report/tzYP-20230222-184348_golem",
+        "buildChatCode": "[&DQcBJy09Ox/uFQAAgQEAAIMBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/mesmer/mirage/condition-alacrity-mirage",
+        "postProcessSteps": [
+            // Precast Phantasmal Duelist (Weapon4)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 10175,
+                "time": -560,
+                "duration": 560,
+                "noteType": "Weapon4"
+            }
+        ]
+    },
+    {
+        "name": "Condi Mirage (Axe) [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Dec 7, 2022",
+        "logUrl": "https://dps.report/une5-20220723-180845_golem",
+        "buildChatCode": "[&DQctHQEnOx8jDwAAgwEAAIEBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/mesmer/mirage/condition-mirage",
+        "postProcessSteps": [
+            // For some reason, it has the precast duelist but misses a dodge
+            {
+                "command": "DeleteAt",
+                "index": 0
+            },
+            // Dodge
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": -17,
+                "time": -279,
+                "duration": 0,
+                "noteType": "Dodge"
+            },
+            // Precast Phantasmal Mage (Weapon5)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 10189,
+                "time": -600,
+                "duration": 879,
+                "noteType": "Weapon5"
+            }
+        ]
+    },
+    {
         "name": "Condi Virtuoso [Benchmark]",
         "description": "by: Snow Crows\nUpdated Dec 7, 2022",
         "logUrl": "https://dps.report/xE4Z-20220807-013444_golem",
@@ -937,6 +984,17 @@ var songMetasActual = [
 var songMetas = [
 ];
 
+function deleteAt(song, index) {
+    var note = song.notes[index];
+    song.notes.splice(index, 1);
+    console.log("  Delete Note At: " + index + " (" + note.abilityId + ", " + note.noteType + ")");
+
+    if (index == 0) {
+        console.log("  Shifting notes back so note 0 is at t=0");
+        fixTimeOffset(song.notes);
+    }
+}
+
 function deleteAbilityId(song, abilityId) {
     var notes = song.notes;
     var numDeleted = 0;
@@ -945,6 +1003,13 @@ function deleteAbilityId(song, abilityId) {
         if (note.abilityId == abilityId) {
             song.notes.splice(index, 1);
             numDeleted += 1;
+
+            if (index == 0) {
+                console.log("  Shifting notes back so note 0 is at t=0");
+                fixTimeOffset(song.notes);
+            }
+
+            index -= 1;
         }
     }
     console.log("  Deleted " + numDeleted + " notes of abilityId: " + abilityId);
@@ -990,9 +1055,7 @@ async function generateSongs() {
                 );
             } else if (command == "DeleteAt") {
                 var index = process.index;
-                var note = song.notes[index];
-                song.notes.splice(index, 1);
-                console.log("  Delete Note At: " + index + " (" + note.abilityId + ", " + note.noteType + ")");
+                deleteAt(song, index);
             } else if (command == "DeleteAbilityId") {
                 deleteAbilityId(song, process.abilityId);
             }

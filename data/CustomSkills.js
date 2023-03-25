@@ -329,6 +329,6 @@ var customSkills = {
     // Mirage - Ambush
 	"-17": {
 		"isNote": true,
-		"noteType": "Weapon1"
+		"noteType": "Dodge"
 	}
 };

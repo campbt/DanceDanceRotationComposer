@@ -531,28 +531,21 @@ function fixEngineer(build, notes) {
 function fixMesmer(build, notes) {
     var originalNoteSize = notes.length;
 
+    var ambushSkills = {
+        44321: true, // (Axe) Imaginary Axes
+        45230: true, // (Sword) Mirage Thrust
+        42304: true, // (Scepter) Ether Barrage
+        44241: true, // (Greatsword) Split Surge
+        40184: true, // (Staff) Chaos Vortex
+        44864: true, // (Spear) Ambush Assault
+        39959: true, // Wave of Panic
+    };
     for (var index = 0; index < notes.length; index++) {
         var note = notes[index];
 
-        // Ambush - This note should actually be Weapon1 for when the ambush is *cast*
-        //          This requires manually hitting Weapon1, even if auto hits are on.
-        //          So, "overrideAuto" is applied to the note.
-        if (note.abilityId == -17)
-        {
-            notes[index] = {
-                "time": note.time,
-                "duration": 0,
-                "noteType": "Weapon1",
-                "abilityId": -17,
-                "overrideAuto": true
-            };
-            // A dodge could be added, but it's not guarenteed that a dodge triggered it.
-            // notes.push({
-            //     "time": note.time-100,
-            //     "duration": 0,
-            //     "noteType": "Dodge",
-            //     "abilityId": 23275
-            // });
+        // Ambush - Ambush skills need to be manually triggered, even if weapon 1
+        if (note.abilityId in ambushSkills) {
+            note["overrideAuto"] = true;
         }
     }
 }
