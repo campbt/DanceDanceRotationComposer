@@ -127,6 +127,718 @@ var songMetasActual = [
         ]
     },
 
+    // MARK: Necromancer
+
+    // Unfortunately, the dps report does not have the profession skills, and they are not just cast off cooldown in this rotation
+    {
+        "name": "Condi Scourge [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Jan 7, 2023",
+        "logUrl": "https://dps.report/0Pzn-20220630-021720_golem",
+        "buildChatCode": "[&DQgnNjI1PCYoD6IAgAAAAG8BAABwAQAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/necromancer/scourge/condition-scourge",
+        "postProcessSteps": [
+        ]
+    },
+    {
+        "name": "Condi Harbinger [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Dec 30, 2022",
+        "logUrl": "https://dps.report/ViK3-20221201-114322_golem",
+        "buildChatCode": "[&DQgnNjI1QD/nGgAAgAAAANQaAADsGgAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/necromancer/harbinger/condition-harbinger",
+        "postProcessSteps": [
+            // Precast is: Elixir of Anguish -> Elixir of Rish -> Elixir of Promise -> Plaguelands
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 10549,
+                "time": -918,
+                "duration": 918,
+                "noteType": "EliteSkill"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62667,
+                "time": -676,
+                "duration": 676,
+                "noteType": "HealingSkill"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62530,
+                "time": -682,
+                "duration": 682,
+                "noteType": "UtilitySkill2"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62662,
+                "time": -683,
+                "duration": 683,
+                "noteType": "UtilitySkill3"
+            }
+        ]
+    },
+    {
+        "name": "Power Reaper [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Feb 17, 2023",
+        "logUrl": "https://dps.report/61Dw-20230214-203311_golem",
+        "buildChatCode": "[&DQg1KTImIjabACgPQAGBAIEAQAHxEnUBlQCVAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/necromancer/reaper/power-reaper",
+        "postProcessSteps": [
+        ]
+    },
+
+    // MARK: Engineer
+
+    {
+        "name": "Power Holosmith [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Dec 9, 2022",
+        "logUrl": "https://dps.report/Xk87-20221130-224702_golem",
+        "buildChatCode": "[&DQMGOyYvOSsqDwAAhgAAACYBAABXFgAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/engineer/holosmith/power-holosmith",
+        "postProcessSteps": [
+            // Autocast Profession Skill 3, which doesn't show up in the dps logs
+            {
+                "command": "AddAutoCastAbility",
+                "abilityId": 6178,
+                "interval": 6500,
+                "offset": 1500,
+                "noteType": "ProfessionSkill3"
+            },
+            // Autocast Profession Skill 4, which doesn't show up in the dps logs
+            {
+                "command": "AddAutoCastAbility",
+                "abilityId": 42163,
+                "interval": 24500,
+                "offset": 1750,
+                "noteType": "ProfessionSkill4"
+            }
+        ]
+    },
+    {
+        "name": "Condi Mechanist [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Feb 20, 2023\nSet JadeBot skills to autocast.",
+        "logUrl": "https://dps.report/XehS-20230217-165803_golem",
+        "buildChatCode": "[&DQMGJyY5RhUNGyoPhgCGAAcBBwEQGw4bCRuJAQAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/engineer/mechanist/condition-mechanist",
+        "postProcessSteps": [
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 5812,
+                "time": -200,
+                "duration": 0,
+                "noteType": "UtilitySkill2"
+            }
+        ]
+    },
+
+    // MARK: Ranger
+
+    {
+        "name": "Power Soulbeast [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Dec 4, 2022",
+        "logUrl": "https://dps.report/9nH4-20220717-181537_golem",
+        "buildChatCode": "[&DQQePSA/Nzp5AAAApQEAAKwBAAC1AAAALhYAADsAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/ranger/soulbeast/power-soulbeast",
+        "postProcessSteps": [
+        ]
+    },
+    {
+        "name": "Condi Soulbeast",
+        "description": "by: Snow Crows\nUpdated Dec 26, 2022\nStart in Beastmode with Lynx",
+        "logUrl": "https://dps.report/vqa8-20220905-124634_golem",
+        "buildChatCode": "[&DQQeLSE3Ny55AC4XvwC/ALoApQHpFukWLhYuFgMlFQkAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/ranger/soulbeast/condition-soulbeast",
+        "postProcessSteps": [
+            // Precast Abilities
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 12517,
+                "time": -250,
+                "duration": 250,
+                "noteType": "Weapon3"
+            },
+			{
+                "command": "AddPreCastAbility",
+                "abilityId": 45479,
+                "time": -250,
+                "duration": 250,
+                "noteType": "EliteSkill"
+            },
+			{
+                "command": "AddPreCastAbility",
+                "abilityId": 12496,
+                "time": -500,
+                "duration": 500,
+                "noteType": "UtilitySkill2"
+            }
+        ]
+    },
+    {
+        "name": "Hybrid Soulbeast [Benchmark]",
+        "description": "Condi damage, but bursty like power \nStart in Beastmode with Bristleback",
+        "logUrl": "https://dps.report/OZNq-20230218-035157_golem",
+        "buildChatCode": "[&DQQePSA/Ny55AC4XvwC/AKUBpQHpFukWLhYuFjQlFQkAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/ranger/soulbeast/hybrid-soulbeast",
+        "postProcessSteps": [
+            // AutoCast Abilities
+			{
+                "command": "AddAutoCastAbility",
+                "abilityId": 45479,
+                "interval": 24000,
+                "offset": 3450,
+                "noteType": "ProfessionSkill2"
+            }
+        ]
+    },
+    {
+        "name": "Power Alacrity Untamed [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Dec 10, 2022",
+        "logUrl": "https://dps.report/dVD1-20221202-174129_golem",
+        "buildChatCode": "[&DQQePRkVSBclDwAAtQAAALYAAAABGwAA7QAAAAMAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/ranger/untamed/power-alacrity-untamed",
+        "postProcessSteps": [
+            // Precast Call lightning on your storm spirit
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 12594,
+                "time": -639,
+                "duration": 639,
+                "noteType": "UtilitySkill2"
+            },
+            // Precast Strength of the Pack
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 12516,
+                "time": -750,
+                "duration": 750,
+                "noteType": "EliteSkill"
+            }
+        ]
+    },
+    {
+        "name": "Power Untamed [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Dec 10, 2022",
+        "logUrl": "https://dps.report/YaET-20221228-195030_golem",
+        "buildChatCode": "[&DQQIGh49SBd5AAAAtQAAAAEbAACsAQAA7QAAAAMAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/ranger/untamed/power-untamed",
+        "postProcessSteps": [
+            // Precast Exploding Spores
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 63157,
+                "time": -484,
+                "duration": 484,
+                "noteType": "UtilitySkill2"
+            }
+        ]
+    },
+    {
+        "name": "Condition Untamed [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Dec 4, 2022",
+        "logUrl": "https://dps.report/eY6D-20221027-005909_golem",
+        "buildChatCode": "[&DQQePSA2SBd5AAAAARsAALYAAAC/AAAAwAAAAD0AAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/ranger/untamed/condition-untamed",
+        "postProcessSteps": [
+            // Precast Sharpening Stone
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 12537,
+                "time": -200,
+                "duration": 0,
+                "noteType": "UtilitySkill3"
+            }
+        ]
+    },
+
+    // MARK: Thief
+
+    {
+        "name": "Power Daredevil [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Mar 15, 2023",
+        "logUrl": "https://www.dps.report/wYRI-20220824-133048_golem",
+        "buildChatCode": "[&DQUcPSMbBzkMAQAAVwEAADMBAACwEgAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/daredevil/power-daredevil",
+        "postProcessSteps": [
+            // Precast Dodges to empty bar
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 23275,
+                "time": -750,
+                "duration": 750,
+                "noteType": "Dodge"
+            },
+			{
+                "command": "AddPreCastAbility",
+                "abilityId": 13027,
+                "time": -1000,
+                "duration": 1000,
+                "noteType": "HealSkill"
+            },
+			{
+                "command": "AddPreCastAbility",
+                "abilityId": 23275,
+                "time": -750,
+                "duration": 750,
+                "noteType": "Dodge"
+            },
+			{
+                "command": "AddPreCastAbility",
+                "abilityId": 23275,
+                "time": -750,
+                "duration": 750,
+                "noteType": "Dodge"
+            },
+            // Precast Thieves Guild
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 13082,
+                "time": -1162,
+                "duration": 1162,
+                "noteType": "EliteSkill"
+            }
+        ]
+    },
+    {
+        "name": "Condition Daredevil [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Feb 17, 2023",
+        "logUrl": "https://www.dps.report/84Ov-20230216-152900_golem",
+        "buildChatCode": "[&DQUcGyw1BxmUEgwBVQFXAS8BMwELAVYBKAAOAQAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/daredevil/condition-daredevil",
+        "postProcessSteps": [
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 13093,
+                "time": -100,
+                "duration": 0,
+                "noteType": "UtilitySkill1"
+            },
+            // Precast Thieves Guild
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 13082,
+                "time": -1162,
+                "duration": 1162,
+                "noteType": "EliteSkill"
+            }
+        ]
+    },
+    {
+        "name": "Power Deadeye Rifle [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Mar 13, 2023",
+        "logUrl": "https://dps.report/yDtd-20230214-221732_golem",
+        "buildChatCode": "[&DQUcPSMbOh0MAQAAMwEAAB8WAAAgFwAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/deadeye/power-deadeye",
+        "postProcessSteps": [
+            // Precast Deadeye's Mark
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 43390,
+                "time": -402,
+                "duration": 402,
+                "noteType": "ProfessionSkill1"
+            }
+        ]
+    },
+    {
+        "name": "Power Deadeye Dagger [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Mar 13, 2023",
+        "logUrl": "https://dps.report/ZuuL-20221130-040247_golem",
+        "buildChatCode": "[&DQUcPSMbOh0MAQAAMwEAAB8WAACsFgAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/deadeye/power-deadeye",
+        "postProcessSteps": [
+            // Precast Deadeye's Mark
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 43390,
+                "time": -402,
+                "duration": 402,
+                "noteType": "ProfessionSkill1"
+            },
+            // Precast Thieves Guild
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 13082,
+                "time": -1162,
+                "duration": 1162,
+                "noteType": "EliteSkill"
+            }
+        ]
+    },
+    {
+        "name": "Condi Alacrity Specter [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Mar 14, 2023",
+        "logUrl": "https://dps.report/KKWN-20220902-160446_golem",
+        "buildChatCode": "[&DQUcGywXRx8VGwAALwEAAAgbAAAGGwAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/specter/condition-alacrity-spectre",
+        "postProcessSteps": [
+        ]
+    },
+    {
+        "name": "Condi Specter [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Mar 14, 2023",
+        "logUrl": "https://dps.report/KzkD-20220827-170023_golem",
+        "buildChatCode": "[&DQUcGywfRxcVGwAAPgEAAC8BAAALAQAAKAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/specter/condition-spectre",
+        "postProcessSteps": [
+        ]
+    },
+
+    // MARK: Guardian
+
+    {
+        "name": "Power Dragonhunter [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Feb 27, 2023",
+        "logUrl": "https://dps.report/iJlg-20230223-101906_golem",
+        "buildChatCode": "[&DQEqOhA/GykmDwAA/gAAAEgBAACKEgAAtRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/guardian/dragonhunter/power-dragonhunter",
+        "postProcessSteps": [
+            // Precast Procession of Blades, which was missed in logs
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 30364,
+                "time": -447,
+                "duration": 447,
+                "noteType": "UtilitySkill3"
+            }
+        ]
+    },
+    {
+        "name": "Condi Quickness Firebrand [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Mar 6, 2023",
+        "logUrl": "https://dps.report/tZsX-20230301-130007_golem",
+        "buildChatCode": "[&DQEQGi4fPi5LFwAATAEAABUXAAB6FgAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/guardian/firebrand/condition-quickness-firebrand",
+        "postProcessSteps": [
+        ]
+    },
+    {
+        "name": "Condi Firebrand [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Mar 2, 2023",
+        "logUrl": "https://dps.report/PeVd-20230226-194816_golem",
+        "buildChatCode": "[&DQEQGi4fPi1LFwAATAEAABUXAAAxAQAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/guardian/firebrand/condition-firebrand",
+        "postProcessSteps": [
+        ]
+    },
+    {
+        "name": "Power Willbender [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Mar 8, 2023",
+        "logUrl": "https://dps.report/vmTw-20230305-042153_golem",
+        "buildChatCode": "[&DQEqOi4VQSYmDwAATAEAAEgBAAD+AAAA6RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/guardian/willbender/power-willbender",
+        "postProcessSteps": [
+            // Delete the initial ProfessionSkill2 casts, they appear in the wrong order in the dps log and are added in manually
+            {
+                "command": "DeleteAbilityId",
+                "abilityId": 62603
+            },
+            // Precast Order: Flowing Resolve (ProfessionSkill2) x2 -> Crashing Courage (ProfessionSkill3) -> Shield of Wrath (Weapon5) -> Sword of Justice (UtilitySkill2)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 9168,
+                "time": -597,
+                "duration": 597,
+                "noteType": "UtilitySkill2"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 9082,
+                "time": -402,
+                "duration": 402,
+                "noteType": "Weapon5"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62648,
+                "time": -683,
+                "duration": 683,
+                "noteType": "ProfessionSkill3"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62603,
+                "time": -500,
+                "duration": 500,
+                "noteType": "ProfessionSkill2"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62603,
+                "time": -500,
+                "duration": 500,
+                "noteType": "ProfessionSkill2"
+            }
+        ]
+    },
+
+    // MARK: Renegade
+
+    {
+        "name": "Power Herald [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Jan 7, 2023",
+        "logUrl": "https://dps.report/rW1Q-20221202-011416_golem",
+        "buildChatCode": "[&DQkPKgM2NDXcEdwRKxIrEtQR1BEGEgYSyhHKEQECAQIGEisS1BEGEisS1BE=]",
+        "buildUrl": "https://snowcrows.com/en/builds/revenant/herald/power-herald",
+        "postProcessSteps": [
+            // Precast Activating Facets | Facet of Nature (ProfessionSkill2) -> Facet of Darkness (UtilitySkill3) -> Facet of Nature (HealingSkill) -> Facet of Strength (UtilitySkill2)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 26644,
+                "time": -333,
+                "duration": 0,
+                "noteType": "UtilitySkill2"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 27220,
+                "time": -333,
+                "duration": 0,
+                "noteType": "HealingSkill"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 28379,
+                "time": -333,
+                "duration": 0,
+                "noteType": "UtilitySkill3"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 29371,
+                "time": -333,
+                "duration": 0,
+                "noteType": "ProfessionSkill2"
+            }
+        ]
+    },
+    {
+        "name": "Power Quickness Herald [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Jan 7, 2023",
+        "logUrl": "https://dps.report/Qw02-20221201-233631_golem",
+        "buildChatCode": "[&DQkPKgM2NCbcEdwRKxIrEtQR1BEGEgYSyhHKEQECAQIGEisS1BEGEisS1BE=]",
+        "buildUrl": "https://snowcrows.com/en/builds/revenant/herald/power-quickness-herald",
+        "postProcessSteps": [
+            // Precast Activating Facets | Facet of Nature (ProfessionSkill2) -> Facet of Darkness (UtilitySkill3) -> Facet of Nature (HealingSkill)
+            // Then precast activating two of them: Infuse Light (HealingSkill) -> True Nature (ProfessionSkill2)
+            // -> Facet of Strength (UtilitySkill2)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 26644,
+                "time": -333,
+                "duration": 0,
+                "noteType": "UtilitySkill2"
+            },
+            // Activate Facets:
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 51667,
+                "time": -333,
+                "duration": 0,
+                "noteType": "ProfessionSkill2"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 27228,
+                "time": -333,
+                "duration": 0,
+                "noteType": "HealingSkill"
+            },
+            // Turn on Facets:
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 27220,
+                "time": -333,
+                "duration": 0,
+                "noteType": "HealingSkill"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 28379,
+                "time": -333,
+                "duration": 0,
+                "noteType": "UtilitySkill3"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 29371,
+                "time": -333,
+                "duration": 0,
+                "noteType": "ProfessionSkill2"
+            }
+        ]
+    },
+    {
+        "name": "Condi Alacrity Renegade [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Feb 14, 2023",
+        "logUrl": "https://dps.report/S4Zh-20230214-191402_golem",
+        "buildChatCode": "[&DQkOHQMmPzrcEQAAKxIAANQRAAAGEgAAyhEAAAQFAADUESsSBhIAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/revenant/renegade/condition-alacrity-renegade",
+        "postProcessSteps": [
+            // Dlete the first Echoing Eruption so it can be pre-cast before Orders from Above
+            {
+                "command": "DeleteAt",
+                "index": 0
+            },
+            // Precast Razorclaw's Rage (UtilitySkill3) -> Temporal Rift (Weapon5) -> Echoing Eruption (Weapon3) -> Orders from above (ProfessionSkill4)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 45537,
+                "time": -440,
+                "duration": 440,
+                "noteType": "ProfessionSkill4"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 27964,
+                "time": -440,
+                "duration": 440,
+                "noteType": "Weapon3"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 28409,
+                "time": -560,
+                "duration": 560,
+                "noteType": "Weapon5"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 42949,
+                "time": -520,
+                "duration": 520,
+                "noteType": "UtilitySkill3"
+            }
+        ]
+    },
+    {
+        "name": "Condi Renegade [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Jan 7, 2023",
+        "logUrl": "https://dps.report/EeYd-20221008-182313_golem",
+        "buildChatCode": "[&DQkOHQMmPyrcEQAAKxIAANQRAAAGEgAAyhEAAAQFAADUESsSBhIAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/revenant/renegade/condition-renegade",
+        "postProcessSteps": [
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 42836,
+                "time": -592,
+                "duration": 592,
+                "noteType": "ProfessionSkill3"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 28409,
+                "time": -560,
+                "duration": 560,
+                "noteType": "Weapon5"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 42949,
+                "time": -520,
+                "duration": 520,
+                "noteType": "UtilitySkill3"
+            }
+        ]
+    },
+    {
+        "name": "Power Vindicator [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Jan 7, 2023",
+        "logUrl": "https://dps.report/zeOf-20221201-171756_golem",
+        "buildChatCode": "[&DQkPKgM2RR3cEdwRBhIGEisSKxLUEdQRyhHKEQcCAgAGEisS1BEAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/revenant/vindicator/power-vindicator",
+        "postProcessSteps": [
+            // Precast Spear of Archemorus (Elite)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62942,
+                "time": -597,
+                "duration": 597,
+                "noteType": "EliteSkill"
+            }
+        ]
+    },
+
+    // MARK: Warrior
+
+    {
+        "name": "Condi Berserker [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Feb 19, 2023",
+        "logUrl": "https://dps.report/nLun-20230217-094721_golem",
+        "buildChatCode": "[&DQIkLTM9EiryEgAA3BIAANcSAADEEgAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/warrior/berserker/condition-berserker",
+        "postProcessSteps": [
+        ]
+    },
+    {
+        "name": "Power Spellbreaker [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Jan 11, 2023",
+        "logUrl": "https://dps.report/7AYV-20221213-184310_golem",
+        "buildChatCode": "[&DQIEHxY/PT2mAAAArQAAAKkAAACvAAAAnRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/warrior/spellbreaker/power-spellbreaker",
+        "postProcessSteps": [
+            // Precast: "To the Limit" (Heal) -> Winds of Disenchantment (EliteSkill)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 45333,
+                "time": -1200,
+                "duration": 1200,
+                "noteType": "EliteSkill"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 14402,
+                "time": -800,
+                "duration": 800,
+                "noteType": "HealingSkill"
+            }
+        ]
+    },
+    {
+        "name": "Power Bladesworn [Benchmark]",
+        "description": "by: Snow Crows\nUpdated Mar 11, 2023\nSome utility skills are not present in this song.",
+        "logUrl": "https://dps.report/brm9-20220810-112155_golem",
+        "buildChatCode": "[&DQIEHwsVRCunAAAA8BoAAPIaAAD9GgAA/BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/warrior/bladesworn/power-bladesworn",
+        "postProcessSteps": [
+            // Add in Precast: Flow Stabilizer (Utility2) x2 -> Tactical Reload (Elite) -> Flow Stabilizer (Utility2) -> Overcharged Cartridges (Utility3)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 68085,
+                "time": -689,
+                "duration": 689,
+                "noteType": "UtilitySkill3"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62967,
+                "time": -300,
+                "duration": 300,
+                "noteType": "UtilitySkill2"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62901,
+                "time": -560,
+                "duration": 560,
+                "noteType": "EliteSkill"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62967,
+                "time": -300,
+                "duration": 300,
+                "noteType": "UtilitySkill2"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 62967,
+                "time": -300,
+                "duration": 300,
+                "noteType": "UtilitySkill2"
+            }
+        ]
+    },
+
     // MARK: Mr. Mystic
 
     {
@@ -290,5 +1002,9 @@ async function generateSongs() {
         songs.push(song);
     }
 
-    return songs;
+    if (songs.length == 1) {
+        return songs[0];
+    } else {
+        return songs;
+    }
 }

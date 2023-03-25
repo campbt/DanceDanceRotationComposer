@@ -4,6 +4,7 @@
 // var customSkills (loaded from data/CustomSkills.js)
 // var skillToPaletteLookup (loaded from data/PaletteSkills.js)
 // var toolbeltIdToSlot (loaded from data/ToolbeltToSlots.js)
+// var reventSkillToLegend (loaded from data/RevenantSkillToLegend.js)
 
 /*
  * Makes a GET request for the logUrl and then parses the results to find the rotation
@@ -23,8 +24,37 @@ async function getRotationFromDpsReport(logUrl) {
                 try {
                     const dpsReportObj = JSON.parse(cleanJsonString.trim());
 
-                    // Extract
-                    var rotation = dpsReportObj["players"][0]["details"]["rotation"][0];
+                    var players = dpsReportObj["players"];
+
+                    var rotation = null;
+                    if (players.length == 1) {
+                        rotation = players[0]["details"]["rotation"][0];
+                    } else {
+                        // Special Case:
+                        // Some benches involve more than one person, like for specter
+                        // We'll use a hacky way to guess the real one by assuming the actual
+                        // bencher is using more unique skills. The non-bencher is usually just auto attacking,
+                        // so their count will just be 1
+
+                        var bestCount = 0;
+                        for (var playerIndex = 0; playerIndex < players.length; playerIndex++) {
+                            var playerRotation = players[playerIndex]["details"]["rotation"][0];
+                            var abilityIds = {};
+                            var count = 0;
+                            for (var rotationIndex = 0; rotationIndex < playerRotation.length; rotationIndex++) {
+                                var abilityId = playerRotation[rotationIndex][1];
+                                if (abilityIds[abilityId] != true) {
+                                    count += 1;
+                                    abilityIds[abilityId] = true;
+                                }
+                            }
+
+                            if (count > bestCount) {
+                                rotation = playerRotation;
+                                bestCount = count;
+                            }
+                        }
+                    }
 
                     resolve(rotation); // Resolve the Promise with the parsed JSON data
                 } catch (err) {
@@ -527,6 +557,29 @@ function fixMesmer(build, notes) {
     }
 }
 
+/**
+ * Post-Profess: Thief Specific
+ */
+function fixThief(build, notes) {
+    var originalNoteSize = notes.length;
+
+    for (var index = 0; index < notes.length; index++) {
+        var note = notes[index];
+
+        // "Prepare Thousand Needles" -> "Thousand Needles"
+        if (note.abilityId == 13026)
+        {
+            var flipSkill = allSkills[note.abilityId]["flip_skill"]
+            notes.push({
+                "time": note.time + 3000,
+                "duration": 0,
+                "noteType": note.noteType,
+                "abilityId": flipSkill
+            });
+        }
+    }
+}
+
 async function generateSong(
     name,
     description,
@@ -605,6 +658,8 @@ async function generateSong(
     //     09 – Revenant
     if (build.profession == 3) {
         fixEngineer(build, notes);
+    } else if (build.profession == 5) {
+        fixThief(build, notes);
     } else if (build.profession == 6) {
         fixElementalist(build, notes);
     } else if (build.profession == 7) {
@@ -630,4 +685,11 @@ async function generateSong(
     };
 
     return song;
+}
+
+function warnOfIssues() {
+
+    // Scourge: No Profession skills
+    // Mechanist: No Pet skills
+    // Ranger: No Pet skills
 }
