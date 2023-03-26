@@ -95,7 +95,7 @@ function getRevenantUtilityNoteType(abilityId, utilitySlots, revenantInfo) {
         var paletteId = skillToPaletteLookup[abilityId];
         for (var i = 0; i < utilitySlots.length; i++) {
             if (utilitySlots[i] === paletteId) {
-                retval = "UtilitySkill" + (i + 1);
+                retval = "Utility" + (i + 1);
                 break;
             }
         }
@@ -104,7 +104,7 @@ function getRevenantUtilityNoteType(abilityId, utilitySlots, revenantInfo) {
         var paletteId = skillToPaletteLookup[abilityId];
         for (var i = 0; i < revenantInfo.inactiveUtilities.length; i++) {
             if (revenantInfo.inactiveUtilities[i] === paletteId) {
-                retval = "UtilitySkill" + (i + 1);
+                retval = "Utility" + (i + 1);
                 break;
             }
         }
@@ -165,7 +165,7 @@ function getNoteType(abilityId, utilitySlots, revenantInfo) {
                 var paletteId = skillToPaletteLookup[abilityId];
                 for (var i = 0; i < utilitySlots.length; i++) {
                     if (utilitySlots[i] === paletteId) {
-                        retval = "UtilitySkill" + (i + 1);
+                        retval = "Utility" + (i + 1);
                         break;
                     }
                 }
@@ -174,28 +174,28 @@ function getNoteType(abilityId, utilitySlots, revenantInfo) {
                 retval = getRevenantUtilityNoteType(abilityId, utilitySlots, revenantInfo);
             }
         } else if (slot === "Heal") {
-            retval = "HealingSkill";
+            retval = "Heal";
         } else if (slot === "Elite") {
-            retval = "EliteSkill";
+            retval = "Elite";
         } else if (slot === "Profession_1") {
-            retval = "ProfessionSkill1";
+            retval = "Profession1";
         } else if (slot === "Profession_2") {
-            retval = "ProfessionSkill2";
+            retval = "Profession2";
         } else if (slot === "Profession_3") {
-            retval = "ProfessionSkill3";
+            retval = "Profession3";
         } else if (slot === "Profession_4") {
-            retval = "ProfessionSkill4";
+            retval = "Profession4";
         } else if (slot === "Profession_5") {
-            retval = "ProfessionSkill5";
+            retval = "Profession5";
         } else if (slot === "Profession_6") {
-            retval = "ProfessionSkill6";
+            retval = "Profession6";
         } else if (slot === "Profession_7") {
-            retval = "ProfessionSkill7";
+            retval = "Profession7";
         } else if (slot === "Toolbelt") {
             // Special: These are skills from the Engineer. The slot has to be looked up from that lookup table
             slot = toolbeltIdToSlot[abilityId];
             if (slot == "Heal") {
-                retval = "ProfessionSkill1";
+                retval = "Profession1";
             } else if (slot == "Utility") {
                 // The same special treatment has to be done for the utility lookup
                 // Except it will now link to the profession skills 2-4
@@ -203,12 +203,12 @@ function getNoteType(abilityId, utilitySlots, revenantInfo) {
                 var paletteId = skillToPaletteLookup[abilityId];
                 for (var i = 0; i < utilitySlots.length; i++) {
                     if (utilitySlots[i] === paletteId) {
-                        retval = "ProfessionSkill" + (i + 2);
+                        retval = "Profession" + (i + 2);
                         break;
                     }
                 }
             } else if (slot == "Elite") {
-                retval = "ProfessionSkill5";
+                retval = "Profession5";
             } else {
                 retval = "Unknown"; // Value used if the lookup fails
             }
@@ -251,7 +251,7 @@ function fixTimeOffset(notes) {
  *
  * Elementalist: Conjure Weapons have a Weapon Swap during the cast. Entering is unnecessary.
  * Engineer: Kits have it when entering and exiting. Entering's is unnecessary.
- * Holosmith: Photon Forge has a weapon swap for enter and exit, which are both unnecessary as it uses a ProfessionSkill5 for this.
+ * Holosmith: Photon Forge has a weapon swap for enter and exit, which are both unnecessary as it uses a Profession5 for this.
  * Fire Brand: Happens when entering a tome (no rotation entry is made for the profession skill, so it needs to be swapped to that)
  * Bladesworn: Used when entering and existing, but seems completely unnecessary as there is a profession skill to do this.
  */
@@ -379,8 +379,8 @@ function fixWeaponSwaps(build, notes) {
                     // If this weapon swap is caused by PhotonForge, then photon forge
                     // should appear right next to it.
                     // It seems it is not 100% consistent which side it will be on
-                    (index > 0 && (notes[index-1].noteType == "ProfessionSkill5")) ||
-                    (index + 1 < notes.length && (notes[index+1].noteType == "ProfessionSkill5"))
+                    (index > 0 && (notes[index-1].noteType == "Profession5")) ||
+                    (index + 1 < notes.length && (notes[index+1].noteType == "Profession5"))
                 )
             ) {
                 // Ignore. Don't add note
@@ -479,7 +479,7 @@ function fixElementalist(build, notes) {
             notes.push({
                 "time": time,
                 "duration": 0,
-                "noteType": "EliteSkill",
+                "noteType": "Elite",
                 "abilityId": 25499
             });
         }

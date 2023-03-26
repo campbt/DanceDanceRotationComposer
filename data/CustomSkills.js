@@ -60,22 +60,22 @@ var customSkills = {
     // Weaver - Dual Fire
 	"43470": {
 		"isNote": true,
-		"noteType": "ProfessionSkill1"
+		"noteType": "Profession1"
 	},
     // Weaver - Dual Water
 	"41166": {
 		"isNote": true,
-		"noteType": "ProfessionSkill2"
+		"noteType": "Profession2"
 	},
     // Weaver - Dual Air
 	"42264": {
 		"isNote": true,
-		"noteType": "ProfessionSkill3"
+		"noteType": "Profession3"
 	},
     // Weaver - Dual Earth
 	"44857": {
 		"isNote": true,
-		"noteType": "ProfessionSkill4"
+		"noteType": "Profession4"
 	},
 
     // Firebrand Bundles are not in API for some reason
@@ -269,62 +269,62 @@ var customSkills = {
     // Weaver - Attunement Swap Fire/Water
 	"-5": {
 		"isNote": true,
-		"noteType": "ProfessionSkill1"
+		"noteType": "Profession1"
 	},
     // Weaver - Attunement Swap Fire/Air
 	"-6": {
 		"isNote": true,
-		"noteType": "ProfessionSkill1"
+		"noteType": "Profession1"
 	},
     // Weaver - Attunement Swap Fire/Earth
 	"-7": {
 		"isNote": true,
-		"noteType": "ProfessionSkill1"
+		"noteType": "Profession1"
 	},
     // Weaver - Attunement Swap Water/Fire
 	"-8": {
 		"isNote": true,
-		"noteType": "ProfessionSkill2"
+		"noteType": "Profession2"
 	},
     // Weaver - Attunement Swap Water/Air
 	"-9": {
 		"isNote": true,
-		"noteType": "ProfessionSkill2"
+		"noteType": "Profession2"
 	},
     // Weaver - Attunement Swap Water/Earth
 	"-10": {
 		"isNote": true,
-		"noteType": "ProfessionSkill2"
+		"noteType": "Profession2"
 	},
     // Weaver - Attunement Swap Air/Fire
 	"-11": {
 		"isNote": true,
-		"noteType": "ProfessionSkill3"
+		"noteType": "Profession3"
 	},
     // Weaver - Attunement Swap Air/Water
 	"-12": {
 		"isNote": true,
-		"noteType": "ProfessionSkill3"
+		"noteType": "Profession3"
 	},
     // Weaver - Attunement Swap Air/Earth
 	"-13": {
 		"isNote": true,
-		"noteType": "ProfessionSkill3"
+		"noteType": "Profession3"
 	},
     // Weaver - Attunement Swap Earth/Fire
 	"-14": {
 		"isNote": true,
-		"noteType": "ProfessionSkill4"
+		"noteType": "Profession4"
 	},
     // Weaver - Attunement Swap Earth/Air
 	"-15": {
 		"isNote": true,
-		"noteType": "ProfessionSkill4"
+		"noteType": "Profession4"
 	},
     // Weaver - Attunement Swap Earth/Earth
 	"-16": {
 		"isNote": true,
-		"noteType": "ProfessionSkill4"
+		"noteType": "Profession4"
 	},
     // Mirage - Ambush
 	"-17": {

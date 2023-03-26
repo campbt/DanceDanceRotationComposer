@@ -1,6 +1,6 @@
 // This file is used to generate ALL songs, including extra manual processing steps
 
-var songMetasActual = [
+var songMetas = [
 
     // MARK: Snow Crows
 
@@ -19,7 +19,7 @@ var songMetasActual = [
                 "abilityId": 5737,
                 "time": -1121,
                 "duration": 1121,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             },
             // Then add Weave Self (which comes before Lightning Storm)
             {
@@ -27,7 +27,7 @@ var songMetasActual = [
                 "abilityId": 43638,
                 "time": -800,
                 "duration": 800,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             }
         ]
     },
@@ -44,7 +44,7 @@ var songMetasActual = [
                 "abilityId": 43638,
                 "time": -800,
                 "duration": 800,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             }
         ]
     },
@@ -147,7 +147,7 @@ var songMetasActual = [
                 "abilityId": 24755,
                 "interval": 48100,
                 "offset": 800,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             }
         ]
     },
@@ -169,7 +169,7 @@ var songMetasActual = [
                 "abilityId": 24755,
                 "interval": 48100,
                 "offset": 3500,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             }
         ]
     },
@@ -199,28 +199,28 @@ var songMetasActual = [
                 "abilityId": 10549,
                 "time": -918,
                 "duration": 918,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 62667,
                 "time": -676,
                 "duration": 676,
-                "noteType": "HealingSkill"
+                "noteType": "Heal"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 62530,
                 "time": -682,
                 "duration": 682,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 62662,
                 "time": -683,
                 "duration": 683,
-                "noteType": "UtilitySkill3"
+                "noteType": "Utility3"
             }
         ]
     },
@@ -249,7 +249,7 @@ var songMetasActual = [
                 "abilityId": 6178,
                 "interval": 6500,
                 "offset": 1500,
-                "noteType": "ProfessionSkill3"
+                "noteType": "Profession3"
             },
             // Autocast Profession Skill 4, which doesn't show up in the dps logs
             {
@@ -257,7 +257,7 @@ var songMetasActual = [
                 "abilityId": 42163,
                 "interval": 24500,
                 "offset": 1750,
-                "noteType": "ProfessionSkill4"
+                "noteType": "Profession4"
             }
         ]
     },
@@ -273,7 +273,7 @@ var songMetasActual = [
                 "abilityId": 5812,
                 "time": -200,
                 "duration": 0,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             }
         ]
     },
@@ -309,14 +309,14 @@ var songMetasActual = [
                 "abilityId": 45479,
                 "time": -250,
                 "duration": 250,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             },
 			{
                 "command": "AddPreCastAbility",
                 "abilityId": 12496,
                 "time": -500,
                 "duration": 500,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             }
         ]
     },
@@ -333,7 +333,7 @@ var songMetasActual = [
                 "abilityId": 45479,
                 "interval": 24000,
                 "offset": 3450,
-                "noteType": "ProfessionSkill2"
+                "noteType": "Profession2"
             }
         ]
     },
@@ -350,7 +350,7 @@ var songMetasActual = [
                 "abilityId": 12594,
                 "time": -639,
                 "duration": 639,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             },
             // Precast Strength of the Pack
             {
@@ -358,7 +358,7 @@ var songMetasActual = [
                 "abilityId": 12516,
                 "time": -750,
                 "duration": 750,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             }
         ]
     },
@@ -375,7 +375,7 @@ var songMetasActual = [
                 "abilityId": 63157,
                 "time": -484,
                 "duration": 484,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             }
         ]
     },
@@ -392,7 +392,7 @@ var songMetasActual = [
                 "abilityId": 12537,
                 "time": -200,
                 "duration": 0,
-                "noteType": "UtilitySkill3"
+                "noteType": "Utility3"
             }
         ]
     },
@@ -441,7 +441,7 @@ var songMetasActual = [
                 "abilityId": 13082,
                 "time": -1162,
                 "duration": 1162,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             }
         ]
     },
@@ -457,7 +457,7 @@ var songMetasActual = [
                 "abilityId": 13093,
                 "time": -100,
                 "duration": 0,
-                "noteType": "UtilitySkill1"
+                "noteType": "Utility1"
             },
             // Precast Thieves Guild
             {
@@ -465,7 +465,7 @@ var songMetasActual = [
                 "abilityId": 13082,
                 "time": -1162,
                 "duration": 1162,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             }
         ]
     },
@@ -482,7 +482,7 @@ var songMetasActual = [
                 "abilityId": 43390,
                 "time": -402,
                 "duration": 402,
-                "noteType": "ProfessionSkill1"
+                "noteType": "Profession1"
             }
         ]
     },
@@ -499,7 +499,7 @@ var songMetasActual = [
                 "abilityId": 43390,
                 "time": -402,
                 "duration": 402,
-                "noteType": "ProfessionSkill1"
+                "noteType": "Profession1"
             },
             // Precast Thieves Guild
             {
@@ -507,7 +507,7 @@ var songMetasActual = [
                 "abilityId": 13082,
                 "time": -1162,
                 "duration": 1162,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             }
         ]
     },
@@ -545,7 +545,7 @@ var songMetasActual = [
                 "abilityId": 30364,
                 "time": -447,
                 "duration": 447,
-                "noteType": "UtilitySkill3"
+                "noteType": "Utility3"
             }
         ]
     },
@@ -574,18 +574,18 @@ var songMetasActual = [
         "buildChatCode": "[&DQEqOi4VQSYmDwAATAEAAEgBAAD+AAAA6RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/guardian/willbender/power-willbender",
         "postProcessSteps": [
-            // Delete the initial ProfessionSkill2 casts, they appear in the wrong order in the dps log and are added in manually
+            // Delete the initial Profession2 casts, they appear in the wrong order in the dps log and are added in manually
             {
                 "command": "DeleteAbilityId",
                 "abilityId": 62603
             },
-            // Precast Order: Flowing Resolve (ProfessionSkill2) x2 -> Crashing Courage (ProfessionSkill3) -> Shield of Wrath (Weapon5) -> Sword of Justice (UtilitySkill2)
+            // Precast Order: Flowing Resolve (Profession2) x2 -> Crashing Courage (Profession3) -> Shield of Wrath (Weapon5) -> Sword of Justice (Utility2)
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 9168,
                 "time": -597,
                 "duration": 597,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             },
             {
                 "command": "AddPreCastAbility",
@@ -599,21 +599,21 @@ var songMetasActual = [
                 "abilityId": 62648,
                 "time": -683,
                 "duration": 683,
-                "noteType": "ProfessionSkill3"
+                "noteType": "Profession3"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 62603,
                 "time": -500,
                 "duration": 500,
-                "noteType": "ProfessionSkill2"
+                "noteType": "Profession2"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 62603,
                 "time": -500,
                 "duration": 500,
-                "noteType": "ProfessionSkill2"
+                "noteType": "Profession2"
             }
         ]
     },
@@ -627,34 +627,34 @@ var songMetasActual = [
         "buildChatCode": "[&DQkPKgM2NDXcEdwRKxIrEtQR1BEGEgYSyhHKEQECAQIGEisS1BEGEisS1BE=]",
         "buildUrl": "https://snowcrows.com/en/builds/revenant/herald/power-herald",
         "postProcessSteps": [
-            // Precast Activating Facets | Facet of Nature (ProfessionSkill2) -> Facet of Darkness (UtilitySkill3) -> Facet of Nature (HealingSkill) -> Facet of Strength (UtilitySkill2)
+            // Precast Activating Facets | Facet of Nature (Profession2) -> Facet of Darkness (Utility3) -> Facet of Nature (Heal) -> Facet of Strength (Utility2)
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 26644,
                 "time": -333,
                 "duration": 0,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 27220,
                 "time": -333,
                 "duration": 0,
-                "noteType": "HealingSkill"
+                "noteType": "Heal"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 28379,
                 "time": -333,
                 "duration": 0,
-                "noteType": "UtilitySkill3"
+                "noteType": "Utility3"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 29371,
                 "time": -333,
                 "duration": 0,
-                "noteType": "ProfessionSkill2"
+                "noteType": "Profession2"
             }
         ]
     },
@@ -665,15 +665,15 @@ var songMetasActual = [
         "buildChatCode": "[&DQkPKgM2NCbcEdwRKxIrEtQR1BEGEgYSyhHKEQECAQIGEisS1BEGEisS1BE=]",
         "buildUrl": "https://snowcrows.com/en/builds/revenant/herald/power-quickness-herald",
         "postProcessSteps": [
-            // Precast Activating Facets | Facet of Nature (ProfessionSkill2) -> Facet of Darkness (UtilitySkill3) -> Facet of Nature (HealingSkill)
-            // Then precast activating two of them: Infuse Light (HealingSkill) -> True Nature (ProfessionSkill2)
-            // -> Facet of Strength (UtilitySkill2)
+            // Precast Activating Facets | Facet of Nature (Profession2) -> Facet of Darkness (Utility3) -> Facet of Nature (Heal)
+            // Then precast activating two of them: Infuse Light (Heal) -> True Nature (Profession2)
+            // -> Facet of Strength (Utility2)
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 26644,
                 "time": -333,
                 "duration": 0,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             },
             // Activate Facets:
             {
@@ -681,14 +681,14 @@ var songMetasActual = [
                 "abilityId": 51667,
                 "time": -333,
                 "duration": 0,
-                "noteType": "ProfessionSkill2"
+                "noteType": "Profession2"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 27228,
                 "time": -333,
                 "duration": 0,
-                "noteType": "HealingSkill"
+                "noteType": "Heal"
             },
             // Turn on Facets:
             {
@@ -696,21 +696,21 @@ var songMetasActual = [
                 "abilityId": 27220,
                 "time": -333,
                 "duration": 0,
-                "noteType": "HealingSkill"
+                "noteType": "Heal"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 28379,
                 "time": -333,
                 "duration": 0,
-                "noteType": "UtilitySkill3"
+                "noteType": "Utility3"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 29371,
                 "time": -333,
                 "duration": 0,
-                "noteType": "ProfessionSkill2"
+                "noteType": "Profession2"
             }
         ]
     },
@@ -726,13 +726,13 @@ var songMetasActual = [
                 "command": "DeleteAt",
                 "index": 0
             },
-            // Precast Razorclaw's Rage (UtilitySkill3) -> Temporal Rift (Weapon5) -> Echoing Eruption (Weapon3) -> Orders from above (ProfessionSkill4)
+            // Precast Razorclaw's Rage (Utility3) -> Temporal Rift (Weapon5) -> Echoing Eruption (Weapon3) -> Orders from above (Profession4)
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 45537,
                 "time": -440,
                 "duration": 440,
-                "noteType": "ProfessionSkill4"
+                "noteType": "Profession4"
             },
             {
                 "command": "AddPreCastAbility",
@@ -753,7 +753,7 @@ var songMetasActual = [
                 "abilityId": 42949,
                 "time": -520,
                 "duration": 520,
-                "noteType": "UtilitySkill3"
+                "noteType": "Utility3"
             }
         ]
     },
@@ -769,7 +769,7 @@ var songMetasActual = [
                 "abilityId": 42836,
                 "time": -592,
                 "duration": 592,
-                "noteType": "ProfessionSkill3"
+                "noteType": "Profession3"
             },
             {
                 "command": "AddPreCastAbility",
@@ -783,7 +783,7 @@ var songMetasActual = [
                 "abilityId": 42949,
                 "time": -520,
                 "duration": 520,
-                "noteType": "UtilitySkill3"
+                "noteType": "Utility3"
             }
         ]
     },
@@ -800,7 +800,7 @@ var songMetasActual = [
                 "abilityId": 62942,
                 "time": -597,
                 "duration": 597,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             }
         ]
     },
@@ -823,20 +823,20 @@ var songMetasActual = [
         "buildChatCode": "[&DQIEHxY/PT2mAAAArQAAAKkAAACvAAAAnRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/warrior/spellbreaker/power-spellbreaker",
         "postProcessSteps": [
-            // Precast: "To the Limit" (Heal) -> Winds of Disenchantment (EliteSkill)
+            // Precast: "To the Limit" (Heal) -> Winds of Disenchantment (Elite)
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 45333,
                 "time": -1200,
                 "duration": 1200,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 14402,
                 "time": -800,
                 "duration": 800,
-                "noteType": "HealingSkill"
+                "noteType": "Heal"
             }
         ]
     },
@@ -853,35 +853,35 @@ var songMetasActual = [
                 "abilityId": 68085,
                 "time": -689,
                 "duration": 689,
-                "noteType": "UtilitySkill3"
+                "noteType": "Utility3"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 62967,
                 "time": -300,
                 "duration": 300,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 62901,
                 "time": -560,
                 "duration": 560,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 62967,
                 "time": -300,
                 "duration": 300,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             },
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 62967,
                 "time": -300,
                 "duration": 300,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             }
         ]
     },
@@ -939,7 +939,7 @@ var songMetasActual = [
                 "abilityId": 5818,
                 "time": -800,
                 "duration": 500,
-                "noteType": "UtilitySkill2"
+                "noteType": "Utility2"
             },
             // Autocast Profession Skill 3, which doesn't show up in the dps logs
             {
@@ -947,7 +947,7 @@ var songMetasActual = [
                 "abilityId": 6178,
                 "interval": 6500,
                 "offset": 1500,
-                "noteType": "ProfessionSkill3"
+                "noteType": "Profession3"
             },
             // Autocast Profession Skill 4, which doesn't show up in the dps logs
             {
@@ -955,7 +955,7 @@ var songMetasActual = [
                 "abilityId": 42163,
                 "interval": 24500,
                 "offset": 1750,
-                "noteType": "ProfessionSkill4"
+                "noteType": "Profession4"
             }
         ]
     },
@@ -972,16 +972,11 @@ var songMetasActual = [
                 "abilityId": 63095,
                 "interval": 72500,
                 "offset": 3000,
-                "noteType": "EliteSkill"
+                "noteType": "Elite"
             }
         ]
     }
 
-];
-
-// Only ones being tested at the moment
-// TODO: MOVE ALL TO ONE ARRAY
-var songMetas = [
 ];
 
 function deleteAt(song, index) {
