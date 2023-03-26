@@ -290,7 +290,7 @@ var songMetasActual = [
         ]
     },
     {
-        "name": "Condi Soulbeast",
+        "name": "Condi Soulbeast [Benchmark]",
         "description": "by: Snow Crows\nUpdated Dec 26, 2022\nStart in Beastmode with Lynx",
         "logUrl": "https://dps.report/vqa8-20220905-124634_golem",
         "buildChatCode": "[&DQQeLSE3Ny55AC4XvwC/ALoApQHpFukWLhYuFgMlFQkAAAAAAAAAAAAAAAA=]",
