@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Song Editor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script language="javascript" src="data/CustomSkills.js"></script>
+        <script language="javascript" src="data/AllSkills.js"></script>
+        <script language="javascript" src="data/Buildtemplate.js"></script>
+        <script language="javascript" src="data/PaletteSkills.js"></script>
+        <script language="javascript" src="data/ToolbeltToSlots.js"></script>
+        <script language="javascript" src="data/RevenantSkillToLegend.js"></script>
+        <script language="javascript" src="ddr.js"></script>
+        <script language="javascript" src="ddrEdit.js"></script>
+    </head>
+    <body style="max-width: 1280px; margin-left: auto; margin-right: auto">
+        <nav id="navigation"></nav>
+        <div style="text-align: center; margin-bottom: 2%">
+            <h1>DDR Song for Instruments</h1>
+            <h2>Instructions:</h2>
+            Navigate to <a href=http://gw2mb.com/archive.php>http://gw2mb.com/archive.php</a><br/>
+            Find a song and click "Export Song"<br/>
+            Copy the contents of "AutoHotkey Script" to this form's Input field.<br/>
+            Assign it a song name and instrument and click Generate<br/>
+        </div>
+        <div class="row">
+            <div class="col">
+                <small id="description" class="form-text text-muted">Input:</small>
+                <div class="form-group">
+                    <textarea class="form-control" id="song" name="song" rows="5" cols="10" style="margin-top: 2%"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <small id="description" class="form-text text-muted">Output:</small>
+                <div class="form-group">
+                    <textarea class="form-control" id="songOutput" name="songOutput" rows="5" cols="10" style="margin-top: 2%"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="name">Give your song a name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="ex: Power Catalyst" value=""/>
+                        <small id="nameHelp" class="form-text text-muted">The song name should be something like "Power Catalyst" or "Condition Weaver"</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div style="text-align: right; margin-right: 5%">
+                        <label for="instrument" class="form-text text-muted">Instrument:</small>
+                        <select id="instrument">
+                            <option>Bell</option>
+                            <option>Flute</option>
+                            <option>Horn</option>
+                            <option>Harp</option>
+                            <option>Lute</option>
+                            <option>Bell2</option>
+                            <option>Bass</option>
+                        </select>
+                        <button class="btn btn-primary" type="button" id="generate">Generate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div style="text-align: right; margin-right: 5%">
+                    <button class="btn btn-primary" type="button" id="copyToClipboard">Copy Song to Clipboard</button>
+                    <button class="btn btn-primary" type="button" id="saveToFile">Save Song to File</button>
+                </div>
+            </div>
+        </div>
+
+        <div for="description" id="output" style="padding-left: 5%; padding-right: 5%; padding-top: 1%"></div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+        <script>
+            $('#generate').on('click', function() {
+                var autoHotkeyScript = $("#song").val();
+                var name = $("#name").val();
+                var instrument = $("#instrument").val();
+
+                try {
+                    var updatedSong = generateFromMusicBox(
+                        autoHotkeyScript,
+                        name,
+                        instrument
+                    );
+                    var json = JSON.stringify(updatedSong, null, 4);
+                    $("#songOutput").val(json);
+                    appendOutput("Generated instrument song");
+                } catch (e) {
+                    setOutput("Failed: " + e);
+                }
+            });
+
+            //Copy the song object to the clipboard for immediate import into DDR
+            //Requires the page to be served over localhost or HTTPS.  HTTP sites will NOT work!
+            $('#copyToClipboard').on('click', function () {
+                if (navigator.clipboard) {
+                    navigator.clipboard
+                        .writeText($('#songOutput').text())
+                        .then(() => {
+                            alert("Copied to Clipboard!");
+                        });
+                } else {
+                    alert("Failed to copy to clipboard.");
+                }
+            });
+
+            ////Download the song object to a JSON file
+            $('#saveToFile').on('click', function () {
+                var name = $("#name").val();
+                var songJson = $('#songOutput').val();
+                if (songJson.length == 0) {
+                    alert("No song has been input");
+                    return;
+                }
+                var blob = new Blob([songJson], {
+                    type: "application/json"
+                });
+                var link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = name + ".json";
+                link.click();
+            });
+        </script>
+    </body>
+</html>

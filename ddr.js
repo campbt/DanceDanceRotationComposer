@@ -686,3 +686,159 @@ function warnOfIssues() {
     // Mechanist: No Pet skills
     // Ranger: No Pet skills
 }
+
+// MARK: Music Box
+
+/**
+ * Converts an AutoHotkey script from http://gw2mb.com/archive.php
+ */
+function generateFromMusicBox(
+    autoHotkeyScript,
+    name,
+    instrument
+) {
+    var lines = autoHotkeyScript.split("\n");
+
+    var time = 0;
+    var notes = [];
+    for (var index = 0; index < lines.length; index++) {
+        var line = lines[index];
+
+        if (line.includes("up")) {
+            continue;
+        }
+        if (line.includes("Sleep")) {
+            time += parseInt(line.replace(/\D/g,''));
+        } else if (line.includes("Numpad")) {
+            var numPad = parseInt(line.replace(/\D/g,''));
+
+            var noteType = "Unknown";
+            var abilityId = 0;
+
+
+            if (numPad == 0) {
+                noteType = "Utility3";
+                abilityId = -1309;
+            } else if (numPad == 1) {
+                noteType = "Weapon1";
+                abilityId = -1301;
+            } else if (numPad == 2) {
+                noteType = "Weapon2";
+                abilityId = -1302;
+            } else if (numPad == 3) {
+                noteType = "Weapon3";
+                abilityId = -1303;
+            } else if (numPad == 4) {
+                noteType = "Weapon4";
+                abilityId = -1304;
+            } else if (numPad == 5) {
+                noteType = "Weapon5";
+                abilityId = -1305;
+            } else if (numPad == 6) {
+                noteType = "Heal";
+                abilityId = -1306;
+            } else if (numPad == 7) {
+                noteType = "Utility1";
+                abilityId = -1307;
+            } else if (numPad == 8) {
+                noteType = "Utility2";
+                abilityId = -1308;
+            } else if (numPad == 9) {
+                noteType = "Elite";
+                abilityId = -1310;
+            } else {
+                console.log("Unknown Numpad: " + numPad + " | line: " + line);
+                continue;
+            }
+
+            var note = {
+                "time": time,
+                "duration": 500,
+                "noteType": noteType,
+                "abilityId": abilityId
+            };
+            if (numPad == 1) {
+                note["overrideAuto"] = true;
+            }
+
+            notes.push(note);
+        }
+    }
+
+    var song = {
+        "name" : name,
+        "description" : "A song to be played on a " + instrument,
+        "logUrl" : "",
+        "buildChatCode" : "",
+        "buildUrl" : "",
+        "decodedBuildTemplate" : {
+            "profession": 0,
+            "specializations": [
+                {
+                    "id": 31,
+                    "traits": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "id": 37,
+                    "traits": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "id": 0,
+                    "traits": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ],
+            "skills": {
+                "terrestrial": {
+                    "heal": 0,
+                    "utilities": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "elite": 0
+                },
+                "aquatic": {
+                    "heal": 0,
+                    "utilities": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "elite": 0
+                }
+            },
+            "specific": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "notes" : notes
+    };
+    return song;
+}
