@@ -28,6 +28,17 @@ var songMetas = [
                 "time": -800,
                 "duration": 800,
                 "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
+            },
+            // Add in the Profession1 that is not in the dps report for some reason
+            {
+                "command": "AddAbility",
+                "time": 1200,
+                "duration": 0,
+                "noteType": "Profession1",
+                "abilityId": -6
             }
         ]
     },
@@ -45,6 +56,9 @@ var songMetas = [
                 "time": -800,
                 "duration": 800,
                 "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -55,6 +69,9 @@ var songMetas = [
         "buildChatCode": "[&DQYfHSkfQyb+GgAAvgEAAPgaAADuGgAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/elementalist/catalyst/power-catalyst",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
     {
@@ -64,6 +81,9 @@ var songMetas = [
         "buildChatCode": "[&DQYpHyU1Qz50AAAAvgEAAPgaAADuGgAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/elementalist/catalyst/power-quickness-catalyst",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
 
@@ -76,6 +96,9 @@ var songMetas = [
         "buildChatCode": "[&DQcKGQEdKD4jDwAABBMAAGkBAACPAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/mesmer/chronomancer/power-chronomancer",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
     {
@@ -85,6 +108,9 @@ var songMetas = [
         "buildChatCode": "[&DQcBJS09OxfuFQAA4BUAAIEBAACDAQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/mesmer/mirage/condition-alacrity-mirage",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
     {
@@ -101,6 +127,9 @@ var songMetas = [
                 "time": -560,
                 "duration": 560,
                 "noteType": "Weapon4"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -131,6 +160,9 @@ var songMetas = [
                 "time": -600,
                 "duration": 879,
                 "noteType": "Weapon5"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -148,6 +180,9 @@ var songMetas = [
                 "interval": 48100,
                 "offset": 800,
                 "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -170,6 +205,9 @@ var songMetas = [
                 "interval": 48100,
                 "offset": 3500,
                 "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -184,6 +222,9 @@ var songMetas = [
         "buildChatCode": "[&DQgnNjI1PCYoD6IAgAAAAG8BAABwAQAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/necromancer/scourge/condition-scourge",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
     {
@@ -221,6 +262,9 @@ var songMetas = [
                 "time": -683,
                 "duration": 683,
                 "noteType": "Utility3"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -231,6 +275,9 @@ var songMetas = [
         "buildChatCode": "[&DQg1KTImIjabACgPQAGBAIEAQAHxEnUBlQCVAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/necromancer/reaper/power-reaper",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
 
@@ -258,6 +305,9 @@ var songMetas = [
                 "interval": 24500,
                 "offset": 1750,
                 "noteType": "Profession4"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -274,6 +324,9 @@ var songMetas = [
                 "time": -200,
                 "duration": 0,
                 "noteType": "Utility2"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -287,6 +340,9 @@ var songMetas = [
         "buildChatCode": "[&DQQePSA/Nzp5AAAApQEAAKwBAAC1AAAALhYAADsAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/ranger/soulbeast/power-soulbeast",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
     {
@@ -317,6 +373,9 @@ var songMetas = [
                 "time": -500,
                 "duration": 500,
                 "noteType": "Utility2"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -334,6 +393,9 @@ var songMetas = [
                 "interval": 24000,
                 "offset": 3450,
                 "noteType": "Profession2"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -359,6 +421,9 @@ var songMetas = [
                 "time": -750,
                 "duration": 750,
                 "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -376,6 +441,9 @@ var songMetas = [
                 "time": -484,
                 "duration": 484,
                 "noteType": "Utility2"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -393,6 +461,9 @@ var songMetas = [
                 "time": -200,
                 "duration": 0,
                 "noteType": "Utility3"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -442,6 +513,9 @@ var songMetas = [
                 "time": -1162,
                 "duration": 1162,
                 "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -466,6 +540,9 @@ var songMetas = [
                 "time": -1162,
                 "duration": 1162,
                 "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -483,6 +560,9 @@ var songMetas = [
                 "time": -402,
                 "duration": 402,
                 "noteType": "Profession1"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -508,6 +588,9 @@ var songMetas = [
                 "time": -1162,
                 "duration": 1162,
                 "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -518,6 +601,9 @@ var songMetas = [
         "buildChatCode": "[&DQUcGywXRx8VGwAALwEAAAgbAAAGGwAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/thief/specter/condition-alacrity-spectre",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
     {
@@ -527,6 +613,9 @@ var songMetas = [
         "buildChatCode": "[&DQUcGywfRxcVGwAAPgEAAC8BAAALAQAAKAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/thief/specter/condition-spectre",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
 
@@ -546,6 +635,9 @@ var songMetas = [
                 "time": -447,
                 "duration": 447,
                 "noteType": "Utility3"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -556,6 +648,9 @@ var songMetas = [
         "buildChatCode": "[&DQEQGi4fPi5LFwAATAEAABUXAAB6FgAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/guardian/firebrand/condition-quickness-firebrand",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
     {
@@ -565,6 +660,9 @@ var songMetas = [
         "buildChatCode": "[&DQEQGi4fPi1LFwAATAEAABUXAAAxAQAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/guardian/firebrand/condition-firebrand",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
     {
@@ -614,6 +712,9 @@ var songMetas = [
                 "time": -500,
                 "duration": 500,
                 "noteType": "Profession2"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -655,6 +756,9 @@ var songMetas = [
                 "time": -333,
                 "duration": 0,
                 "noteType": "Profession2"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -711,6 +815,9 @@ var songMetas = [
                 "time": -333,
                 "duration": 0,
                 "noteType": "Profession2"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -754,6 +861,9 @@ var songMetas = [
                 "time": -520,
                 "duration": 520,
                 "noteType": "Utility3"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -784,6 +894,9 @@ var songMetas = [
                 "time": -520,
                 "duration": 520,
                 "noteType": "Utility3"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -801,6 +914,9 @@ var songMetas = [
                 "time": -597,
                 "duration": 597,
                 "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -814,6 +930,9 @@ var songMetas = [
         "buildChatCode": "[&DQIkLTM9EiryEgAA3BIAANcSAADEEgAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/warrior/berserker/condition-berserker",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
     {
@@ -837,6 +956,9 @@ var songMetas = [
                 "time": -800,
                 "duration": 800,
                 "noteType": "Heal"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -882,6 +1004,9 @@ var songMetas = [
                 "time": -300,
                 "duration": 300,
                 "noteType": "Utility2"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -899,6 +1024,9 @@ var songMetas = [
             {
                 "command": "DeleteAt",
                 "index": 2
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -910,6 +1038,9 @@ var songMetas = [
         "buildChatCode": "[&DQYfFSUlOBUnDwAAcgAAAE0BAAA1FwAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://www.youtube.com/watch?v=9rVVx0aSuSk",
         "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
         ]
     },
     {
@@ -923,6 +1054,9 @@ var songMetas = [
             {
                 "command": "DeleteAt",
                 "index": 2
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -956,6 +1090,9 @@ var songMetas = [
                 "interval": 24500,
                 "offset": 1750,
                 "noteType": "Profession4"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     },
@@ -973,11 +1110,40 @@ var songMetas = [
                 "interval": 72500,
                 "offset": 3000,
                 "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
             }
         ]
     }
 
 ];
+
+/** Adds a new note in at the correct location. Does NOT shift any notes around. */
+function addAbility(song, abilityId, time, duration, noteType) {
+    var newNote = {
+        "time": time,
+        "duration": duration,
+        "noteType": noteType,
+        "abilityId": abilityId
+    };
+
+    var notes = song.notes;
+    for (var index = 0; index < notes.length; index++) {
+        var note = notes[index];
+        if (note.time > newNote.time) {
+            notes.splice(
+                index, 0,
+                newNote
+            );
+            return;
+        }
+    }
+
+    song.notes.push(
+        newNote
+    );
+}
 
 function deleteAt(song, index) {
     var note = song.notes[index];
@@ -1023,7 +1189,8 @@ async function generateSongs() {
             songMeta.description,
             songMeta.logUrl,
             songMeta.buildChatCode,
-            songMeta.buildUrl
+            songMeta.buildUrl,
+            false // Don't optimize at this stage. Do it after postProcess
         )
         console.log("  Song Generated!");
 
@@ -1032,7 +1199,15 @@ async function generateSongs() {
             var process = postProcessSteps[postIndex];
             var command = process.command;
             console.log("  Post Process: " + command);
-            if (command == "AddPreCastAbility") {
+            if (command == "AddAbility") {
+                addAbility(
+                    song,
+                    process.abilityId,
+                    process.time,
+                    process.duration,
+                    process.noteType
+                );
+            } else if (command == "AddPreCastAbility") {
                 song = addPrecastAbility(
                     song,
                     process.abilityId,
@@ -1053,6 +1228,11 @@ async function generateSongs() {
                 deleteAt(song, index);
             } else if (command == "DeleteAbilityId") {
                 deleteAbilityId(song, process.abilityId);
+            } else if (command == "OptimizeAbilityQueue") {
+                song.notes = optimizeAbilityQueue(
+                    song.decodedBuildTemplate,
+                    song.notes
+                );
             }
         }
         console.log("  Completed");

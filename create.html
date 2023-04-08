@@ -11,6 +11,7 @@
         <script language="javascript" src="data/PaletteSkills.js"></script>
         <script language="javascript" src="data/ToolbeltToSlots.js"></script>
         <script language="javascript" src="data/RevenantSkillToLegend.js"></script>
+        <script language="javascript" src="data/SkillPriority.js"></script>
         <script language="javascript" src="ddr.js"></script>
 	</head>
     <body style="max-width: 1280px; margin-left: auto; margin-right: auto">
@@ -63,6 +64,17 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <!-- <label for="optimizeAbilityQueue">Optimize Build for Ability Queueing</label> -->
+                        Optimize Build for Ability Queueing
+                        <input type="checkbox" class="form-control" id="optimizeAbilityQueue" name="optimizeAbilityQueue" value="false" />
+                    </div>
+                </div>
+            </div>
         </form>
         <div class="row">
             <button class="btn btn-primary" type="submit" id="submit" style="margin-left: auto; margin-right: 5%">Submit</button>
@@ -89,13 +101,15 @@
                 var logUrl = $("#logUrl").val();
                 var buildChatCode = $("#buildChatCode").val();
                 var buildUrl = $("#buildUrl").val();
+                var optimizeAbilityQueue = $("#optimizeAbilityQueue").val();
 
 				generateSong(
                     name,
                     description,
                     logUrl,
                     buildChatCode,
-                    buildUrl
+                    buildUrl,
+                    optimizeAbilityQueue
                 )
                     .then((result) => {
                         var song = result;

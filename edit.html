@@ -11,6 +11,7 @@
         <script language="javascript" src="data/PaletteSkills.js"></script>
         <script language="javascript" src="data/ToolbeltToSlots.js"></script>
         <script language="javascript" src="data/RevenantSkillToLegend.js"></script>
+        <script language="javascript" src="data/SkillPriority.js"></script>
         <script language="javascript" src="ddr.js"></script>
         <script language="javascript" src="ddrEdit.js"></script>
     </head>
@@ -100,6 +101,9 @@
                 </div>
             </div>
         </div>
+        <div class="row" style="padding-left: 5%; padding-right: 5%; padding-top: 5%">
+            <button class="btn btn-primary" type="optimizeAbilityQueue" id="optimizeAbilityQueue" style="margin-left: auto; margin-right: 5%; margin-top: 5%">Optimize for Ability Queue</button>
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -149,6 +153,28 @@
                     var json = JSON.stringify(updatedSong, null, 4);
                     $("#songOutput").val(json);
                     appendOutput("Updated song with autocast ability");
+                } catch (e) {
+                    setOutput("Failed: " + e);
+                }
+            });
+
+            $('#optimizeAbilityQueue').on('click', function() {
+                var songInput = $("#song").val();
+
+                try {
+                    var song = parseSong(songInput);
+                    var newNotes = optimizeAbilityQueue(
+                        song.notes
+                    );
+                    newNotes.sort(
+                        function(a,b) {
+                            return a.time-b.time;
+                        }
+                    );
+                    song.notes = newNotes;
+                    var json = JSON.stringify(song, null, 4);
+                    $("#songOutput").val(json);
+                    appendOutput("Updated song now optimized for ability casting");
                 } catch (e) {
                     setOutput("Failed: " + e);
                 }

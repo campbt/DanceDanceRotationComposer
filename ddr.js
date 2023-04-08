@@ -5,6 +5,7 @@
 // var skillToPaletteLookup (loaded from data/PaletteSkills.js)
 // var toolbeltIdToSlot (loaded from data/ToolbeltToSlots.js)
 // var reventSkillToLegend (loaded from data/RevenantSkillToLegend.js)
+// var skillPriority (loaded from data/SkillPriority.js)
 
 /*
  * Makes a GET request for the logUrl and then parses the results to find the rotation
@@ -218,6 +219,41 @@ function getNoteType(abilityId, utilitySlots, revenantInfo) {
     return retval;
 }
 
+// MARK: Post Process Utilities
+
+function isConjureAbility(abilityId) {
+    if ((abilityId in allSkills) == false) {
+        return false;
+    }
+    var skillInfo = allSkills[abilityId];
+    if (("categories" in skillInfo) == false) {
+        return false;
+    }
+    var categories = allSkills[abilityId]["categories"];
+    for (var index = 0; index < categories.length; index++) {
+        if (categories[index] == "Conjure") {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Kits sometimes have a category, but some don't
+// So, we'll check if there are bundle skills
+function isKitAbility(abilityId) {
+    if ((abilityId in allSkills) == false) {
+        return false;
+    }
+    var skillInfo = allSkills[abilityId];
+    if (("bundle_skills" in skillInfo) == false) {
+        return false;
+    }
+    var bundleSkills = allSkills[abilityId]["bundle_skills"];
+    return bundleSkills.length > 0;
+}
+
+// MARK: Post Process Functions
+
 /**
  * Post Process Step: Fix Time Offset
  *
@@ -351,20 +387,6 @@ function fixWeaponSwaps(build, notes) {
     } else if (profession == 3) {
         // Engineer
 
-        // Kits sometimes have a category, but some don't
-        // So, we'll check if there are bundle skills
-        function isKitAbility(abilityId) {
-            if ((abilityId in allSkills) == false) {
-                return false;
-            }
-            var skillInfo = allSkills[abilityId];
-            if (("bundle_skills" in skillInfo) == false) {
-                return false;
-            }
-            var bundleSkills = allSkills[abilityId]["bundle_skills"];
-            return bundleSkills.length > 0;
-        }
-
         retval = [];
 
         var isHolosmith = hasSpec(57);
@@ -405,23 +427,6 @@ function fixWeaponSwaps(build, notes) {
         // Elementalist
         // If the abilityId of the note is for a conjured weapon, search forward and remove the next weapon swap
 
-        function isConjureAbility(abilityId) {
-            if ((abilityId in allSkills) == false) {
-                return false;
-            }
-            var skillInfo = allSkills[abilityId];
-            if (("categories" in skillInfo) == false) {
-                return false;
-            }
-            var categories = allSkills[abilityId]["categories"];
-            for (var index = 0; index < categories.length; index++) {
-                if (categories[index] == "Conjure") {
-                    return true;
-                }
-            }
-            return false;
-        }
-
         retval = [];
         for (var index = 0; index < notes.length; index++) {
             var note = notes[index];
@@ -450,6 +455,8 @@ function fixWeaponSwaps(build, notes) {
     return retval;
 }
 
+// MARK: Post-Process Class Specific Fixes
+
 /**
  * Post-Profess: Elemenalist Specific
  */
@@ -468,7 +475,7 @@ function fixElementalist(build, notes) {
             notes.push({
                 "time": note.time + 759,
                 "duration": 0,
-                "noteType": note.nodeType,
+                "noteType": note.noteType,
                 "abilityId": flipSkill
             });
         }
@@ -573,12 +580,219 @@ function fixThief(build, notes) {
     }
 }
 
+// MARK: Optimize Ability Queue
+
+/**
+ * To have better songs, the notes should take advantage of ability queueing when possible
+ * This means that the note hits while another ability is casting, allowing the ability to be queued.
+ *
+ * The system for ability queueing is a bit opaque but it seems to be this:
+ * At most, one skill can be queued up at a time.
+ *
+ * + If the note is instant cast (duration of 0ms): Don't move it
+ * + If the note has higher priority than the previous skill: Don't move it
+ * + If the note has equal to or lower priority than the previous skill: Move note time back to somewhere within the previous skill's duration (maybe with a buffer of like 200ms?)
+ *
+ *  Ex: {A, t=0, 500ms}, {B, t=500, 500ms}, {C, t=750, 0ms}, {D, t=1000, 500ms}, {E, t=1500, 500ms, +1 priority}
+ *      =>
+ *      {A, t=0, 500ms}, {B, t=200, 500ms}, {D, t=700, 500ms}, {C, t=750, 0ms}, {E, t=1500, 500ms, +1 priority}
+ */
+function optimizeAbilityQueue(
+    build,
+    notes
+) {
+    if (notes.length == 0) {
+        return notes;
+    }
+
+    var newNotes = [];
+
+    // Some profession specific fixes exist
+    //     01 – Guardian
+    //     02 – Warrior
+    //     03 – Engineer
+    //     04 – Ranger
+    //     05 – Thief
+    //     06 – Elementalist
+    //     07 – Mesmer
+    //     08 – Necromancer
+    //     09 – Revenant
+    var profession = build["profession"];
+    //     5: Druid
+    //     7: Daredevil
+    //     18: Berserker
+    //     27: Dragonhunter
+    //     34: Reaper
+    //     40: Chronomancer
+    //     43: Scrapper
+    //     48: Tempest
+    //     52: Herald
+    //     55: Soulbeast
+    //     56: Weaver
+    //     57: Holosmith
+    //     58: Deadeye
+    //     59: Mirage
+    //     60: Scourge
+    //     61: Spellbreaker
+    //     62: Firebrand
+    //     63: Renegade
+    //     64: Harbinger
+    //     65: Willbender
+    //     66: Virtuoso
+    //     67: Catalyst
+    //     68: Bladesworn
+    //     69: Vindicator
+    //     70: Mechanist
+    //     71: Specter
+    //     72: Untamed
+    var elite = build["specializations"][3]["id"];
+
+    var specialPrioritySkillId
+
+    function canBeQueuedOn(castingNote, nextNote) {
+        // Basic Auto Attacks can not be queued or be queued on
+        if (castingNote.noteType == "Weapon1" && castingNote.overrideAuto != true)
+            return false;
+        if (nextNote.noteType == "Weapon1" && nextNote.overrideAuto != true)
+            return false;
+
+        var castingAbilityId = castingNote.abilityId;
+        var nextAbilityId = nextNote.abilityId;
+
+        var castingPriority = 1;
+        if (castingAbilityId in skillPriority) {
+            castingPriority += skillPriority[castingAbilityId];
+        }
+
+        var nextAbilityPriority = 1;
+        if (nextAbilityId in skillPriority) {
+            nextAbilityPriority += skillPriority[nextAbilityId];
+        }
+
+        return castingPriority >= nextAbilityPriority;
+    }
+
+    var currentCastingNote = null;
+    for (var index = 0; index < notes.length; index++) {
+        var oldNote = notes[index];
+        var note = JSON.parse(JSON.stringify(oldNote, null, 4));
+        newNotes.push(note);
+
+        // BUT, dodges/swaps/stows...etc can't be moved and also prevent other abilities from
+        // being enqueued earlier than them.
+        if (
+            note.noteType == "Heal" ||
+            note.noteType == "Dodge" ||
+            note.noteType == "WeaponSwap" ||
+            note.noteType == "WeaponStow" ||
+            note.noteType == "Unknown"
+        ) {
+            currentCastingNote = null;
+            continue;
+        }
+
+        if (
+            (note.abilityId in skillPriorityBlacklistInstantCasts) ||
+            isKitAbility(note.abilityId) ||
+            isConjureAbility(note.abilityId)
+        ) {
+            // These skills have duration 0 but other abilities can NOT be queued in front of them
+            // They are generally some kind of kit or ability swap, similar to WeaponSwap
+            currentCastingNote = null;
+            continue;
+        }
+
+        // Profession Specific
+        if (elite == 62) {
+            // Firebrand can't allow shifting skills around any profession skill
+            if (
+                note.noteType == "Profession1" ||
+                note.noteType == "Profession2" ||
+                note.noteType == "Profession3"
+            ) {
+                currentCastingNote = null;
+                continue;
+            }
+        } else if (elite == 68) {
+            // Bladesworn has Sheath/Unsheath gunsaber for profession skill 1
+            if (
+                note.noteType == "Profession1"
+            ) {
+                currentCastingNote = null;
+                continue;
+            }
+        } else if (elite == 57) {
+            // Holosmith has Photon Forge for profession 5
+            if (
+                note.noteType == "Profession5"
+            ) {
+                currentCastingNote = null;
+                continue;
+            }
+        } else if (profession == 6) {
+            // Elementalist can't let anything queue up before profession skills 1-4. All are attunement swaps.
+            if (
+                note.noteType == "Profession1" ||
+                note.noteType == "Profession2" ||
+                note.noteType == "Profession3" ||
+                note.noteType == "Profession4"
+            ) {
+                currentCastingNote = null;
+                continue;
+            }
+        } else if (profession == 8) {
+            // Necromancer Profession1 is a Shroud skill (or Sand Shade) which doesn't allow abilities to be shifted before them
+            if (
+                elite != 60 && // Ignore scourge
+                note.noteType == "Profession1"
+            ) {
+                currentCastingNote = null;
+                continue;
+            }
+        } else if (profession == 9) {
+            // Revanant Profession1 is a Legendary Swap skill which can't allow abilities before it most of the time
+            if (
+                note.noteType == "Profession1"
+            ) {
+                currentCastingNote = null;
+                continue;
+            }
+        }
+
+        // Assume that 0 duration abilities are instant cast and don't interrupt anything nor are ever "casting"
+        if (note.duration == 0) {
+            // currentCastingNote is not set so abilities can be moved in front of this instant cast, if necessary
+            continue;
+        }
+
+
+        if (currentCastingNote != null && canBeQueuedOn(currentCastingNote, note)) {
+            // Shift the new note back
+            note.time = currentCastingNote.time + Math.min(currentCastingNote.duration, 200);
+        }
+        currentCastingNote = oldNote;
+    }
+
+    // It's possible notes were shifted ahead of other notes (like instant cast ones)
+    // So ensure everything is in order for the module
+    newNotes.sort(
+        function(a,b) {
+            return a.time-b.time;
+        }
+    );
+
+    return newNotes;
+}
+
+// MARK: Generate
+
 async function generateSong(
     name,
     description,
     logUrl,
     buildChatCode,
-    buildUrl
+    buildUrl,
+    performOptimizeAbilityQueue
 ) {
     var rotation = await getRotationFromDpsReport(logUrl);
 
@@ -665,6 +879,14 @@ async function generateSong(
             return a.time-b.time;
         }
     );
+
+    if (performOptimizeAbilityQueue == true) {
+        console.log("Optimizing note times for ability queueing");
+        notes = optimizeAbilityQueue(
+            build,
+            notes
+        );
+    }
 
     //Build the song object
     var song = {

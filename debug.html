@@ -11,6 +11,7 @@
         <script language="javascript" src="data/PaletteSkills.js"></script>
         <script language="javascript" src="data/ToolbeltToSlots.js"></script>
         <script language="javascript" src="data/RevenantSkillToLegend.js"></script>
+        <script language="javascript" src="data/SkillPriority.js"></script>
         <script language="javascript" src="ddr.js"></script>
         <script language="javascript" src="ddrEdit.js"></script>
         <script language="javascript" src="ddrSongGeneration.js"></script>
@@ -197,7 +198,7 @@
                         // Allow these to be downloaded now
                         $('#generateDownload').show();
 
-                        var json = JSON.stringify(result, null, 4);
+                        var json = JSON.stringify(result, null, 2);
                         $("#generateOutput").val(json);
                     });
             });
@@ -208,7 +209,7 @@
                 var songs = JSON.parse(rawJson);
                 for (var index = 0; index < songs.length; index++) {
                     var song = songs[index];
-                    var songJson = JSON.stringify(song, null, 4);
+                    var songJson = JSON.stringify(song, null, 2);
                     var blob = new Blob([songJson], {
                         type: "application/json"
                     });
