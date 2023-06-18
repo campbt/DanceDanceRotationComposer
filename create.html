@@ -68,11 +68,11 @@
                 <div class="col">
                 </div>
                 <div class="col">
-                    <div class="row">
-                        <!-- <label for="optimizeAbilityQueue">Optimize Build for Ability Queueing</label> -->
-                        Optimize Build for Ability Queueing
+                        Optimize Build for Ability Queueing (Beta)
+                        <small id="buildChatCodeHelp" class="form-text text-muted">Attempts to shift abilities around to take advantage of ability queueing.</small>
+                </div>
+                <div class="col">
                         <input type="checkbox" class="form-control" id="optimizeAbilityQueue" name="optimizeAbilityQueue" value="false" />
-                    </div>
                 </div>
             </div>
         </form>
@@ -101,7 +101,7 @@
                 var logUrl = $("#logUrl").val();
                 var buildChatCode = $("#buildChatCode").val();
                 var buildUrl = $("#buildUrl").val();
-                var optimizeAbilityQueue = $("#optimizeAbilityQueue").val();
+                var optimizeAbilityQueue = $("#optimizeAbilityQueue").is(":checked") ? true : false;
 
 				generateSong(
                     name,

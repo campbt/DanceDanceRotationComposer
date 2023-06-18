@@ -18,11 +18,12 @@ async function getRotationFromDpsReport(logUrl) {
             type: "GET",
             success: function(data) {
                 const extractedStringStartPosition = data.indexOf('{"targets":');
-                const extractedStringEndPorition = data.indexOf('var logData = _logData');
-                const jsonString = data.slice(extractedStringStartPosition, extractedStringEndPorition);
+                const extractedStringEndPosition = data.indexOf('};', extractedStringStartPosition) + 2;
+                const jsonString = data.slice(extractedStringStartPosition, extractedStringEndPosition);
                 const cleanJsonString = jsonString.slice(0, jsonString.trim().length - 1);
 
                 try {
+                    console.log(cleanJsonString.trim());
                     const dpsReportObj = JSON.parse(cleanJsonString.trim());
 
                     var players = dpsReportObj["players"];
@@ -645,7 +646,7 @@ function optimizeAbilityQueue(
     //     70: Mechanist
     //     71: Specter
     //     72: Untamed
-    var elite = build["specializations"][3]["id"];
+    var elite = build["specializations"][2]["id"];
 
     var specialPrioritySkillId
 
@@ -811,10 +812,12 @@ async function generateSong(
     buildUrl,
     performOptimizeAbilityQueue
 ) {
+    console.log("Generating song: " + name);
     var rotation = await getRotationFromDpsReport(logUrl);
 
     //Use a build template to assume the Utility_1, Utility_2, Utility_3, Heal, and Elite skill orders
     var build = new Buildtemplate(buildChatCode);
+    console.log("  Build: " + build);
     var utilitySlots = build["skills"]["terrestrial"]["utilities"];
 
     // Special: Revenant can have inactive utility slots and inactive legendary stored in the profession specific bytes
@@ -916,6 +919,7 @@ async function generateSong(
         "notes" : notes
     };
 
+    console.log("Completed generation: " + name);
     return song;
 }
 

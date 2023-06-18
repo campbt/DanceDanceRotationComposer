@@ -1182,7 +1182,7 @@ async function generateSongs() {
     console.log("Starting Generation of " + songMetas.length + " Songs");
     for (var songMetasIndex = 0; songMetasIndex < songMetas.length; songMetasIndex++) {
         var songMeta = songMetas[songMetasIndex];
-        console.log("Generating Song: " + songMeta.name);
+        // console.log("Generating Song: " + songMeta.name);
 
         var song = await generateSong(
             songMeta.name,
@@ -1192,7 +1192,7 @@ async function generateSongs() {
             songMeta.buildUrl,
             false // Don't optimize at this stage. Do it after postProcess
         )
-        console.log("  Song Generated!");
+        // console.log("  Song Generated!");
 
         var postProcessSteps = songMeta.postProcessSteps;
         for (var postIndex = 0; postIndex < postProcessSteps.length; postIndex++) {
