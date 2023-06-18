@@ -3,12 +3,44 @@
 var songMetas = [
 
     // MARK: Snow Crows
+    //       Last generated: 2023/6/17
 
     // MARK: Elementalist
 
     {
-        "name": "Power Weaver [Benchmark]",
-        "description": "A benchmark for Power Weaver provided by Snow Crows.\nLast Updated: 2/18/2023",
+        "name": "Condition Alacrity Tempest [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 5, 2022\nUpdated May 10, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/kLLn-20230503-182011_golem",
+        "buildChatCode": "[&DQYfFSU1MCnHEgAAcwAAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/elementalist/tempest/condition-alacrity-tempest",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Weaver [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Feb 23, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/MZfE-20230221-213716_golem",
+        "buildChatCode": "[&DQYfFRomOBV0AAAAcwAAAMsAAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/elementalist/weaver/condition-weaver",
+        "postProcessSteps": [
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 43638,
+                "time": -800,
+                "duration": 800,
+                "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Weaver [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 14, 2023\nFebruary 2023 Balance",
         "logUrl": "https://dps.report/jpIq-20230218-140800_golem",
         "buildChatCode": "[&DQYfHSkfOBl0AHQAUAEAAL4BAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/elementalist/weaver/power-weaver",
@@ -21,7 +53,6 @@ var songMetas = [
                 "duration": 1121,
                 "noteType": "Utility2"
             },
-            // Then add Weave Self (which comes before Lightning Storm)
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 43638,
@@ -32,7 +63,6 @@ var songMetas = [
             {
                 "command": "OptimizeAbilityQueue"
             },
-            // Add in the Profession1 that is not in the dps report for some reason
             {
                 "command": "AddAbility",
                 "time": 1200,
@@ -43,28 +73,32 @@ var songMetas = [
         ]
     },
     {
-        "name": "Condi Weaver [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Feb 23, 2023",
-        "logUrl": "https://dps.report/MZfE-20230221-213716_golem",
-        "buildChatCode": "[&DQYfFRomOBV0AAAAcwAAAMsAAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/elementalist/weaver/condition-weaver",
+        "name": "Power Quickness Catalyst [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated Dec 8, 2022\nNovember 2022 Balance",
+        "logUrl": "https://dps.report/7kx4-20221209-102548_golem",
+        "buildChatCode": "[&DQYpHyU1Qz50AAAAvgEAAPgaAADuGgAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/elementalist/catalyst/power-quickness-catalyst",
         "postProcessSteps": [
-            // The initial Weave Self Elite Skill is part of a pre-cast
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 43638,
-                "time": -800,
-                "duration": 800,
-                "noteType": "Elite"
-            },
             {
                 "command": "OptimizeAbilityQueue"
             }
         ]
     },
     {
-        "name": "Power Catalyst [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 1, 2022",
+        "name": "Hybrid Weaver [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 7, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/4kbg-20230312-075239_golem",
+        "buildChatCode": "[&DQYfFSkvOBV0AAAAcgAAAMsAAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/elementalist/weaver/hybrid-weaver",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Catalyst [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated Dec 1, 2022\nNovember 2022 Balance",
         "logUrl": "https://dps.report/9pYO-20221213-215347_golem",
         "buildChatCode": "[&DQYfHSkfQyb+GgAAvgEAAPgaAADuGgAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/elementalist/catalyst/power-catalyst",
@@ -75,217 +109,29 @@ var songMetas = [
         ]
     },
     {
-        "name": "Power Quickness Catalyst [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 8, 2022",
-        "logUrl": "https://dps.report/7kx4-20221209-102548_golem",
-        "buildChatCode": "[&DQYpHyU1Qz50AAAAvgEAAPgaAADuGgAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/elementalist/catalyst/power-quickness-catalyst",
+        "name": "Beginner Condition Weaver [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Dec 2, 2022\nUpdated Dec 30, 2022\nNovember 2022 Balance",
+        "logUrl": "https://dps.report/m2fR-20221230-135117_golem",
+        "buildChatCode": "[&DQYfFRomOBV0AAAAcwAAAMsAAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/elementalist/weaver/beginner-condition-weaver",
         "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-
-    // MARK: Mesmer
-
-    {
-        "name": "Power Chronomancer [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 17, 2022\nNOTE: Split Second is not in this song because it is not reported in DPS logs. It should be cast basically off cooldown.",
-        "logUrl": "https://dps.report/4U2Z-20221207-132946_golem",
-        "buildChatCode": "[&DQcKGQEdKD4jDwAABBMAAGkBAACPAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/mesmer/chronomancer/power-chronomancer",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
         ]
     },
     {
-        "name": "Condi Alacrity Mirage (Staff) [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 8th, 2023",
-        "logUrl": "https://dps.report/5DUZ-20221003-032506_golem",
-        "buildChatCode": "[&DQcBJS09OxfuFQAA4BUAAIEBAACDAQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/mesmer/mirage/condition-alacrity-mirage",
+        "name": "Beginner Power Weaver [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Dec 22, 2022\nUpdated Mar 12, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/orIr-20230311-214922_golem",
+        "buildChatCode": "[&DQYfHSkfOBl0AHQAUAEAAL4BAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/elementalist/weaver/beginner-power-weaver",
         "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Condi Alacrity Mirage (StAxe) [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 8, 2023",
-        "logUrl": "https://dps.report/tzYP-20230222-184348_golem",
-        "buildChatCode": "[&DQcBJy09Ox/uFQAAgQEAAIMBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/mesmer/mirage/condition-alacrity-mirage",
-        "postProcessSteps": [
-            // Precast Phantasmal Duelist (Weapon4)
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 10175,
-                "time": -560,
-                "duration": 560,
-                "noteType": "Weapon4"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Condi Mirage (Axe) [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 7, 2022",
-        "logUrl": "https://dps.report/une5-20220723-180845_golem",
-        "buildChatCode": "[&DQctHQEnOx8jDwAAgwEAAIEBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/mesmer/mirage/condition-mirage",
-        "postProcessSteps": [
-            // For some reason, it has the precast duelist but misses a dodge
-            {
-                "command": "DeleteAt",
-                "index": 0
-            },
-            // Dodge
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": -17,
-                "time": -279,
-                "duration": 0,
-                "noteType": "Dodge"
-            },
-            // Precast Phantasmal Mage (Weapon5)
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 10189,
-                "time": -600,
-                "duration": 879,
-                "noteType": "Weapon5"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Condi Virtuoso [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 7, 2022",
-        "logUrl": "https://dps.report/xE4Z-20220807-013444_golem",
-        "buildChatCode": "[&DQcBHRgdQjsjDwAAggEAAIEBAACDAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/mesmer/virtuoso/condition-virtuoso",
-        "postProcessSteps": [
-            // The Virtuoso Elite Skill is not in the DPS report for some reason
-            {
-                "command": "AddAutoCastAbility",
-                "abilityId": 24755,
-                "interval": 48100,
-                "offset": 800,
-                "noteType": "Elite"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Power Virtuoso [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 17, 2022\nNOTE: This was recorded before changes to mantra of pain, so it has been disabled for this song.",
-        "logUrl": "https://dps.report/3K6u-20220818-152539_golem",
-        "buildChatCode": "[&DQcKGQEdQjojDwAA3RoAAI8BAABpAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/mesmer/virtuoso/power-virtuoso",
-        "postProcessSteps": [
-            // This song was recorded when Mantra of Pain was just an instant cast ammo skill. So it should be removed.
-            {
-                "command": "DeleteAbilityId",
-                "abilityId": 10211
-            },
-            // The Virtuoso Elite Skill is not in the DPS report for some reason
-            {
-                "command": "AddAutoCastAbility",
-                "abilityId": 24755,
-                "interval": 48100,
-                "offset": 3500,
-                "noteType": "Elite"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-
-    // MARK: Necromancer
-
-    // Unfortunately, the dps report does not have the profession skills, and they are not just cast off cooldown in this rotation
-    {
-        "name": "Condi Scourge [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Jan 7, 2023",
-        "logUrl": "https://dps.report/0Pzn-20220630-021720_golem",
-        "buildChatCode": "[&DQgnNjI1PCYoD6IAgAAAAG8BAABwAQAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/necromancer/scourge/condition-scourge",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Condi Harbinger [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 30, 2022",
-        "logUrl": "https://dps.report/ViK3-20221201-114322_golem",
-        "buildChatCode": "[&DQgnNjI1QD/nGgAAgAAAANQaAADsGgAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/necromancer/harbinger/condition-harbinger",
-        "postProcessSteps": [
-            // Precast is: Elixir of Anguish -> Elixir of Rish -> Elixir of Promise -> Plaguelands
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 10549,
-                "time": -918,
-                "duration": 918,
-                "noteType": "Elite"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 62667,
-                "time": -676,
-                "duration": 676,
-                "noteType": "Heal"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 62530,
-                "time": -682,
-                "duration": 682,
-                "noteType": "Utility2"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 62662,
-                "time": -683,
-                "duration": 683,
-                "noteType": "Utility3"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Power Reaper [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Feb 17, 2023",
-        "logUrl": "https://dps.report/61Dw-20230214-203311_golem",
-        "buildChatCode": "[&DQg1KTImIjabACgPQAGBAIEAQAHxEnUBlQCVAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/necromancer/reaper/power-reaper",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
         ]
     },
 
     // MARK: Engineer
 
     {
-        "name": "Power Holosmith [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 9, 2022",
+        "name": "Power Holosmith [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 27, 2022\nUpdated Dec 9, 2022\nAugust 2022 Balance",
         "logUrl": "https://dps.report/Xk87-20221130-224702_golem",
         "buildChatCode": "[&DQMGOyYvOSsqDwAAhgAAACYBAABXFgAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/engineer/holosmith/power-holosmith",
@@ -312,8 +158,44 @@ var songMetas = [
         ]
     },
     {
-        "name": "Condi Mechanist [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Feb 20, 2023\nSet JadeBot skills to autocast.",
+        "name": "Condition Holosmith [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 10, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/YxuZ-20230507-143234_golem",
+        "buildChatCode": "[&DQMGJyY5ORcqDwAAhgAAAAcBAACTAQAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/engineer/holosmith/condition-holosmith",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Scrapper [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Feb 22, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/SJTF-20230216-171115_golem",
+        "buildChatCode": "[&DQMGNyYvKz0qDyoPhgCGAK4SBwEmAa4S+RKJAQAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/engineer/scrapper/power-scrapper",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Alacrity Mechanist [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated Feb 15, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/Xp1A-20230215-033453_golem",
+        "buildChatCode": "[&DQMGNyYvRiooAQ0bhgCGABobBwEQGxobCRuJAQAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/engineer/mechanist/power-alacrity-mechanist",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Mechanist [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 9, 2022\nUpdated Feb 20, 2023\nFebruary 2023 Balance",
         "logUrl": "https://dps.report/XehS-20230217-165803_golem",
         "buildChatCode": "[&DQMGJyY5RhUNGyoPhgCGAAcBBwEQGw4bCRuJAQAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/engineer/mechanist/condition-mechanist",
@@ -330,15 +212,12 @@ var songMetas = [
             }
         ]
     },
-
-    // MARK: Ranger
-
     {
-        "name": "Power Soulbeast [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 4, 2022",
-        "logUrl": "https://dps.report/9nH4-20220717-181537_golem",
-        "buildChatCode": "[&DQQePSA/Nzp5AAAApQEAAKwBAAC1AAAALhYAADsAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/ranger/soulbeast/power-soulbeast",
+        "name": "Hand Kite Mechanist [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Jan 7, 2023\nAugust 2022 Balance",
+        "logUrl": "https://dps.report/rT9l-20221007-180058_dei",
+        "buildChatCode": "[&DQMvJR0fRiooAQAAJAEAAAsbAACVAQAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/engineer/mechanist/hand-kite-mechanist",
         "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
@@ -346,307 +225,23 @@ var songMetas = [
         ]
     },
     {
-        "name": "Condi Soulbeast [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 26, 2022\nStart in Beastmode with Lynx",
-        "logUrl": "https://dps.report/vqa8-20220905-124634_golem",
-        "buildChatCode": "[&DQQeLSE3Ny55AC4XvwC/ALoApQHpFukWLhYuFgMlFQkAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/ranger/soulbeast/condition-soulbeast",
+        "name": "Beginner Power Holosmith [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Dec 18, 2022\nUpdated Jan 5, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/nMYf-20220824-174210_golem",
+        "buildChatCode": "[&DQMGOyYvOSsqDwAAhgAAACYBAABXFgAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/engineer/holosmith/beginner-power-holosmith",
         "postProcessSteps": [
-            // Precast Abilities
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 12517,
-                "time": -250,
-                "duration": 250,
-                "noteType": "Weapon3"
-            },
-			{
-                "command": "AddPreCastAbility",
-                "abilityId": 45479,
-                "time": -250,
-                "duration": 250,
-                "noteType": "Elite"
-            },
-			{
-                "command": "AddPreCastAbility",
-                "abilityId": 12496,
-                "time": -500,
-                "duration": 500,
-                "noteType": "Utility2"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Hybrid Soulbeast [Benchmark]",
-        "description": "Condi damage, but bursty like power \nStart in Beastmode with Bristleback",
-        "logUrl": "https://dps.report/OZNq-20230218-035157_golem",
-        "buildChatCode": "[&DQQePSA/Ny55AC4XvwC/AKUBpQHpFukWLhYuFjQlFQkAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/ranger/soulbeast/hybrid-soulbeast",
-        "postProcessSteps": [
-            // AutoCast Abilities
-			{
-                "command": "AddAutoCastAbility",
-                "abilityId": 45479,
-                "interval": 24000,
-                "offset": 3450,
-                "noteType": "Profession2"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Power Alacrity Untamed [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 10, 2022",
-        "logUrl": "https://dps.report/dVD1-20221202-174129_golem",
-        "buildChatCode": "[&DQQePRkVSBclDwAAtQAAALYAAAABGwAA7QAAAAMAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/ranger/untamed/power-alacrity-untamed",
-        "postProcessSteps": [
-            // Precast Call lightning on your storm spirit
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 12594,
-                "time": -639,
-                "duration": 639,
-                "noteType": "Utility2"
-            },
-            // Precast Strength of the Pack
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 12516,
-                "time": -750,
-                "duration": 750,
-                "noteType": "Elite"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Power Untamed [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 10, 2022",
-        "logUrl": "https://dps.report/YaET-20221228-195030_golem",
-        "buildChatCode": "[&DQQIGh49SBd5AAAAtQAAAAEbAACsAQAA7QAAAAMAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/ranger/untamed/power-untamed",
-        "postProcessSteps": [
-            // Precast Exploding Spores
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 63157,
-                "time": -484,
-                "duration": 484,
-                "noteType": "Utility2"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Condition Untamed [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Dec 4, 2022",
-        "logUrl": "https://dps.report/eY6D-20221027-005909_golem",
-        "buildChatCode": "[&DQQePSA2SBd5AAAAARsAALYAAAC/AAAAwAAAAD0AAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/ranger/untamed/condition-untamed",
-        "postProcessSteps": [
-            // Precast Sharpening Stone
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 12537,
-                "time": -200,
-                "duration": 0,
-                "noteType": "Utility3"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-
-    // MARK: Thief
-
-    {
-        "name": "Power Daredevil [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 15, 2023",
-        "logUrl": "https://www.dps.report/wYRI-20220824-133048_golem",
-        "buildChatCode": "[&DQUcPSMbBzkMAQAAVwEAADMBAACwEgAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/thief/daredevil/power-daredevil",
-        "postProcessSteps": [
-            // Precast Dodges to empty bar
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 23275,
-                "time": -750,
-                "duration": 750,
-                "noteType": "Dodge"
-            },
-			{
-                "command": "AddPreCastAbility",
-                "abilityId": 13027,
-                "time": -1000,
-                "duration": 1000,
-                "noteType": "HealSkill"
-            },
-			{
-                "command": "AddPreCastAbility",
-                "abilityId": 23275,
-                "time": -750,
-                "duration": 750,
-                "noteType": "Dodge"
-            },
-			{
-                "command": "AddPreCastAbility",
-                "abilityId": 23275,
-                "time": -750,
-                "duration": 750,
-                "noteType": "Dodge"
-            },
-            // Precast Thieves Guild
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 13082,
-                "time": -1162,
-                "duration": 1162,
-                "noteType": "Elite"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Condition Daredevil [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Feb 17, 2023",
-        "logUrl": "https://www.dps.report/84Ov-20230216-152900_golem",
-        "buildChatCode": "[&DQUcGyw1BxmUEgwBVQFXAS8BMwELAVYBKAAOAQAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/thief/daredevil/condition-daredevil",
-        "postProcessSteps": [
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 13093,
-                "time": -100,
-                "duration": 0,
-                "noteType": "Utility1"
-            },
-            // Precast Thieves Guild
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 13082,
-                "time": -1162,
-                "duration": 1162,
-                "noteType": "Elite"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Power Deadeye Rifle [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 13, 2023",
-        "logUrl": "https://dps.report/yDtd-20230214-221732_golem",
-        "buildChatCode": "[&DQUcPSMbOh0MAQAAMwEAAB8WAAAgFwAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/thief/deadeye/power-deadeye",
-        "postProcessSteps": [
-            // Precast Deadeye's Mark
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 43390,
-                "time": -402,
-                "duration": 402,
-                "noteType": "Profession1"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Power Deadeye Dagger [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 13, 2023",
-        "logUrl": "https://dps.report/ZuuL-20221130-040247_golem",
-        "buildChatCode": "[&DQUcPSMbOh0MAQAAMwEAAB8WAACsFgAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/thief/deadeye/power-deadeye",
-        "postProcessSteps": [
-            // Precast Deadeye's Mark
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 43390,
-                "time": -402,
-                "duration": 402,
-                "noteType": "Profession1"
-            },
-            // Precast Thieves Guild
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 13082,
-                "time": -1162,
-                "duration": 1162,
-                "noteType": "Elite"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Condi Alacrity Specter [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 14, 2023",
-        "logUrl": "https://dps.report/KKWN-20220902-160446_golem",
-        "buildChatCode": "[&DQUcGywXRx8VGwAALwEAAAgbAAAGGwAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/thief/specter/condition-alacrity-spectre",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Condi Specter [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 14, 2023",
-        "logUrl": "https://dps.report/KzkD-20220827-170023_golem",
-        "buildChatCode": "[&DQUcGywfRxcVGwAAPgEAAC8BAAALAQAAKAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/thief/specter/condition-spectre",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
         ]
     },
 
     // MARK: Guardian
 
     {
-        "name": "Power Dragonhunter [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Feb 27, 2023",
-        "logUrl": "https://dps.report/iJlg-20230223-101906_golem",
-        "buildChatCode": "[&DQEqOhA/GykmDwAA/gAAAEgBAACKEgAAtRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/guardian/dragonhunter/power-dragonhunter",
-        "postProcessSteps": [
-            // Precast Procession of Blades, which was missed in logs
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 30364,
-                "time": -447,
-                "duration": 447,
-                "noteType": "Utility3"
-            },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Condi Quickness Firebrand [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 6, 2023",
-        "logUrl": "https://dps.report/tZsX-20230301-130007_golem",
-        "buildChatCode": "[&DQEQGi4fPi5LFwAATAEAABUXAAB6FgAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/guardian/firebrand/condition-quickness-firebrand",
+        "name": "Condition Willbender [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 3, 2022\nUpdated Mar 15, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/OVsj-20230314-233458_golem",
+        "buildChatCode": "[&DQEQGi4XQSUmDwAATAEAANgaAAAxAQAA6RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/guardian/willbender/condition-willbender",
         "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
@@ -654,22 +249,10 @@ var songMetas = [
         ]
     },
     {
-        "name": "Condi Firebrand [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 2, 2023",
-        "logUrl": "https://dps.report/PeVd-20230226-194816_golem",
-        "buildChatCode": "[&DQEQGi4fPi1LFwAATAEAABUXAAAxAQAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/guardian/firebrand/condition-firebrand",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Power Willbender [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 8, 2023",
+        "name": "Power Willbender [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated Mar 8, 2023\nFebruary 2023 Balance",
         "logUrl": "https://dps.report/vmTw-20230305-042153_golem",
-        "buildChatCode": "[&DQEqOi4VQSYmDwAATAEAAEgBAAD+AAAA6RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildChatCode": "[&DQEqOi4VQSYmDwAATAEAAEgBAAD+AAAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/guardian/willbender/power-willbender",
         "postProcessSteps": [
             // Delete the initial Profession2 casts, they appear in the wrong order in the dps log and are added in manually
@@ -718,43 +301,309 @@ var songMetas = [
             }
         ]
     },
+    {
+        "name": "Condition Firebrand [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 28, 2022\nUpdated Apr 16, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/ff9W-20230506-163902_golem",
+        "buildChatCode": "[&DQEQGi4fPiVLFwAATAEAABUXAAAxAQAAGBYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/guardian/firebrand/condition-firebrand",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Quickness Firebrand [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Mar 6, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/dgOZ-20230603-163723_golem",
+        "buildChatCode": "[&DQEQGi4fPiZLFwAAFRcAAHoWAABMAQAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/guardian/firebrand/condition-quickness-firebrand",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Alacrity Willbender [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jan 24, 2022\nUpdated May 22, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/Q7JT-20230308-183224_golem",
+        "buildChatCode": "[&DQEqOi4lQRbjGgAASAEAANgaAAD+AAAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/guardian/willbender/power-alacrity-willbender",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
 
-    // MARK: Renegade
+    // MARK: Mesmer
 
     {
-        "name": "Power Herald [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Jan 7, 2023",
-        "logUrl": "https://dps.report/rW1Q-20221202-011416_golem",
-        "buildChatCode": "[&DQkPKgM2NDXcEdwRKxIrEtQR1BEGEgYSyhHKEQECAQIGEisS1BEGEisS1BE=]",
-        "buildUrl": "https://snowcrows.com/en/builds/revenant/herald/power-herald",
+        "name": "Power Chronomancer [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated May 14, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/zSma-20230503-133214_golem",
+        "buildChatCode": "[&DQcKGQEdKD4jDwAABBMAAGkBAACPAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/mesmer/chronomancer/power-chronomancer",
         "postProcessSteps": [
-            // Precast Activating Facets | Facet of Nature (Profession2) -> Facet of Darkness (Utility3) -> Facet of Nature (Heal) -> Facet of Strength (Utility2)
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Mirage [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Dec 8, 2022\nMay 2021 Balance",
+        "logUrl": "https://dps.report/une5-20220723-180845_golem",
+        "buildChatCode": "[&DQcBJy0dOx0jDyMP4BUHFoEBgQGDAYMBRhe8AQAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/mesmer/mirage/condition-mirage",
+        "postProcessSteps": [
+            // For some reason, it has the precast duelist but misses a dodge
+            {
+                "command": "DeleteAt",
+                "index": 0
+            },
+            // Dodge
             {
                 "command": "AddPreCastAbility",
-                "abilityId": 26644,
-                "time": -333,
+                "abilityId": -17,
+                "time": -279,
                 "duration": 0,
-                "noteType": "Utility2"
+                "noteType": "Dodge"
+            },
+            // Precast Phantasmal Mage (Weapon5)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 10189,
+                "time": -600,
+                "duration": 879,
+                "noteType": "Weapon5"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Alacrity Mirage [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated May 10, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/nECF-20230503-161902_golem",
+        "buildChatCode": "[&DQcBJS09OxfuFQAA4BUAAIEBAACDAQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/mesmer/mirage/condition-alacrity-mirage",
+        "postProcessSteps": [
+            // Precast Phantasmal Duelist (Weapon4)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 10175,
+                "time": -560,
+                "duration": 560,
+                "noteType": "Weapon4"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Virtuoso [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 16, 2022\nUpdated Dec 7, 2022\nEnd of Dragons",
+        "logUrl": "https://dps.report/6ilS-20230314-224441_golem",
+        "buildChatCode": "[&DQcBHRgdQjsjDwAAggEAAIEBAACDAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/mesmer/virtuoso/condition-virtuoso",
+        "postProcessSteps": [
+            // The Virtuoso Elite Skill is not in the DPS report for some reason
+            {
+                "command": "AddAutoCastAbility",
+                "abilityId": 24755,
+                "interval": 48100,
+                "offset": 800,
+                "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Virtuoso [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 19, 2021\nUpdated Dec 3, 2022\nEnd of Dragons BETA",
+        "logUrl": "https://dps.report/3K6u-20220818-152539_golem",
+        "buildChatCode": "[&DQcKGQEdQjojDwAA3RoAAI8BAABpAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/mesmer/virtuoso/power-virtuoso",
+        "postProcessSteps": [
+            // This song was recorded when Mantra of Pain was just an instant cast ammo skill. So it should be removed.
+            {
+                "command": "DeleteAbilityId",
+                "abilityId": 10211
+            },
+            // The Virtuoso Elite Skill is not in the DPS report for some reason
+            {
+                "command": "AddAutoCastAbility",
+                "abilityId": 24755,
+                "interval": 48100,
+                "offset": 3500,
+                "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Quickness Chronomancer [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Dec 7, 2022\nMay 2021 Balance",
+        "logUrl": "https://dps.report/UUB2-20220703-201532_golem",
+        "buildChatCode": "[&DQcBJxg/KC4jDwAAgQEAAIMBAABrAQAAvAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/mesmer/chronomancer/condition-quickness-chronomancer",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Quickness Chronomancer [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Feb 20, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/oyYk-20230217-162011_golem",
+        "buildChatCode": "[&DQcKGQEdKC4jDwAABBMAAGkBAACPAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/mesmer/chronomancer/power-quickness-chronomancer",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+
+    // MARK: Necromancer
+
+    {
+        "name": "Power Reaper [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 12, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/XI5L-20230521-175913_golem",
+        "buildChatCode": "[&DQg1KTImIjbBEigPQAGBAIEAQAHxEnUBlQCVAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/necromancer/reaper/power-reaper",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Quickness Harbinger [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated May 11, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/B6zX-20230507-085416_golem",
+        "buildChatCode": "[&DQgnNTI1QCvnGgAAgAAAAOwaAAB1AQAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/necromancer/harbinger/condition-quickness-harbinger",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Harbinger [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 18, 2021\nUpdated May 11, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/gPxU-20230506-103307_golem",
+        "buildChatCode": "[&DQgnNTI1QD/nGgAAgAAAAOsaAACLAAAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/necromancer/harbinger/condition-harbinger",
+        "postProcessSteps": [
+            // Precast is: Elixir of Anguish -> Elixir of Rish -> Elixir of Promise -> Plaguelands
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 10549,
+                "time": -918,
+                "duration": 918,
+                "noteType": "Elite"
             },
             {
                 "command": "AddPreCastAbility",
-                "abilityId": 27220,
-                "time": -333,
-                "duration": 0,
+                "abilityId": 62667,
+                "time": -676,
+                "duration": 676,
                 "noteType": "Heal"
             },
             {
                 "command": "AddPreCastAbility",
-                "abilityId": 28379,
-                "time": -333,
-                "duration": 0,
-                "noteType": "Utility3"
+                "abilityId": 62530,
+                "time": -682,
+                "duration": 682,
+                "noteType": "Utility2"
             },
             {
                 "command": "AddPreCastAbility",
-                "abilityId": 29371,
-                "time": -333,
-                "duration": 0,
+                "abilityId": 62662,
+                "time": -683,
+                "duration": 683,
+                "noteType": "Utility3"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Reaper [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 27, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/KAdA-20230506-114320_golem",
+        "buildChatCode": "[&DQgnNzIlIiabAAAAQAEAAIAAAACmEgAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/necromancer/reaper/condition-reaper",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Scourge [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 16, 2022\nUpdated Jan 7, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/0Pzn-20220630-021720_golem",
+        "buildChatCode": "[&DQgnNjI1PCYoD6IAgAAAAG8BAABwAQAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/necromancer/scourge/condition-scourge",
+        "postProcessSteps": [
+            // Unfortunately, the dps report does not have the profession skills, and they are not just cast off cooldown in this rotation
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Beginner Scourge [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jun 27, 2021\nUpdated Nov 30, 2022\nMay 2021 Balance",
+        "logUrl": "https://dps.report/2Wdl-20210619-195432_golem",
+        "buildChatCode": "[&DQgnNjI1PCZ+FgAAbwEAAIAAAABwAQAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/necromancer/scourge/beginner-scourge",
+        "postProcessSteps": [
+        ]
+    },
+
+    // MARK: Ranger
+
+    {
+        "name": "Power Soulbeast [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 17, 2022\nUpdated Dec 4, 2022\nNovember 2022 Balance",
+        "logUrl": "https://dps.report/9nH4-20220717-181537_golem",
+        "buildChatCode": "[&DQQePSA/Nzp5AAAApQEAALUAAACsAQAALhYAABE7AAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/ranger/soulbeast/power-soulbeast",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Hybrid Soulbeast [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 6, 2022\nUpdated Apr 16, 2023\nNovember 2022 Balance",
+        "logUrl": "https://dps.report/OZNq-20230218-035157_golem",
+        "buildChatCode": "[&DQQePSA/Ny55AC4XvwC/AKUBpQHpFukWLhYuFjQlFQkAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/ranger/soulbeast/hybrid-soulbeast",
+        "postProcessSteps": [
+            // AutoCast Abilities
+            {
+                "command": "AddAutoCastAbility",
+                "abilityId": 45479,
+                "interval": 24000,
+                "offset": 3450,
                 "noteType": "Profession2"
             },
             {
@@ -763,15 +612,50 @@ var songMetas = [
         ]
     },
     {
-        "name": "Power Quickness Herald [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Jan 7, 2023",
+        "name": "Condition Soulbeast [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Dec 26, 2022\nNovember 2022 Balance",
+        "logUrl": "https://dps.report/vqa8-20220905-124634_golem",
+        "buildChatCode": "[&DQQeLSE3Ny55AC4XvwC/ALoApQHpFukWLhYuFgMlFQkAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/ranger/soulbeast/condition-soulbeast",
+        "postProcessSteps": [
+            // Precast Abilities
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 12517,
+                "time": -250,
+                "duration": 250,
+                "noteType": "Weapon3"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 45479,
+                "time": -250,
+                "duration": 250,
+                "noteType": "Elite"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 12496,
+                "time": -500,
+                "duration": 500,
+                "noteType": "Utility2"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+
+    // MARK: Revenant
+
+    {
+        "name": "Power Quickness Herald [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 12, 2022\nUpdated Jan 7, 2023\nNovember 2022 Balance",
         "logUrl": "https://dps.report/Qw02-20221201-233631_golem",
         "buildChatCode": "[&DQkPKgM2NCbcEdwRKxIrEtQR1BEGEgYSyhHKEQECAQIGEisS1BEGEisS1BE=]",
         "buildUrl": "https://snowcrows.com/en/builds/revenant/herald/power-quickness-herald",
         "postProcessSteps": [
-            // Precast Activating Facets | Facet of Nature (Profession2) -> Facet of Darkness (Utility3) -> Facet of Nature (Heal)
-            // Then precast activating two of them: Infuse Light (Heal) -> True Nature (Profession2)
-            // -> Facet of Strength (Utility2)
+            // Precast Activating Facets | Facet of Nature (Profession2) -> Facet of Darkness (Utility3) -> Facet of Nature (Heal). Then precast activating two of them: Infuse Light (Heal) -> True Nature (Profession2)-> Facet of Strength (Utility2)
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 26644,
@@ -822,8 +706,8 @@ var songMetas = [
         ]
     },
     {
-        "name": "Condi Alacrity Renegade [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Feb 14, 2023",
+        "name": "Condition Alacrity Renegade [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 10, 2021\nUpdated Feb 14, 2023\nFebruary 2023 Balance",
         "logUrl": "https://dps.report/S4Zh-20230214-191402_golem",
         "buildChatCode": "[&DQkOHQMmPzrcEQAAKxIAANQRAAAGEgAAyhEAAAQFAADUESsSBhIAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/revenant/renegade/condition-alacrity-renegade",
@@ -868,8 +752,8 @@ var songMetas = [
         ]
     },
     {
-        "name": "Condi Renegade [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Jan 7, 2023",
+        "name": "Condition Renegade [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 8, 2022\nUpdated Jan 7, 2023\nNovember 2022 Balance",
         "logUrl": "https://dps.report/EeYd-20221008-182313_golem",
         "buildChatCode": "[&DQkOHQMmPyrcEQAAKxIAANQRAAAGEgAAyhEAAAQFAADUESsSBhIAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/revenant/renegade/condition-renegade",
@@ -901,9 +785,9 @@ var songMetas = [
         ]
     },
     {
-        "name": "Power Vindicator [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Jan 7, 2023",
-        "logUrl": "https://dps.report/zeOf-20221201-171756_golem",
+        "name": "Power Vindicator [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated May 10, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/DWk6-20230510-145934_golem",
         "buildChatCode": "[&DQkPKgM2RR3cEdwRBhIGEisSKxLUEdQRyhHKEQcCAgAGEisS1BEAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/revenant/vindicator/power-vindicator",
         "postProcessSteps": [
@@ -920,15 +804,53 @@ var songMetas = [
             }
         ]
     },
-
-    // MARK: Warrior
-
     {
-        "name": "Condi Berserker [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Feb 19, 2023",
-        "logUrl": "https://dps.report/nLun-20230217-094721_golem",
-        "buildChatCode": "[&DQIkLTM9EiryEgAA3BIAANcSAADEEgAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/warrior/berserker/condition-berserker",
+        "name": "Power Herald [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 30, 2022\nUpdated Apr 16, 2023\nNovember 2022 Balance",
+        "logUrl": "https://dps.report/rW1Q-20221202-011416_golem",
+        "buildChatCode": "[&DQkPKgM2NDXcEdwRKxIrEtQR1BEGEgYSyhHKEQECAQIGEisS1BEGEisS1BE=]",
+        "buildUrl": "https://snowcrows.com/en/builds/revenant/herald/power-herald",
+        "postProcessSteps": [
+            // Precast Activating Facets | Facet of Nature (Profession2) -> Facet of Darkness (Utility3) -> Facet of Nature (Heal) -> Facet of Strength (Utility2)
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 26644,
+                "time": -333,
+                "duration": 0,
+                "noteType": "Utility2"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 27220,
+                "time": -333,
+                "duration": 0,
+                "noteType": "Heal"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 28379,
+                "time": -333,
+                "duration": 0,
+                "noteType": "Utility3"
+            },
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 29371,
+                "time": -333,
+                "duration": 0,
+                "noteType": "Profession2"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Quickness Herald [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Jan 7, 2023\nNovember 2022 Balance",
+        "logUrl": "https://dps.report/EU7k-20221203-213656_golem",
+        "buildChatCode": "[&DQkOHQMWNCbcEdwRKxIrEtQR1BEGEgYSyhHKEQEEAQQrEtQRBhLUESsSBhI=]",
+        "buildUrl": "https://snowcrows.com/en/builds/revenant/herald/condition-quickness-herald",
         "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
@@ -936,13 +858,128 @@ var songMetas = [
         ]
     },
     {
-        "name": "Power Spellbreaker [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Jan 11, 2023",
+        "name": "Hand Kite Herald [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Jan 7, 2023\nNovember 2022 Balance",
+        "logUrl": "https://dps.report/ihYk-20221101-185500_dei",
+        "buildChatCode": "[&DQkOKAwpNCncEdwRKxIGEtQRKxIGEtQRyhHKEQEGAgDUESsSBhIAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/revenant/herald/hand-kite-herald",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Alacrity Renegade [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 16, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/8LBy-20230515-192958_golem",
+        "buildChatCode": "[&DQkDJg8qPz3cEQAA1BEAAAYSAAArEgAAyhEAAAUCAADUESsSBhIAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/revenant/renegade/power-alacrity-renegade",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+
+    // MARK: Thief
+
+    {
+        "name": "Power Deadeye [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 1, 2022\nUpdated Jun 2, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/ZuuL-20221130-040247_golem",
+        "buildChatCode": "[&DQUcPSMbOh0MAQAAMwEAAB8WAACsFgAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/deadeye/power-deadeye",
+        "postProcessSteps": [
+            // Precast Deadeye's Mark
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 43390,
+                "time": -402,
+                "duration": 402,
+                "noteType": "Profession1"
+            },
+            // Precast Thieves Guild
+            {
+                "command": "AddPreCastAbility",
+                "abilityId": 13082,
+                "time": -1162,
+                "duration": 1162,
+                "noteType": "Elite"
+            },
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Alacrity Specter [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 9, 2022\nUpdated May 10, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/TlRY-20230502-170730_golem",
+        "buildChatCode": "[&DQUcGywXRx8VGwAALwEAAAgbAAAGGwAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/specter/condition-alacrity-spectre",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Kite Deadeye [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Apr 16, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/OK9l-20230214-214155_golem",
+        "buildChatCode": "[&DQUcPSM7OhUMAQAAWAAAADMBAACsFgAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/deadeye/kite-deadeye",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Condition Specter [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated May 29, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/KzkD-20220827-170023_golem",
+        "buildChatCode": "[&DQUcGywfRxcVGwAAPgEAAC8BAAALAQAAKAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/specter/condition-spectre",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Beginner Condition Alacrity Specter [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Apr 2, 2023\nUpdated Apr 16, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/nVbR-20220902-120538_golem",
+        "buildChatCode": "[&DQUcGywXRx8VGwAALwEAAAgbAAAGGwAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/thief/specter/beginner-condition-alacrity-specter",
+        "postProcessSteps": [
+        ]
+    },
+
+    // MARK: Warrior
+
+    {
+        "name": "Power Berserker [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 10, 2023\nMay 2023 Balance",
+        "logUrl": "https://dps.report/0ImQ-20230502-185448_golem",
+        "buildChatCode": "[&DQIEHzMaEhXyEgAAqQAAANcSAADEEgAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/warrior/berserker/power-berserker",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Spellbreaker [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 1, 2022\nUpdated Jan 11, 2023\nNovember 2022 Balance",
         "logUrl": "https://dps.report/7AYV-20221213-184310_golem",
         "buildChatCode": "[&DQIEHxY/PT2mAAAArQAAAKkAAACvAAAAnRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/warrior/spellbreaker/power-spellbreaker",
         "postProcessSteps": [
-            // Precast: "To the Limit" (Heal) -> Winds of Disenchantment (Elite)
+            // Precast: 'To the Limit' (Heal) -> Winds of Disenchantment (Elite)
             {
                 "command": "AddPreCastAbility",
                 "abilityId": 45333,
@@ -963,9 +1000,9 @@ var songMetas = [
         ]
     },
     {
-        "name": "Power Bladesworn [Benchmark]",
-        "description": "by: Snow Crows\nUpdated Mar 11, 2023\nSome utility skills are not present in this song.",
-        "logUrl": "https://dps.report/brm9-20220810-112155_golem",
+        "name": "Power Bladesworn [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated May 12, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/9ns8-20230512-052547_golem",
         "buildChatCode": "[&DQIEHwsVRCunAAAA8BoAAPIaAAD9GgAA/BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/warrior/bladesworn/power-bladesworn",
         "postProcessSteps": [
@@ -1010,6 +1047,29 @@ var songMetas = [
             }
         ]
     },
+    {
+        "name": "Condition Berserker [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 22, 2022\nUpdated Feb 19, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/nLun-20230217-094721_golem",
+        "buildChatCode": "[&DQIkLTM9EiryEgAA3BIAANcSAADEEgAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/warrior/berserker/condition-berserker",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Beginner Power Spellbreaker [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 19, 2023\nUpdated Mar 21, 2023\nFebruary 2023 Balance",
+        "logUrl": "https://dps.report/dUYi-20230319-214900_golem",
+        "buildChatCode": "[&DQIEHxY/PT2mAAAArQAAAKkAAACvAAAAnRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/en/builds/warrior/spellbreaker/beginner-power-spellbreaker",
+        "postProcessSteps": [
+        ]
+    },
+
+    // MARK: End of Snowcrows
 
     // MARK: Mr. Mystic
 
