@@ -183,3 +183,43 @@ var skillPriority = {
     "62803": 1, // Dragon Trigger
 
 };
+
+// These skills have duration 0 but other abilities can NOT be queued in front of them
+// They are generally some kind of kit or ability swap, similar to WeaponSwap
+var skillPriorityBlacklistInstantCasts = {
+    // "-17"   : true, // Ambush
+    // "5495"  : true, // Earth Attunment
+    // "44857" : true, // Earth Attunment
+    // "-16"   : true, // Earth Attunment
+    // "-15"   : true, // Earth Attunment
+    // "-14"   : true, // Earth Attunment
+    // "5494"  : true, // Air Attunment
+    // "42264" : true, // Air Attunment
+    // "-13"   : true, // Air Attunment
+    // "-12"   : true, // Air Attunment
+    // "-11"   : true, // Air Attunment
+    // "5493"  : true, // Water Attunment
+    // "41166" : true, // Water Attunment
+    // "-10"   : true, // Water Attunment
+    // "-9"    : true, // Water Attunment
+    // "-8"    : true, // Water Attunment
+    // "5492"  : true, // Fire Attunment
+    // "43470" : true, // Fire Attunment
+    // "-7"    : true, // Fire Attunment
+    // "-6"    : true, // Fire Attunment
+    // "-5"    : true, // Fire Attunment
+    // "44364" : true, // Firebrand - Tome of Justice
+    // "68647" : true, // Firebrand - Tome of Justice
+    // "41780" : true, // Firebrand - Tome of Resolve
+    // "44364" : true, // Firebrand - Tome of Justice
+    // "68647" : true, // Firebrand - Tome of Justice
+    // "41780" : true, // Firebrand - Tome of Resolve
+    // "68648" : true, // Firebrand - Tome of Resolve
+    // "42259" : true, // Firebrand - Tome of Courage
+    // "68650" : true, // Firebrand - Tome of Courage
+    // "28494" : true, // Revenant - Legendary
+    // "41123" : true, // Holosmith - Deactivate Photon Forge
+    // "42938" : true, // Holosmith - EngagePhoton Forge
+    // "62745" : true, // Bladesworn - Unsheathe Gunsaber
+    // "62861" : true  // Bladesworn - Sheathe Gunsaber
+}

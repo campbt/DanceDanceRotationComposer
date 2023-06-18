@@ -655,6 +655,23 @@ function optimizeAbilityQueue(
             return false;
         if (nextNote.noteType == "Weapon1" && nextNote.overrideAuto != true)
             return false;
+        // Dodges, WeaponSwaps, and WeaponStows are all things that can not be moved or queued on
+        // if (
+        //     // Note: Not 100% on heal, but Signet of the Ether does seem to block queueing on top of it
+        //     //       Better safe than sorry here. Heal is pretty uncommon
+        //     castingNote.noteType == "Heal" ||
+        //     nextNote.noteType == "Heal" ||
+        //     castingNote.noteType == "Dodge" ||
+        //     nextNote.noteType == "Dodge" ||
+        //     castingNote.noteType == "WeaponSwap" ||
+        //     nextNote.noteType == "WeaponSwap" ||
+        //     castingNote.noteType == "WeaponStow" ||
+        //     nextNote.noteType == "WeaponStow" ||
+        //     castingNote.noteType == "Unknown" ||
+        //     nextNote.noteType == "Unknown"
+        // ) {
+        //     return false
+        // }
 
         var castingAbilityId = castingNote.abilityId;
         var nextAbilityId = nextNote.abilityId;
