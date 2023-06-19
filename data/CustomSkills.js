@@ -77,6 +77,14 @@ var customSkills = {
 		"isNote": true,
 		"noteType": "Profession4"
 	},
+	// Holosmith - Vent Exhaust
+	"43630": {
+		"isNote": false
+	},
+	// Holosmith - Overheat
+	"43937": {
+		"isNote": false
+	},
 
     // Firebrand Bundles are not in API for some reason
 
@@ -330,5 +338,17 @@ var customSkills = {
 	"-17": {
 		"isNote": true,
 		"noteType": "Dodge"
+	},
+	//  Firebrand - Restoring Reprieve
+	"-20": {
+		"remap": 41475
+	},
+	//  Firebrand - Potent Haste
+	"-22": {
+		"remap": 42983
+	},
+	//  Rune of the Nightmare
+	"-26": {
+		"isNote": false
 	}
 };

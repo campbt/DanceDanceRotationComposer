@@ -23,7 +23,6 @@ async function getRotationFromDpsReport(logUrl) {
                 const cleanJsonString = jsonString.slice(0, jsonString.trim().length - 1);
 
                 try {
-                    console.log(cleanJsonString.trim());
                     const dpsReportObj = JSON.parse(cleanJsonString.trim());
 
                     var players = dpsReportObj["players"];
@@ -116,6 +115,18 @@ function getRevenantUtilityNoteType(abilityId, utilitySlots, revenantInfo) {
     }
 
     return retval;
+}
+
+// Some skills come in with negative numbers but point to real skills
+// It seems like it could be one of multiple skills, but we'll just map to one
+function getActualAbilityId(abilityId) {
+    if (abilityId in customSkills) {
+        const customSkillData = customSkills[abilityId];
+        if ("remap" in customSkillData) {
+            return customSkillData.remap;
+        }
+    }
+    return abilityId;
 }
 
 //Return the noteType to the song note
@@ -852,9 +863,12 @@ async function generateSong(
     //Convert the DPS rotation into notes
     var notes = [];
     for (var i = 0; i < rotation.length; i++) {
+        // Rotation ability ID may be remapped
+        var abilityId = getActualAbilityId(rotation[i][1]);
+
         //Try to get the noteType (weaponType) from the manuallyMappedSkills array or the allSkills array
         //If the abilityID doesn't appear in either of those tables, return ""
-        var noteType = getNoteType(rotation[i][1], utilitySlots, revenantInfo);
+        var noteType = getNoteType(abilityId, utilitySlots, revenantInfo);
 
         //Drop all empty noteTypes and create song notes with non-empty noteTypes
         if (noteType !== null) {
@@ -862,7 +876,7 @@ async function generateSong(
                 "time": Math.floor(rotation[i][0] * 1000), //convert seconds to milliseconds
                 "duration": rotation[i][2], // duration is already in ms
                 "noteType": noteType,
-                "abilityId": rotation[i][1]
+                "abilityId": abilityId
             });
         }
     }

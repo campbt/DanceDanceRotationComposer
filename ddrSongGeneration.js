@@ -11,7 +11,7 @@ var songMetas = [
         "name": "Condition Alacrity Tempest [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 5, 2022\nUpdated May 10, 2023\nMay 2023 Balance",
         "logUrl": "https://dps.report/kLLn-20230503-182011_golem",
-        "buildChatCode": "[&DQYfFSU1MCnHEgAAcwAAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildChatCode": "[&DQYfFSU1MCnHEgAAjgAAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/elementalist/tempest/condition-alacrity-tempest",
         "postProcessSteps": [
             {
@@ -88,7 +88,7 @@ var songMetas = [
         "name": "Hybrid Weaver [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 7, 2023\nFebruary 2023 Balance",
         "logUrl": "https://dps.report/4kbg-20230312-075239_golem",
-        "buildChatCode": "[&DQYfFSkvOBV0AAAAcgAAAMsAAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildChatCode": "[&DQYfFSkvOBV0AAAAvgEAAMsAAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/elementalist/weaver/hybrid-weaver",
         "postProcessSteps": [
             {
@@ -207,18 +207,6 @@ var songMetas = [
                 "duration": 0,
                 "noteType": "Utility2"
             },
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Hand Kite Mechanist [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Jan 7, 2023\nAugust 2022 Balance",
-        "logUrl": "https://dps.report/rT9l-20221007-180058_dei",
-        "buildChatCode": "[&DQMvJR0fRiooAQAAJAEAAAsbAACVAQAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/engineer/mechanist/hand-kite-mechanist",
-        "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
             }
@@ -477,18 +465,19 @@ var songMetas = [
 
     // MARK: Necromancer
 
-    {
-        "name": "Power Reaper [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 12, 2023\nMay 2023 Balance",
-        "logUrl": "https://dps.report/XI5L-20230521-175913_golem",
-        "buildChatCode": "[&DQg1KTImIjbBEigPQAGBAIEAQAHxEnUBlQCVAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/necromancer/reaper/power-reaper",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
+    // Power Reaper has a bad recording that makes the script have a lot of unknown notes
+    // {
+    //     "name": "Power Reaper [SC]",
+    //     "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 12, 2023\nMay 2023 Balance",
+    //     "logUrl": "https://dps.report/XI5L-20230521-175913_golem",
+    //     "buildChatCode": "[&DQg1KTImIjbBEigPQAGBAIEAQAHxEnUBlQCVAAAAAAAAAAAAAAAAAAAAAAA=]",
+    //     "buildUrl": "https://snowcrows.com/en/builds/necromancer/reaper/power-reaper",
+    //     "postProcessSteps": [
+    //         {
+    //             "command": "OptimizeAbilityQueue"
+    //         }
+    //     ]
+    // },
     {
         "name": "Condition Quickness Harbinger [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated May 11, 2023\nMay 2023 Balance",
@@ -858,18 +847,6 @@ var songMetas = [
         ]
     },
     {
-        "name": "Hand Kite Herald [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Jan 7, 2023\nNovember 2022 Balance",
-        "logUrl": "https://dps.report/ihYk-20221101-185500_dei",
-        "buildChatCode": "[&DQkOKAwpNCncEdwRKxIGEtQRKxIGEtQRyhHKEQEGAgDUESsSBhIAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/revenant/herald/hand-kite-herald",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
         "name": "Power Alacrity Renegade [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated May 16, 2023\nFebruary 2023 Balance",
         "logUrl": "https://dps.report/8LBy-20230515-192958_golem",
@@ -918,18 +895,6 @@ var songMetas = [
         "logUrl": "https://dps.report/TlRY-20230502-170730_golem",
         "buildChatCode": "[&DQUcGywXRx8VGwAALwEAAAgbAAAGGwAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/thief/specter/condition-alacrity-spectre",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
-    {
-        "name": "Kite Deadeye [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Apr 16, 2023\nFebruary 2023 Balance",
-        "logUrl": "https://dps.report/OK9l-20230214-214155_golem",
-        "buildChatCode": "[&DQUcPSM7OhUMAQAAWAAAADMBAACsFgAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/en/builds/thief/deadeye/kite-deadeye",
         "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
@@ -1175,7 +1140,69 @@ var songMetas = [
                 "command": "OptimizeAbilityQueue"
             }
         ]
-    }
+    },
+    {
+        "name": "Button Mash Scrapper",
+        "description": "by: Mr. Mystic",
+        "logUrl": "https://dps.report/Xf3X-20230320-185258_golem",
+        "buildChatCode": "[&DQMGNyYvKz0qDwAAJgEAAK4SAACjAAAAiQEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://www.youtube.com/watch?v=8y8xVNPgA0Y",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "The New Power Reaper [LI]",
+        "description": "by: Mr. Mystic\nLow intensity version",
+        "logUrl": "https://dps.report/d6kn-20230503-122000_golem",
+        "buildChatCode": "[&DQg1LTImIjYoDwAAgQAAAHUBAABvAQAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://www.youtube.com/watch?v=qnmZYQvlfnk",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "The New Power Reaper [Simplified]",
+        "description": "by: Mr. Mystic\nSimplified version",
+        "difficulty": 2,
+        "logUrl": "https://dps.report/2MOO-20230504-000904_golem",
+        "buildChatCode": "[&DQg1KTImIjbBEgAAgQAAAEABAADxEgAAegEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://www.youtube.com/watch?v=qnmZYQvlfnk",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "The New Harbinger",
+        "description": "by: Mr. Mystic",
+        "logUrl": "https://dps.report/nfyh-20230511-030639_golem",
+        "buildChatCode": "[&DQgnNTI1QD/nGgAAiwAAAOsaAACAAAAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://www.youtube.com/watch?v=V4D5Ud-LYCg",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Chaos Condi Viruotoso",
+        "description": "by: Mr. Mystic",
+        "difficulty": 2,
+        "logUrl": "https://dps.report/cPga-20230517-030126_golem",
+        "buildChatCode": "[&DQctPRgdQj8jDwAAgwEAAIEBAADdGgAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://www.youtube.com/watch?v=8OhmaHmtr1Q",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
 
 ];
 
