@@ -1,4 +1,10 @@
 var customSkills = {
+    // Elementalist - Cleansing Fire
+    // Not sure how this is in the DPS reports on builds that didn't even take it,
+    // but it doesn't seem castable, so ignore.
+    "5535": {
+        "isNote": false
+    },
     // Elementalist - Part of Fiery Greatsword
 	"5663": {
 		"isNote": false
@@ -37,6 +43,10 @@ var customSkills = {
 	"29604": {
 		"isNote": false
 	},
+    // Daredevil - Trait: Bound
+    "31129": {
+        "isNote": false
+    },
     // Dareevil - Trait: Impaling Lotus
 	"31267": {
 		"isNote": false
@@ -185,8 +195,16 @@ var customSkills = {
     "59591": {
         "isNote": false
     },
+    // Harbinger - Trait: Approaching Doom
+    "62558": {
+        "isNote": false
+    },
     // Willbender - Part of Rushing Justice (there is a real note at start)
     "62624": {
+        "isNote": false
+    },
+    // Harbinger - Trait: Deathly Haste
+    "62671": {
         "isNote": false
     },
     // Vindicator - Trait: Forerunner of Death
@@ -269,6 +287,17 @@ var customSkills = {
     "63201": {
         "isNote": false
     },
+    // Untamed - Part of some ability/Trait
+    "63224": {
+        "isNote": false
+    },
+    // Soulbeast - Part of some ability/Trait
+    "69203": {
+        "isNote": false
+    },
+
+
+
     // Ability Code for all weapon swaps
 	"-2": {
 		"isNote": true,
