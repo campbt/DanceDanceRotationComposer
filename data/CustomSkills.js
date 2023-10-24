@@ -178,6 +178,10 @@ var customSkills = {
         "noteType": "Weapon5",
         "tomeSkill": "42259",
     },
+	
+	"46970": { // Mushroom King's Blessing (PoV only) - No idea
+        "isNote": false
+    },
 
     // Elementalist - Trait: Sunspot
 	"56883": {
@@ -279,6 +283,11 @@ var customSkills = {
         "noteType": "Weapon5"
     },
 
+	// Mechanist - Barrier Burst
+    "63365": {
+        "isNote": true,
+		"noteType": "Profession3"
+    },
     // Specter - Part of Twilight Combo
     "63181": {
         "isNote": false
@@ -291,12 +300,64 @@ var customSkills = {
     "63224": {
         "isNote": false
     },
+	// Mechanist - Sky Circus
+    "63236": {
+        "isNote": true,
+		"noteType": "Profession3"
+    },
+	// Mechanist - Crisis Zone
+    "63293": {
+        "isNote": true,
+		"noteType": "Profession2"
+    },
+	// Mechanist - Rolling Smash
+    "63334": {
+        "isNote": true,
+		"noteType": "Profession1"
+    },
+	// Mechanist - Explosive Knucle
+    "63365": {
+        "isNote": true,
+		"noteType": "Profession1"
+    },
+	// Mechanist - Discharge Array
+    "63365": {
+        "isNote": true,
+		"noteType": "Profession2"
+    },
+		// Mechanist - Crisis Zone
+    "63293": {
+        "isNote": true,
+		"noteType": "Profession2"
+    },
     // Soulbeast - Part of some ability/Trait
     "69203": {
         "isNote": false
     },
+	// Sigil - Lightning Strike
+	"69297": {
+		"isNote": false
+	},
+	
+	// Mesmer - Bladecall (non-Virtuoso, so makes a clone)
+	"69311": {
+		"isNote": true,
+		"noteType": "Weapon2"
+	},
 
+	
+	// == Relics ==
+	
+	// Relic - ?? (Was in another language)
+	"69262": {
+		"isNote": false
+	},
+	// Relic - Fireworks
+	"69855": {
+		"isNote": false
+	},
 
+	// == End of Relics ==
 
     // Ability Code for all weapon swaps
 	"-2": {
@@ -378,6 +439,10 @@ var customSkills = {
 	},
 	//  Rune of the Nightmare
 	"-26": {
+		"isNote": false
+	},
+	//  Relic of Fireworks (Buff Lost)
+	"-32": {
 		"isNote": false
 	}
 };
