@@ -334,10 +334,16 @@ var customSkills = {
     "69203": {
         "isNote": false
     },
+	// Soulbeast - Hammer 3
+	"69262": {
+		"isNote": true,
+		"noteType": "Weapon3"
+	},
 	// Sigil - Lightning Strike
 	"69297": {
 		"isNote": false
 	},
+	
 	
 	// Mesmer - Bladecall (non-Virtuoso, so makes a clone)
 	"69311": {
@@ -348,10 +354,6 @@ var customSkills = {
 	
 	// == Relics ==
 	
-	// Relic - ?? (Was in another language)
-	"69262": {
-		"isNote": false
-	},
 	// Relic - Fireworks
 	"69855": {
 		"isNote": false
