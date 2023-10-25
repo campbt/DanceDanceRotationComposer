@@ -330,9 +330,10 @@ var customSkills = {
         "isNote": true,
 		"noteType": "Profession2"
     },
-    // Soulbeast - Part of some ability/Trait
+    // Soulbeast - Serpent's Strike
     "69203": {
-        "isNote": false
+        "isNote": true,
+		"noteType": "Weapon3"
     },
 	// Soulbeast - Hammer 3
 	"69262": {
