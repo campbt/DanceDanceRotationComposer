@@ -178,7 +178,7 @@ var customSkills = {
         "noteType": "Weapon5",
         "tomeSkill": "42259",
     },
-	
+
 	"46970": { // Mushroom King's Blessing (PoV only) - No idea
         "isNote": false
     },
@@ -284,6 +284,11 @@ var customSkills = {
     },
 
 	// Mechanist - Barrier Burst
+    "63141": {
+        "isNote": true,
+		"noteType": "Profession3"
+    },
+	// Mechanist - Barrier Burst
     "63365": {
         "isNote": true,
 		"noteType": "Profession3"
@@ -310,6 +315,7 @@ var customSkills = {
         "isNote": true,
 		"noteType": "Profession2"
     },
+
 	// Mechanist - Rolling Smash
     "63334": {
         "isNote": true,
@@ -325,36 +331,15 @@ var customSkills = {
         "isNote": true,
 		"noteType": "Profession2"
     },
-		// Mechanist - Crisis Zone
-    "63293": {
+	// Mechanist - Discharge Array
+    "63367": {
         "isNote": true,
 		"noteType": "Profession2"
     },
-    // Soulbeast - Serpent's Strike
-    "69203": {
-        "isNote": true,
-		"noteType": "Weapon3"
-    },
-	// Soulbeast - Hammer 3
-	"69262": {
-		"isNote": true,
-		"noteType": "Weapon3"
-	},
-	// Sigil - Lightning Strike
-	"69297": {
-		"isNote": false
-	},
-	
-	
-	// Mesmer - Bladecall (non-Virtuoso, so makes a clone)
-	"69311": {
-		"isNote": true,
-		"noteType": "Weapon2"
-	},
 
-	
+
 	// == Relics ==
-	
+
 	// Relic - Fireworks
 	"69855": {
 		"isNote": false
