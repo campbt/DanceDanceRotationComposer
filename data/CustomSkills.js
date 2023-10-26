@@ -305,38 +305,6 @@ var customSkills = {
     "63224": {
         "isNote": false
     },
-	// Mechanist - Sky Circus
-    "63236": {
-        "isNote": true,
-		"noteType": "Profession3"
-    },
-	// Mechanist - Crisis Zone
-    "63293": {
-        "isNote": true,
-		"noteType": "Profession2"
-    },
-
-	// Mechanist - Rolling Smash
-    "63334": {
-        "isNote": true,
-		"noteType": "Profession1"
-    },
-	// Mechanist - Explosive Knucle
-    "63365": {
-        "isNote": true,
-		"noteType": "Profession1"
-    },
-	// Mechanist - Discharge Array
-    "63365": {
-        "isNote": true,
-		"noteType": "Profession2"
-    },
-	// Mechanist - Discharge Array
-    "63367": {
-        "isNote": true,
-		"noteType": "Profession2"
-    },
-
 
 	// == Relics ==
 
@@ -344,8 +312,6 @@ var customSkills = {
 	"69855": {
 		"isNote": false
 	},
-
-	// == End of Relics ==
 
     // Ability Code for all weapon swaps
 	"-2": {

@@ -2,9 +2,9 @@ var snowCrowsSongMetas = [
 
     // Last Generated: 2023/10/16
 
-    
+
     // MARK: Elementalist
-    
+
     {
         "name": "Beginner Condition Weaver [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Dec 2, 2022\nUpdated Dec 30, 2022\nNovember 2022 Balance",
@@ -39,7 +39,7 @@ var snowCrowsSongMetas = [
         "name": "Condition Tempest [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 9, 2022\nUpdated Sep 3, 2023\nSecrets of the Obscure",
         "logUrl": "https://dps.report/LxOW-20230829-062736_golem",
-        "buildChatCode": "[&DQYfFRomMBfHEgAAcgAAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildChatCode": "[&DQYfFRomMBfHEgAAcwAAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/elementalist/tempest/condition-tempest",
         "postProcessSteps": [
             {
@@ -126,9 +126,9 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-    
+
     // MARK: Engineer
-    
+
     {
         "name": "Beginner Power Holosmith [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Dec 18, 2022\nUpdated Jan 5, 2023\nMay 2023 Balance",
@@ -179,9 +179,9 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-    
+
     // MARK: Guardian
-    
+
     {
         "name": "Condition Firebrand [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 28, 2022\nUpdated Oct 4, 2023\nSecrets of the Obscure",
@@ -271,9 +271,9 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-    
+
     // MARK: Mesmer
-    
+
     {
         "name": "Condition Alacrity Mirage [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Oct 4, 2023\nSecrets of the Obscure",
@@ -371,14 +371,14 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-    
+
     // MARK: Necromancer
-    
+
     {
         "name": "Condition Alacrity Scourge [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 9, 2023\nUpdated Oct 14, 2023\nSecrets of the Obscure",
         "logUrl": "https://dps.report/2bvf-20231014-100953_golem",
-        "buildChatCode": "[&DQgnNjI1PD5+FgAAgAAAAAAAAAAAAAAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildChatCode": "[&DQgnNjI1PD5+FgAAgAAAAHUBAABvAQAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/necromancer/scourge/condition-alacrity-scourge",
         "postProcessSteps": [
             // (No Entry Found in post_process_steps.py)
@@ -388,7 +388,7 @@ var snowCrowsSongMetas = [
         "name": "Condition Harbinger [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 18, 2021\nUpdated Oct 4, 2023\nSecrets of the Obscure",
         "logUrl": "https://dps.report/IpSJ-20231002-151234_golem",
-        "buildChatCode": "[&DQgnNTI1QD/nGgAAgAAAAOsaAAB1AQAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildChatCode": "[&DQgnNTI1QD/nGgAAgAAAAOwaAAB1AQAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/en/builds/necromancer/harbinger/condition-harbinger",
         "postProcessSteps": [
             // Precast is: Elixir of Anguish -> Elixir of Rish -> Elixir of Promise -> Plaguelands
@@ -474,9 +474,9 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-    
+
     // MARK: Ranger
-    
+
     {
         "name": "Condition Druid [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Jun 30, 2023\nUpdated Sep 10, 2023\nSecrets of the Obscure",
@@ -585,9 +585,9 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-    
+
     // MARK: Revenant
-    
+
     {
         "name": "Condition Alacrity Renegade [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 10, 2021\nUpdated Sep 30, 2023\nSecrets of the Obscure",
@@ -703,9 +703,9 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-    
+
     // MARK: Thief
-    
+
     {
         "name": "Beginner Power Daredevil [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Jan 1, 2023\nUpdated Mar 14, 2023\nFebruary 2023 Balance",
@@ -844,9 +844,9 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-    
+
     // MARK: Warrior
-    
+
     {
         "name": "Beginner Power Spellbreaker [SC]",
         "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 19, 2023\nUpdated Mar 21, 2023\nFebruary 2023 Balance",
@@ -967,5 +967,5 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-    
+
 ];
