@@ -21,6 +21,14 @@ var customSkills = {
 	"9433": {
 		"isNote": false
 	},
+    // Signet of Spite
+	"10622": {
+		"isNote": false
+	},
+    // Signet of Fury
+	"14410": {
+		"isNote": false
+	},
     // Firebrand - Trait: Glacial Heart
 	"21795": {
 		"isNote": false
@@ -43,6 +51,10 @@ var customSkills = {
 	"29604": {
 		"isNote": false
 	},
+    // Reaper - Trait: Quick Draw
+	"29703": {
+		"isNote": false
+	},
     // Daredevil - Trait: Bound
     "31129": {
         "isNote": false
@@ -58,6 +70,11 @@ var customSkills = {
     // Daredevil - Trait: Bound
 	"31600": {
 		"isNote": false
+	},
+    // Elementalist - Glyph of Elemental Power
+	"34736": {
+		"isNote": true,
+		"noteType": "Utility"
 	},
     // Revenant - Trait: Call of the Demon
     "46856": {
@@ -207,6 +224,15 @@ var customSkills = {
     "62624": {
         "isNote": false
     },
+    // Willbender - Followup executions calling
+    "62656": {
+        "isNote": false
+    },
+    // Willbender - Advancing strike
+    "62523": {
+        "isNote": true,
+        "noteType": "Weapon5"
+    },
     // Harbinger - Trait: Deathly Haste
     "62671": {
         "isNote": false
@@ -288,10 +314,30 @@ var customSkills = {
         "isNote": true,
 		"noteType": "Profession3"
     },
+	// Mechanist - Sky Circus
+    "63236": {
+        "isNote": true,
+		"noteType": "Profession3"
+    },
+	// Mechanist - Crisis Zone
+    "63293": {
+        "isNote": true,
+		"noteType": "Profession2"
+    },
+	// Mechanist - Rolling Smash
+    "63334": {
+        "isNote": true,
+		"noteType": "Profession1"
+    },
 	// Mechanist - Barrier Burst
     "63365": {
         "isNote": true,
 		"noteType": "Profession3"
+    },
+	// Mechanist - Discharge Array
+    "63367": {
+        "isNote": true,
+		"noteType": "Profession1"
     },
     // Specter - Part of Twilight Combo
     "63181": {
@@ -312,6 +358,23 @@ var customSkills = {
 	"69855": {
 		"isNote": false
 	},
+    // Relic - Peitha
+	"69882": {
+		"isNote": false
+	},
+    // Relic - Peitha
+	"70196": {
+		"isNote": false
+	},
+
+    // Guardian - Jurisdiction (channel?)
+    "71818": {
+		"isNote": false
+    },
+    // Guardian - Jurisdiction (channel?)
+    "72053": {
+		"isNote": false
+    },
 
     // Ability Code for all weapon swaps
 	"-2": {
@@ -393,6 +456,10 @@ var customSkills = {
 	},
 	//  Rune of the Nightmare
 	"-26": {
+		"isNote": false
+	},
+	//  Hollosmith - Photon Forge skill followup stuff
+	"-31": {
 		"isNote": false
 	},
 	//  Relic of Fireworks (Buff Lost)

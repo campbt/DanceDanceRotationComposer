@@ -152,18 +152,6 @@ var myMysticSongMetas = [
             }
         ]
     },
-    {
-        "name": "Chaos Condi Viruotoso",
-        "description": "by: Mr. Mystic",
-        "difficulty": 2,
-        "logUrl": "https://dps.report/cPga-20230517-030126_golem",
-        "buildChatCode": "[&DQctPRgdQj8jDwAAgwEAAIEBAADdGgAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://www.youtube.com/watch?v=8OhmaHmtr1Q",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
+
 
 ];
