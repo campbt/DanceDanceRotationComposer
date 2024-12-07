@@ -67,7 +67,6 @@ async function generateSongs() {
     var allSongMetas = [];
     allSongMetas = allSongMetas.concat(songMetas);
     allSongMetas = allSongMetas.concat(snowCrowsSongMetas);
-    allSongMetas = allSongMetas.concat(myMysticSongMetas);
 
     console.log("Starting Generation of " + allSongMetas.length + " Songs");
     for (var songMetasIndex = 0; songMetasIndex < allSongMetas.length; songMetasIndex++) {
