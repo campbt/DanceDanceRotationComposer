@@ -1,15 +1,15 @@
 var snowCrowsSongMetas = [
 
-    // Last Generated: 2024/03/09
+    // Last Generated: 2024/12/06
 
-
+    
     // MARK: Elementalist
-
+    
     {
         "name": "Condition Alacrity Tempest [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 5, 2022\nUpdated Mar 8, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/pPuh-20240307-121112_golem",
-        "buildChatCode": "[&DQYfFRomMCd0AAAAcwAAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 5, 2022\nUpdated Aug 30, 2024\nRaids - March 2024 Balance",
+        "logUrl": "https://dps.report/ToYQ-20240320-030855_golem",
+        "buildChatCode": "[&DQYfFRomMCd0AAAAcgAAAJEAAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/elementalist/condition-alacrity-tempest",
         "postProcessSteps": [
             {
@@ -19,9 +19,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Tempest [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 9, 2022\nUpdated Mar 4, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/UMK6-20240306-032132_golem",
-        "buildChatCode": "[&DQYfFRomMCd0AAAAcwAAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 9, 2022\nUpdated Aug 30, 2024\nRaids - March 2024 Balance",
+        "logUrl": "https://dps.report/c6Pe-20240320-004729_golem",
+        "buildChatCode": "[&DQYfFRomMBd0AAAAcgAAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/elementalist/condition-tempest",
         "postProcessSteps": [
             {
@@ -31,18 +31,23 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Weaver [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Feb 1, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/JIUx-20231008-232724_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/LyCY-20240323-201022_golem",
         "buildChatCode": "[&DQYfFRomOBV0AAAAcwAAAMsAAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/elementalist/condition-weaver",
         "postProcessSteps": [
             {
-                "command": "AddPreCastAbility",
-                "abilityId": 43638,
-                "time": -800,
-                "duration": 800,
-                "noteType": "Elite"
-            },
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Alacrity Tempest [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 23, 2024\nUpdated Aug 30, 2024\nRaids - June 2024 Balance",
+        "logUrl": "https://dps.report/JESv-20240724-055201_golem",
+        "buildChatCode": "[&DQYpLyU1MCfHEgAAwxIAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/elementalist/power-alacrity-tempest",
+        "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
             }
@@ -50,9 +55,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Catalyst [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated Oct 17, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/EBWX-20231008-175134_golem",
-        "buildChatCode": "[&DQYfHSkfQyZ0AAAAvgEAAPgaAABQAQAA9xoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated Aug 30, 2024\nRaids - Secrets of the Obscure",
+        "logUrl": "https://dps.report/kqFR-20240831-221311_golem",
+        "buildChatCode": "[&DQYfHSkfQyZ0AAAAvgEAAPgaAADuGgAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/elementalist/power-catalyst",
         "postProcessSteps": [
             {
@@ -61,8 +66,20 @@ var snowCrowsSongMetas = [
         ]
     },
     {
+        "name": "Power Tempest [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/qZCK-20240717-155857_golem",
+        "buildChatCode": "[&DQYpLxE+MBfHEgAAwxIAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/elementalist/power-tempest",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
         "name": "Power Weaver [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Oct 17, 2023\nSecrets of the Obscure",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Aug 30, 2024\nRaids - Secrets of the Obscure",
         "logUrl": "https://dps.report/SbRf-20231003-025202_golem",
         "buildChatCode": "[&DQYfHSkfOBl0AHQAUAEAAL4BAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/elementalist/power-weaver",
@@ -72,15 +89,15 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-
+    
     // MARK: Engineer
-
+    
     {
-        "name": "Beginner Power Holosmith [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Dec 18, 2022\nUpdated Jan 5, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/nMYf-20220824-174210_golem",
-        "buildChatCode": "[&DQMGOyYvOSsqDwAAhgAAACYBAABXFgAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/builds/raids/engineer/beginner-power-holosmith",
+        "name": "Beginner Power Scrapper [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jan 8, 2024\nUpdated Aug 30, 2024\nRaids - Secrets of the Obscure",
+        "logUrl": "https://dps.report/VEqb-20240511-103349_golem",
+        "buildChatCode": "[&DQMGNyYvKz0qDyoPhgCGAK4SBwEmAa4SmAGJAQAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/engineer/beginner-power-scrapper",
         "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
@@ -89,9 +106,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Alacrity Mechanist [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated Feb 5, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/wzHf-20240204-193521_golem",
-        "buildChatCode": "[&DQMGJyY5RioNGwAABwEAAJMBAACGAAAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated Sep 14, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/O8xK-20240901-023853_golem",
+        "buildChatCode": "[&DQMGJyY5RikNGwAAhgAAAAcBAAAOGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/engineer/condition-alacrity-mechanist",
         "postProcessSteps": [
             {
@@ -100,9 +117,21 @@ var snowCrowsSongMetas = [
         ]
     },
     {
+        "name": "Condition Engineer [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 19, 2021\nUpdated Jul 22, 2022\nRaids - March 2024 Balance",
+        "logUrl": "https://dps.report/6pe2-20231005-235821_golem",
+        "buildChatCode": "[&DQMGKyY5FRUqDwAAhgAAAAcBAACTAQAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/engineer/condition-engineer",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
         "name": "Condition Holosmith [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Dec 6, 2023\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/TTxK-20231203-192541_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Sep 14, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/1MvY-20240907-181942_golem",
         "buildChatCode": "[&DQMGJyY5OTcqDwAAhgAAAAcBAACTAQAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/engineer/condition-holosmith",
         "postProcessSteps": [
@@ -113,18 +142,23 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Mechanist [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 9, 2022\nUpdated Feb 21, 2024\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/Vh6i-20240220-101735_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 9, 2022\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/zFFe-20240822-023746_golem",
         "buildChatCode": "[&DQMGJyY5RjUNGxQBhgBfARAbAAAOG4YACRsAAAAAAAAAAAAAAAAAAAAAAAABNgAA]",
         "buildUrl": "https://snowcrows.com/builds/raids/engineer/condition-mechanist",
         "postProcessSteps": [
             {
-                "command": "AddPreCastAbility",
-                "abilityId": 5812,
-                "time": -200,
-                "duration": 0,
-                "noteType": "Utility2"
-            },
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Alacrity Mechanist [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/PkKp-20240502-232633_golem",
+        "buildChatCode": "[&DQMGNyYvRioNGwAAlQEAABobAAAQGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/engineer/power-alacrity-mechanist",
+        "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
             }
@@ -132,9 +166,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Holosmith [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 27, 2022\nUpdated Oct 4, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/P7Qz-20231003-143924_golem",
-        "buildChatCode": "[&DQMGOyYvOTsqDwAAhgAAACYBAABXFgAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 27, 2022\nUpdated Jul 23, 2024\nRaids - June 2024 Balance",
+        "logUrl": "https://dps.report/Mazg-20240719-224651_golem",
+        "buildChatCode": "[&DQMGOyYvOSsqDwAAhgAAAOUWAABXFgAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/engineer/power-holosmith",
         "postProcessSteps": [
             {
@@ -143,11 +177,11 @@ var snowCrowsSongMetas = [
         ]
     },
     {
-        "name": "Power Quickness Scrapper [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 16, 2022\nUpdated Oct 19, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/ijBv-20231017-222931_golem",
-        "buildChatCode": "[&DQMGNyYvKy0qD9kShgAnE64SBwEmAa4SmAGDEgAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/builds/raids/engineer/power-quickness-scrapper",
+        "name": "Power Mechanist [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 6, 2022\nUpdated Aug 30, 2024\nRaids - June 2024 Balance",
+        "logUrl": "https://dps.report/vFjo-20240502-222108_golem",
+        "buildChatCode": "[&DQMGNyYvRh0NGwAAlQEAABobAAAQGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/engineer/power-mechanist",
         "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
@@ -156,8 +190,8 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Scrapper [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Feb 22, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/TlPA-20240218-182809_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Aug 30, 2024\nRaids - January 2024 Balance",
+        "logUrl": "https://dps.report/VMeG-20240703-153531_golem",
         "buildChatCode": "[&DQMGNyYvKz0qDyoPhgCGAK4SBwEmAa4SmAGJAQAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/engineer/power-scrapper",
         "postProcessSteps": [
@@ -166,13 +200,13 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-
+    
     // MARK: Guardian
-
+    
     {
         "name": "Condition Firebrand [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 28, 2022\nUpdated Mar 3, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/lH3N-20240308-155554_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 28, 2022\nUpdated Aug 30, 2024\nRaids - June 2024 Balance",
+        "logUrl": "https://dps.report/CdPR-20240321-151620_golem",
         "buildChatCode": "[&DQEQGi4fPiVLFwAATAEAABUXAAAxAQAAGBYAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/guardian/condition-firebrand",
         "postProcessSteps": [
@@ -183,9 +217,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Quickness Firebrand [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Mar 6, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/w8Vs-20240305-135322_golem",
-        "buildChatCode": "[&DQEQGi4fPiZLFwAATAEAABUXAAB6FgAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Aug 30, 2024\nRaids - June 2024 Balance",
+        "logUrl": "https://dps.report/oARy-20240630-123254_golem",
+        "buildChatCode": "[&DQEQGi4bPiZLFwAATAEAABUXAAB6FgAAiRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/guardian/condition-quickness-firebrand",
         "postProcessSteps": [
             {
@@ -195,8 +229,8 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Willbender [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 3, 2022\nUpdated Mar 7, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/rDSc-20240305-013717_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 3, 2022\nUpdated Aug 30, 2024\nRaids - June 2024 Balance",
+        "logUrl": "https://dps.report/K1Vm-20241029-112407_golem",
         "buildChatCode": "[&DQEQGi4XQSUmDwAATAEAANgaAAAxAQAA6RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/guardian/condition-willbender",
         "postProcessSteps": [
@@ -207,7 +241,7 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Alacrity Willbender [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jan 24, 2022\nUpdated Jan 31, 2024\nJanuary 2024 Balance",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jan 24, 2022\nUpdated Aug 30, 2024\nRaids - October 2024 Balance",
         "logUrl": "https://dps.report/7K6o-20231206-175415_golem",
         "buildChatCode": "[&DQEqOi4lQRomDwAA3hoAAEgBAAD+AAAA6RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/guardian/power-alacrity-willbender",
@@ -218,23 +252,35 @@ var snowCrowsSongMetas = [
         ]
     },
     {
-        "name": "Power Dragonhunter [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Nov 12, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/nQ3s-20231011-073653_golem",
-        "buildChatCode": "[&DQEuNSo6GzsmDyYP/gD+AIoSLQFIAUgBtRKJEgAAAAAAAAAAAAAAAAAAAAACMgAjAAA=]",
-        "buildUrl": "https://snowcrows.com/builds/raids/guardian/power-dragonhunter",
+        "name": "Power Willbender [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated Oct 17, 2024\nRaids - October 2024 Balance",
+        "logUrl": "https://dps.report/Z3Rm-20241012-234216_golem",
+        "buildChatCode": "[&DQEqOi4VQSYmDwAA3hoAAEgBAAD+AAAA6RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/guardian/power-willbender",
         "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
             }
         ]
     },
-
+    
     // MARK: Mesmer
-
+    
+    {
+        "name": "Condition Chronomancer [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/ErKq-20240818-033730_golem",
+        "buildChatCode": "[&DQctPRg/KD4jDyMPgQFpAYMBawFrAYMB7RK8AQAAAAAAAAAAAAAAAAAAAAADWQBWAGYAAA==]",
+        "buildUrl": "https://snowcrows.com/builds/raids/mesmer/condition-chronomancer",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
     {
         "name": "Condition Mirage [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Feb 3, 2024\nJanuary 2024 Balance",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Aug 30, 2024\nRaids - January 2024 Balance",
         "logUrl": "https://dps.report/uyqg-20240131-002625_golem",
         "buildChatCode": "[&DQcBJy09Ox/uFSMP4BUHFoEBgQGDAYMBRhe8AQAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/mesmer/condition-mirage",
@@ -246,19 +292,11 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Virtuoso [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 16, 2022\nUpdated Dec 7, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/YeGx-20231205-223957_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 16, 2022\nUpdated Aug 30, 2024\nRaids - Secrets of the Obscure",
+        "logUrl": "https://dps.report/cpdt-20240423-002046_golem",
         "buildChatCode": "[&DQcBHRgdQjsjDwAAgwEAAIIBAACBAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/mesmer/condition-virtuoso",
         "postProcessSteps": [
-            // The Virtuoso Elite Skill is not in the DPS report for some reason
-            {
-                "command": "AddAutoCastAbility",
-                "abilityId": 24755,
-                "interval": 48100,
-                "offset": 800,
-                "noteType": "Elite"
-            },
             {
                 "command": "OptimizeAbilityQueue"
             }
@@ -266,9 +304,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Boon Chronomancer [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Jul 13, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/wbK9-20231111-134616_golem",
-        "buildChatCode": "[&DQcKGQEdKC4jDwAABBMAAGkBAACHEgAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Oct 24, 2024\nRaids - October 2024 Balance",
+        "logUrl": "https://dps.report/arbR-20240915-193047_golem",
+        "buildChatCode": "[&DQcBHQoaKB4jDyMPBBOGAYcSjwFpAWkBsxK8AQAAAAAAAAAAAAAAAAAAAAADCQEvAFoAAA==]",
         "buildUrl": "https://snowcrows.com/builds/raids/mesmer/power-boon-chronomancer",
         "postProcessSteps": [
             {
@@ -278,9 +316,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Chronomancer [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Oct 17, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/mV8B-20231003-224244_golem",
-        "buildChatCode": "[&DQcKGQEdKD4jDwAABBMAAGkBAACPAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished May 23, 2021\nUpdated Nov 4, 2024\nRaids - October 2024 Balance",
+        "logUrl": "https://dps.report/l9nM-20240524-200443_golem",
+        "buildChatCode": "[&DQcKGgEdKD4jDwAABBMAAGkBAACPAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/mesmer/power-chronomancer",
         "postProcessSteps": [
             {
@@ -288,12 +326,24 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-
+    {
+        "name": "Power Virtuoso [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 19, 2021\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/SQov-20240821-152722_golem",
+        "buildChatCode": "[&DQcKGgEdQiojDwAAjwEAAN0aAABpAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/mesmer/power-virtuoso",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    
     // MARK: Necromancer
-
+    
     {
         "name": "Condition Alacrity Scourge [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 9, 2023\nUpdated Oct 14, 2023\nSecrets of the Obscure",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 9, 2023\nUpdated Aug 30, 2024\nRaids - Secrets of the Obscure",
         "logUrl": "https://dps.report/2bvf-20231014-100953_golem",
         "buildChatCode": "[&DQgnNjI1PD5+FgAAgAAAAAAAAAAAAAAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/necromancer/condition-alacrity-scourge",
@@ -305,40 +355,11 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Harbinger [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 18, 2021\nUpdated Feb 4, 2024\nSecrets of the Obscure",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 18, 2021\nUpdated Aug 30, 2024\nRaids - Secrets of the Obscure",
         "logUrl": "https://dps.report/uijh-20240126-112204_golem",
         "buildChatCode": "[&DQgnNTI1QD/nGgAAgAAAAPUAAADsGgAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/necromancer/condition-harbinger",
         "postProcessSteps": [
-            // Precast is: Elixir of Anguish -> Elixir of Rish -> Elixir of Promise -> Plaguelands
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 10549,
-                "time": -918,
-                "duration": 918,
-                "noteType": "Elite"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 62667,
-                "time": -676,
-                "duration": 676,
-                "noteType": "Heal"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 62530,
-                "time": -682,
-                "duration": 682,
-                "noteType": "Utility2"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 62662,
-                "time": -683,
-                "duration": 683,
-                "noteType": "Utility3"
-            },
             {
                 "command": "OptimizeAbilityQueue"
             }
@@ -346,9 +367,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Quickness Harbinger [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated Feb 8, 2024\nSecrets of the Obscure",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated Feb 8, 2024\nRaids - Secrets of the Obscure",
         "logUrl": "https://dps.report/9GSF-20231002-152522_golem",
-        "buildChatCode": "[&DQgnNTI1QCvnGgAAgAAAAOwaAAB1AQAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildChatCode": "[&DQgnNTI1QCvnGgAAgAAAAHUBAADsGgAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/necromancer/condition-quickness-harbinger",
         "postProcessSteps": [
             {
@@ -358,9 +379,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Reaper [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Oct 5, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/O08l-20231002-152104_golem",
-        "buildChatCode": "[&DQgnNzIlIiabAAAAQAEAAIAAAACmEgAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/HZw6-20240829-121726_golem",
+        "buildChatCode": "[&DQgnNzInIibBEgAAgAAAAEABAACmEgAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/necromancer/condition-reaper",
         "postProcessSteps": [
             {
@@ -370,7 +391,7 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Scourge [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 16, 2022\nUpdated Oct 4, 2023\nSecrets of the Obscure",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 16, 2022\nUpdated Aug 30, 2024\nRaids - Secrets of the Obscure",
         "logUrl": "https://dps.report/LzVj-20231003-151324_golem",
         "buildChatCode": "[&DQgnNjI1PCp+FgAAcAEAAIAAAAB1AQAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/necromancer/condition-scourge",
@@ -381,9 +402,33 @@ var snowCrowsSongMetas = [
         ]
     },
     {
+        "name": "Power Harbinger [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 27, 2024\nUpdated Aug 26, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/Mu8J-20240821-222344_golem",
+        "buildChatCode": "[&DQg1KTIlQBXnGigPQAGBAIEAQAF1AXUB6BqVAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/necromancer/power-harbinger",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Quickness Harbinger [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 27, 2024\nUpdated Aug 26, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/BCeZ-20240822-094804_golem",
+        "buildChatCode": "[&DQg1KTIlQCnnGgAAgQAAAEABAADsGgAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/necromancer/power-quickness-harbinger",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
         "name": "Power Reaper [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Oct 14, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/s1PP-20231007-214530_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/oU7B-20240321-155135_golem",
         "buildChatCode": "[&DQg1KTIlIjbBEigPQAGBAIEAQAHxEnUBlQCVAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/necromancer/power-reaper",
         "postProcessSteps": [
@@ -392,24 +437,12 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-
+    
     // MARK: Ranger
-
-    {
-        "name": "Condition Druid [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jun 30, 2023\nUpdated Nov 4, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/shIS-20231028-224106_golem",
-        "buildChatCode": "[&DQQePSE3BT95AAAArAEAABsAAAC/AAAAwAAAADkAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/builds/raids/ranger/condition-druid",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
+    
     {
         "name": "Condition Quickness Untamed [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Apr 1, 2022\nUpdated Feb 1, 2024\nJanuary 2024 Balance",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Apr 1, 2022\nUpdated Feb 1, 2024\nRaids - June 2024 Balance",
         "logUrl": "https://dps.report/QWdC-20240201-101855_golem",
         "buildChatCode": "[&DQQeHSE3SB8UGwAAvwAAAL0AAAC6AAAAwAAAAAMwAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/ranger/condition-quickness-untamed",
@@ -421,9 +454,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Soulbeast [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Oct 4, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/4Iwe-20231003-183528_golem",
-        "buildChatCode": "[&DQQeLSE3Ny55AC4XvwC/ABsApQHpFukWLhYuFgMlFQkAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 6, 2022\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/JR0K-20231129-214456_golem",
+        "buildChatCode": "[&DQQePSA/Ny55AC4XvwC/AKUBpQHpFukWLhYuFjQlFQkAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/ranger/condition-soulbeast",
         "postProcessSteps": [
             {
@@ -432,11 +465,11 @@ var snowCrowsSongMetas = [
         ]
     },
     {
-        "name": "Hybrid Soulbeast [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 6, 2022\nUpdated Nov 29, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/JR0K-20231129-214456_golem",
-        "buildChatCode": "[&DQQePSA/Ny55AC4XvwC/AKUBpQHpFukWLhYuFjQlFQkAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/builds/raids/ranger/hybrid-soulbeast",
+        "name": "Power Quickness Untamed [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Dec 9, 2022\nUpdated Aug 25, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/ZAyF-20240825-174923_golem",
+        "buildChatCode": "[&DQQZGR45SB8UGxQbtgC2ALUAtQCsAawBDxsPGz1GFS8AAAAAAAAAAAAAAAADMwBaAAUAAA==]",
+        "buildUrl": "https://snowcrows.com/builds/raids/ranger/power-quickness-untamed",
         "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
@@ -444,61 +477,39 @@ var snowCrowsSongMetas = [
         ]
     },
     {
-        "name": "Hybrid Soulbeast [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 6, 2022\nUpdated Nov 29, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/JR0K-20231129-214456_golem",
-        "buildChatCode": "[&DQQePSA/Ny55AC4XvwC/AKUBpQHpFukWLhYuFjQlFQkAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/builds/raids/ranger/hybrid-soulbeast",
+        "name": "Power Soulbeast [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 17, 2022\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/AQKD-20240813-195034_golem",
+        "buildChatCode": "[&DQQeOSA/Nzp5AAAApQEAALUAAACsAQAALhYAACcAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/ranger/power-soulbeast",
         "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
             }
         ]
     },
-
+    {
+        "name": "Power Untamed [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Dec 9, 2022\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/0hnB-20240320-202943_golem",
+        "buildChatCode": "[&DQQIGx45SDd5AAAAtQAAAKwBAAC+AAAADxsAAC8GAAAAAAAAAAAAAAAAAAACMwA1AAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/ranger/power-untamed",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    
     // MARK: Revenant
-
+    
     {
         "name": "Condition Alacrity Renegade [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 10, 2021\nUpdated Sep 30, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/ervZ-20231003-013459_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 10, 2021\nUpdated Nov 13, 2024\nRaids - October 2024 Balance",
+        "logUrl": "https://dps.report/aZsY-20241029-155240_golem",
         "buildChatCode": "[&DQkOHQMmPzrcEQAAKxIAANQRAAAGEgAAyhEAAAQFAADUESsSBhIAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/revenant/condition-alacrity-renegade",
         "postProcessSteps": [
-            // Dlete the first Echoing Eruption so it can be pre-cast before Orders from Above
-            {
-                "command": "DeleteAt",
-                "index": 0
-            },
-            // Precast Razorclaw's Rage (Utility3) -> Temporal Rift (Weapon5) -> Echoing Eruption (Weapon3) -> Orders from above (Profession4)
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 45537,
-                "time": -440,
-                "duration": 440,
-                "noteType": "Profession4"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 27964,
-                "time": -440,
-                "duration": 440,
-                "noteType": "Weapon3"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 28409,
-                "time": -560,
-                "duration": 560,
-                "noteType": "Weapon5"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 42949,
-                "time": -520,
-                "duration": 520,
-                "noteType": "Utility3"
-            },
             {
                 "command": "OptimizeAbilityQueue"
             }
@@ -506,8 +517,8 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Quickness Herald [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Oct 17, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/KxGu-20231004-225142_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Oct 16, 2024\nRaids - October 2024 Balance",
+        "logUrl": "https://dps.report/Q85f-20241017-012221_golem",
         "buildChatCode": "[&DQkOHQMWNBbcEdwRKxIrEtQR1BEGEgYSyhHKEQEEAQQrEtQRBhLUESsSBhI=]",
         "buildUrl": "https://snowcrows.com/builds/raids/revenant/condition-quickness-herald",
         "postProcessSteps": [
@@ -517,57 +528,36 @@ var snowCrowsSongMetas = [
         ]
     },
     {
+        "name": "Power Herald [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 30, 2022\nUpdated Aug 30, 2024\nRaids - June 2024 Balance",
+        "logUrl": "https://dps.report/aHzd-20231201-192905_golem",
+        "buildChatCode": "[&DQkDNg8qNDfcEQAABhIAACsSAADUEQAAyhEAAAECAADUESsSBhIAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/revenant/power-herald",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
         "name": "Power Quickness Herald [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 12, 2022\nUpdated Sep 30, 2023\nSecrets of the Obscure",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 12, 2022\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
         "logUrl": "https://dps.report/gpDG-20231003-204833_golem",
         "buildChatCode": "[&DQkDNg8qNBbcEdwRKxIrEtQR1BEGEgYSyhHKEQECAQIGEisS1BEGEisS1BE=]",
         "buildUrl": "https://snowcrows.com/builds/raids/revenant/power-quickness-herald",
         "postProcessSteps": [
-            // Precast Activating Facets | Facet of Nature (Profession2) -> Facet of Darkness (Utility3) -> Facet of Nature (Heal). Then precast activating two of them: Infuse Light (Heal) -> True Nature (Profession2)-> Facet of Strength (Utility2)
             {
-                "command": "AddPreCastAbility",
-                "abilityId": 26644,
-                "time": -333,
-                "duration": 0,
-                "noteType": "Utility2"
-            },
-            // Activate Facets:
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 51667,
-                "time": -333,
-                "duration": 0,
-                "noteType": "Profession2"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 27228,
-                "time": -333,
-                "duration": 0,
-                "noteType": "Heal"
-            },
-            // Turn on Facets:
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 27220,
-                "time": -333,
-                "duration": 0,
-                "noteType": "Heal"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 28379,
-                "time": -333,
-                "duration": 0,
-                "noteType": "Utility3"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 29371,
-                "time": -333,
-                "duration": 0,
-                "noteType": "Profession2"
-            },
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
+        "name": "Power Renegade [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Jul 20, 2022\nRaids - May 2021 Balance",
+        "logUrl": "https://dps.report/hzo6-20210610-032713_golem",
+        "buildChatCode": "[&DQkDJg86Px3cEdwR1BHUESsSBhIGEisSyhHKEQUCAwTUESsSBhIGEisS1BE=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/revenant/power-renegade",
+        "postProcessSteps": [
             {
                 "command": "OptimizeAbilityQueue"
             }
@@ -575,7 +565,7 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Vindicator [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated Feb 22, 2024\nJanuary 2024 Balance",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated Aug 30, 2024\nRaids - January 2024 Balance",
         "logUrl": "https://dps.report/RlrB-20240222-163421_golem",
         "buildChatCode": "[&DQkDNg8qRRXcEQAABhIAANQRAAArEgAAyhEAAAcCAADUESsSBhIAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/revenant/power-vindicator",
@@ -585,26 +575,14 @@ var snowCrowsSongMetas = [
             }
         ]
     },
-
+    
     // MARK: Thief
-
-    {
-        "name": "Beginner Power Daredevil [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jan 1, 2023\nUpdated Mar 14, 2023\nJuly 2023 Balance",
-        "logUrl": "https://www.dps.report/wYRI-20220824-133048_golem",
-        "buildChatCode": "[&DQUcPSMbBzkMAQAAVwEAADMBAACwEgAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
-        "buildUrl": "https://snowcrows.com/builds/raids/thief/beginner-power-daredevil",
-        "postProcessSteps": [
-            {
-                "command": "OptimizeAbilityQueue"
-            }
-        ]
-    },
+    
     {
         "name": "Condition Alacrity Specter [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 9, 2022\nUpdated Oct 8, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/M4K3-20230723-001607_golem",
-        "buildChatCode": "[&DQUcGywfRzUVGwAALwEAAD4BAAALAQAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 9, 2022\nUpdated May 12, 2024\nRaids - Secrets of the Obscure",
+        "logUrl": "https://dps.report/I9xu-20240512-152724_golem",
+        "buildChatCode": "[&DQUcGyw3RzkVGwAALwEAAA0BAAALAQAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/thief/condition-alacrity-spectre",
         "postProcessSteps": [
             {
@@ -614,26 +592,11 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Daredevil [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 29, 2022\nUpdated Dec 1, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/hFjC-20231127-071851_golem",
-        "buildChatCode": "[&DQUcGyw1BxmUEgwBVQFXAS8BMwELAVYBKAAOAQAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 29, 2022\nUpdated May 10, 2024\nRaids - Secrets of the Obscure",
+        "logUrl": "https://dps.report/MnIE-20240430-045748_golem",
+        "buildChatCode": "[&DQUcGyw1BxmUEgwBDQFXAS8BMwELAVYBKAAOAQAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/thief/condition-daredevil",
         "postProcessSteps": [
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 13093,
-                "time": -100,
-                "duration": 0,
-                "noteType": "Utility1"
-            },
-            // Precast Thieves Guild
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 13082,
-                "time": -1162,
-                "duration": 1162,
-                "noteType": "Elite"
-            },
             {
                 "command": "OptimizeAbilityQueue"
             }
@@ -641,9 +604,9 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Deadeye [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Mar 2, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/LRXq-20240307-195658_golem",
-        "buildChatCode": "[&DQUcGyw2Oh0MAQAALwEAAFUBAAALAQAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Jun 4, 2024\nRaids - June 2024 Balance",
+        "logUrl": "https://dps.report/4GTi-20240530-005615_golem",
+        "buildChatCode": "[&DQUcGyw2Oh/xFQAALwEAAFUBAAAgFwAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/thief/condition-deadeye",
         "postProcessSteps": [
             {
@@ -652,9 +615,21 @@ var snowCrowsSongMetas = [
         ]
     },
     {
+        "name": "Condition Quickness Deadeye [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 29, 2024\nUpdated Aug 30, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/dUOv-20240821-180709_golem",
+        "buildChatCode": "[&DQUcGyw3Oj/xFQAALwEAAAsBAAAgFwAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/thief/condition-quickness-deadeye",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
         "name": "Condition Specter [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated Oct 4, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/LWOU-20230719-010902_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 8, 2022\nUpdated Aug 29, 2024\nRaids - Secrets of the Obscure",
+        "logUrl": "https://dps.report/4PUw-20240821-170414_golem",
         "buildChatCode": "[&DQUcGywXRxUVGwAAPgEAAC8BAAALAQAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/thief/condition-spectre",
         "postProcessSteps": [
@@ -664,10 +639,22 @@ var snowCrowsSongMetas = [
         ]
     },
     {
+        "name": "Condition Thief [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 13, 2024\nUpdated Jul 13, 2024\nRaids - June 2024 Balance",
+        "logUrl": "https://dps.report/c4T0-20240627-104916_golem",
+        "buildChatCode": "[&DQUcGyw2FCsMAQwBCwEzAQ0BWAEvAVYBDgEAAAAAAAAAAAAAAAAAAAAAAAADBQAvADYAAA==]",
+        "buildUrl": "https://snowcrows.com/builds/raids/thief/condition-thief",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
         "name": "Kite Deadeye [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Oct 18, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/ENt6-20230710-135557_golem",
-        "buildChatCode": "[&DQUcPiMbOh2FAAAAMwEAAKwWAAAfFgAAKAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 22, 2022\nUpdated Sep 1, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/7Qst-20240901-201424_golem",
+        "buildChatCode": "[&DQUcPSMbOi/xFQAAMwEAACAXAACsFgAAKAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/thief/kite-deadeye",
         "postProcessSteps": [
             {
@@ -677,48 +664,11 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Daredevil [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 28, 2022\nUpdated Aug 27, 2023\nSecrets of the Obscure",
-        "logUrl": "https://www.dps.report/GlYP-20230826-115834_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 28, 2022\nUpdated Apr 3, 2024\nRaids - March 2024 Balance",
+        "logUrl": "https://www.dps.report/smRL-20240319-204548_golem",
         "buildChatCode": "[&DQUcPSMbBzsMAQAAKRMAADMBAACwEgAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/thief/power-daredevil",
         "postProcessSteps": [
-            // Precast Dodges to empty bar
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 23275,
-                "time": -750,
-                "duration": 750,
-                "noteType": "Dodge"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 13027,
-                "time": -1000,
-                "duration": 1000,
-                "noteType": "HealSkill"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 23275,
-                "time": -750,
-                "duration": 750,
-                "noteType": "Dodge"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 23275,
-                "time": -750,
-                "duration": 750,
-                "noteType": "Dodge"
-            },
-            // Precast Thieves Guild
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 13082,
-                "time": -1162,
-                "duration": 1162,
-                "noteType": "Elite"
-            },
             {
                 "command": "OptimizeAbilityQueue"
             }
@@ -726,40 +676,36 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Deadeye [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 1, 2022\nUpdated Sep 27, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/MXrd-20230915-172015_golem",
-        "buildChatCode": "[&DQUcPSMbOh0MAQAAMwEAAKwWAAAfFgAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Sep 1, 2022\nUpdated Mar 23, 2024\nRaids - Secrets of the Obscure",
+        "logUrl": "https://dps.report/FyD0-20240322-133853_golem",
+        "buildChatCode": "[&DQUjGxw9Oh0MAQwBMwEzASAXWwEfFlYBPRYAAAAAAAAAAAAAAAAAAAAAAAADBQAvADYAAA==]",
         "buildUrl": "https://snowcrows.com/builds/raids/thief/power-deadeye",
         "postProcessSteps": [
-            // Precast Deadeye's Mark
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 43390,
-                "time": -402,
-                "duration": 402,
-                "noteType": "Profession1"
-            },
-            // Precast Thieves Guild
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 13082,
-                "time": -1162,
-                "duration": 1162,
-                "noteType": "Elite"
-            },
             {
                 "command": "OptimizeAbilityQueue"
             }
         ]
     },
-
+    {
+        "name": "Power Quickness Deadeye [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jun 29, 2023\nUpdated Aug 24, 2024\nRaids - Janthir Wilds",
+        "logUrl": "https://dps.report/DIWM-20240823-013059_golem",
+        "buildChatCode": "[&DQUcPSMbOj/xFQAAMwEAACAXAACsFgAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/thief/power-quickness-deadeye",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    
     // MARK: Warrior
-
+    
     {
         "name": "Beginner Power Berserker [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jan 8, 2024\nUpdated Feb 16, 2024\nJanuary 2024 Balance",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jan 8, 2024\nUpdated Feb 16, 2024\nRaids - January 2024 Balance",
         "logUrl": "https://dps.report/zgCd-20231203-110404_golem",
-        "buildChatCode": "[&DQIEHzMaEhXyEgAAqQAAANcSAADEEgAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildChatCode": "[&DQIEHzMaEhXyEvIS1xLXEqkAqQCvAK8AwhKcAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/warrior/beginner-power-berserker",
         "postProcessSteps": [
             {
@@ -769,7 +715,7 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Berserker [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 22, 2022\nUpdated Oct 25, 2023\nSecrets of the Obscure",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 22, 2022\nUpdated Aug 30, 2024\nRaids - Secrets of the Obscure",
         "logUrl": "https://dps.report/RzZh-20231014-102529_golem",
         "buildChatCode": "[&DQIkLTM+EibyEgAA3BIAAKESAADXEgAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/warrior/condition-berserker",
@@ -781,7 +727,7 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Condition Quickness Berserker [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 10, 2022\nUpdated Oct 15, 2023\nSecrets of the Obscure",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Aug 10, 2022\nUpdated Jul 15, 2024\nRaids - Secrets of the Obscure",
         "logUrl": "https://dps.report/tNb1-20231014-165434_golem",
         "buildChatCode": "[&DQIkLTM+EiryEqcA3BKoANcSqgChEqwAwhKcAAAAAAAAAAAAAAAAAAAAAAADWgBmACMAAA==]",
         "buildUrl": "https://snowcrows.com/builds/raids/warrior/condition-quickness-berserker",
@@ -792,10 +738,22 @@ var snowCrowsSongMetas = [
         ]
     },
     {
+        "name": "Power Alacrity Bladesworn [SC]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated Aug 30, 2024\nRaids - March 2024 Balance",
+        "logUrl": "https://dps.report/VhEQ-20231207-044927_golem",
+        "buildChatCode": "[&DQIEHws1RDumAAAA8BoAAPIaAAD9GgAA/BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "buildUrl": "https://snowcrows.com/builds/raids/warrior/power-alacrity-bladesworn",
+        "postProcessSteps": [
+            {
+                "command": "OptimizeAbilityQueue"
+            }
+        ]
+    },
+    {
         "name": "Power Berserker [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Feb 3, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/fLGV-20240202-220024_golem",
-        "buildChatCode": "[&DQIEHzMaEhXyEgAAqQAAANcSAADEEgAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Jul 20, 2022\nUpdated Oct 14, 2024\nRaids - October 2024 Balance",
+        "logUrl": "https://dps.report/SlU1-20241011-200304_golem",
+        "buildChatCode": "[&DQIEHzMaEhXyEgAAqQAAANcSAACvAAAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/warrior/power-berserker",
         "postProcessSteps": [
             {
@@ -805,7 +763,7 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Bladesworn [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated Dec 10, 2023\nSecrets of the Obscure",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Mar 14, 2022\nUpdated Aug 30, 2024\nRaids - Secrets of the Obscure",
         "logUrl": "https://dps.report/8m4x-20231129-094539_golem",
         "buildChatCode": "[&DQIEHws1RCunAAAA8BoAAPIaAAD9GgAA/BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/warrior/power-bladesworn",
@@ -817,8 +775,8 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Quickness Berserker [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Dec 5, 2023\nUpdated Feb 3, 2024\nJanuary 2024 Balance",
-        "logUrl": "https://dps.report/LLcD-20240203-030534_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Dec 5, 2023\nUpdated Oct 14, 2024\nRaids - October 2024 Balance",
+        "logUrl": "https://dps.report/IKn6-20241012-182826_golem",
         "buildChatCode": "[&DQIEHzMaEhnyEqYAqQCpANcSrQCvAK8AwhIAAAAAAAAAAAAAAAAAAAAAAAACBQAyAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/warrior/power-quickness-berserker",
         "postProcessSteps": [
@@ -829,30 +787,15 @@ var snowCrowsSongMetas = [
     },
     {
         "name": "Power Spellbreaker [SC]",
-        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 1, 2022\nUpdated Oct 17, 2023\nSecrets of the Obscure",
-        "logUrl": "https://dps.report/58zz-20231006-123848_golem",
+        "description": "Build and rotation created by Snow Crows.\n\nPublished Oct 1, 2022\nUpdated Oct 14, 2024\nRaids - October 2024 Balance",
+        "logUrl": "https://dps.report/ZHqJ-20241013-133554_golem",
         "buildChatCode": "[&DQIEHxY/PT2mAAAArQAAAKkAAACvAAAAnRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
         "buildUrl": "https://snowcrows.com/builds/raids/warrior/power-spellbreaker",
         "postProcessSteps": [
-            // Precast: 'To the Limit' (Heal) -> Winds of Disenchantment (Elite)
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 45333,
-                "time": -1200,
-                "duration": 1200,
-                "noteType": "Elite"
-            },
-            {
-                "command": "AddPreCastAbility",
-                "abilityId": 14402,
-                "time": -800,
-                "duration": 800,
-                "noteType": "Heal"
-            },
             {
                 "command": "OptimizeAbilityQueue"
             }
         ]
     },
-
+    
 ];
