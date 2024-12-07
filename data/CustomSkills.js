@@ -21,6 +21,14 @@ var customSkills = {
 	"9433": {
 		"isNote": false
 	},
+	// Sigil: Sigil of Doom
+	"9441": {
+		"isNote": false
+	},
+	// Sigil: Sigil of Air
+	"43532": {
+        "isNote": false
+    },
     // Signet of Spite
 	"10622": {
 		"isNote": false
@@ -220,6 +228,10 @@ var customSkills = {
     "62558": {
         "isNote": false
     },
+	 // Harbinger - Trait: Cascading Corruption
+    "62660": {
+        "isNote": false
+    },
     // Willbender - Part of Rushing Justice (there is a real note at start)
     "62624": {
         "isNote": false
@@ -309,6 +321,11 @@ var customSkills = {
         "noteType": "Weapon5"
     },
 
+	// Mechanist - Jade Mortar
+    "63121": {
+        "isNote": true,
+		"noteType": "Profession3"
+    },
 	// Mechanist - Barrier Burst
     "63141": {
         "isNote": true,
@@ -329,16 +346,26 @@ var customSkills = {
         "isNote": true,
 		"noteType": "Profession1"
     },
-	// Mechanist - Barrier Burst
+	// Mechanist - Core Reactor Shot
+    "63345": {
+        "isNote": true,
+		"noteType": "Profession2"
+    },
+	// Mechanist - Explosive Knuckle
     "63365": {
         "isNote": true,
-		"noteType": "Profession3"
+		"noteType": "Profession2"
     },
 	// Mechanist - Discharge Array
     "63367": {
         "isNote": true,
 		"noteType": "Profession1"
     },
+	
+
+
+
+	
     // Specter - Part of Twilight Combo
     "63181": {
         "isNote": false
@@ -373,6 +400,29 @@ var customSkills = {
     },
     // Guardian - Jurisdiction (channel?)
     "72053": {
+		"isNote": false
+    },
+	
+	// Engineer - Conduit Surge
+	"73122": {
+        "remap": 72898
+    },
+	
+	// Renegade - Abyssal Strike (Second hit? Ranged Variant?, just remap to first one that exists in all skills)
+	"73139": {
+        "remap": 73015
+    },
+	// Renegade - Trait: Invoke Torment
+	"72363": {
+		"isNote": false
+	},
+	// Guardian - Daybreaking Slash (Second Hit? Variant? - Just remap to working one)
+	"72923": {
+        "remap": 73055
+    },
+	
+	// Relic - Of the Claw
+	"73955": {
 		"isNote": false
     },
 
@@ -458,6 +508,10 @@ var customSkills = {
 	"-26": {
 		"isNote": false
 	},
+	//  Ranger: Pet Spawned
+	"-28": {
+		"isNote": false
+	},
 	//  Hollosmith - Photon Forge skill followup stuff
 	"-31": {
 		"isNote": false
@@ -465,5 +519,17 @@ var customSkills = {
 	//  Relic of Fireworks (Buff Lost)
 	"-32": {
 		"isNote": false
-	}
+	},
+	//  Detonate
+	"-37": {
+		"isNote": false
+	},
+	// Revenant - Abyssal Blitz, Mines detonation (not player input)
+	"-39": {
+		"isNote": false
+    },
+	// Relic of the Claw - (Buff Lost)
+	"-40": {
+		"isNote": false
+    }
 };
