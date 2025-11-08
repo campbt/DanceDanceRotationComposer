@@ -8,6 +8,7 @@
 //     Legendary Dragon Stance   : 1
 //     Legendary Renegade Stance : 5
 //     Legendary Alliance Stance : 7
+//     Legendary Entity Stance   : 8
 // };
 //
 // !! BIG NOTE: You have to also put in the flip skills
@@ -65,6 +66,15 @@ var revenantSkillToLegend = {
     27080 : 1,
     27162 : 1,
     28113 : 1,
-    28382 : 2
+    28382 : 2,
+	76968 : 8,
+	77001 : 8,
+	76805 : 8,
+	76917 : 8,
+	77141 : 8,
+	77159 : 8,
+	77043 : 8,
+	77243 : 8,
+	77291 : 8
 };
 
