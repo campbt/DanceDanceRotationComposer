@@ -361,7 +361,10 @@ var customSkills = {
         "isNote": true,
 		"noteType": "Profession1"
     },
-	
+	// Mechanist - Rocket Punch (Auto fires if trait on)
+	"63185": {
+		"isNote": false
+    },
 
 
 
@@ -403,10 +406,7 @@ var customSkills = {
 		"isNote": false
     },
 	
-	// Engineer - Conduit Surge
-	"73122": {
-        "remap": 72898
-    },
+
 	
 	// Renegade - Abyssal Strike (Second hit? Ranged Variant?, just remap to first one that exists in all skills)
 	"73139": {
@@ -424,6 +424,99 @@ var customSkills = {
 	// Relic - Of the Claw
 	"73955": {
 		"isNote": false
+    },
+	
+
+
+	// Engineer - Incendiary Ammo
+	"5977": {
+		"isNote": false
+	},
+	//  Revenant - Frigid Blitz (2nd hit?)
+	"26923": {
+		"isNote": false
+	},
+	// Druid - Blood Moon trait
+	"31749": {
+		"isNote": false
+	},
+	// Engineer - Conduit Surge
+	"73122": {
+        "isNote": true,
+		"noteType": "Weapon2"
+    },
+	// Engineer - Spear - Conduit Surge
+	"72898": {
+		"isNote": true,
+		"noteType": "Weapon2"
+	},
+	// Untamed - Wolf's Onslaught (Followup)
+	"73043": {
+		"isNote": false
+	},
+	// Bloodstone Explosion (Relic)
+	"76315": {
+		"isNote": false
+	},
+	// Bloodstone Ferver (Relic)
+	"76326": {
+		"isNote": false
+	},
+	// Antiquary - Metal Legion Guitar (Second hit?)
+	"76596": {
+		"isNote": false
+	},
+	// Amalgam - Offensive Protocol: Demolish
+	"76693": {
+		"isNote": true,
+		"noteType": "Profession2"
+	},
+	// Amalgam - Offensive Protocol: Obliterate
+	"76705": {
+		"isNote": true,
+		"noteType": "Profession2"
+	},
+	// Guardian - Effulgent Stance (Damage)
+	"76730": {
+		"isNote": false
+	},
+	// Relic of the Claw
+	"76783": {
+		"isNote": false
+	},
+	// Amalgam - Offensive Protocol: Demolish
+	"77013": {
+		"isNote": false
+	},
+	// Elementalist - Flame Expulsion (Trait)
+	"13334": {
+	    "isNote": false
+    },
+	// Engineer - Aim-Assisted_Rocket (Trait)
+	"29889": {
+        "isNote": false
+    },
+	// Engineer - Orbital Command Strike (Trait)
+    "41612": {
+        "isNote": false
+    },
+	// Mechanist - Spark Revolver 
+    "63188": {
+        "isNote": true,
+		"noteType": "Profession1"
+    },
+	// Mesmer - Syncopate (Trait)
+    "76689": {
+        "isNote": false
+    },
+	// Ranger - Wuthering Wind (Trait)
+    "76905": {
+        "isNote": false
+    },
+	// Elementalist - Zap
+    "77370": {
+        "isNote": true,
+		"noteType": "Profession5"
     },
 
     // Ability Code for all weapon swaps
@@ -530,6 +623,10 @@ var customSkills = {
     },
 	// Relic of the Claw - (Buff Lost)
 	"-40": {
+		"isNote": false
+    },
+	// Relic of the Steamshrieker
+	"-50": {
 		"isNote": false
     }
 };
