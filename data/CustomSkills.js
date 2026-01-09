@@ -51,6 +51,10 @@ var customSkills = {
 		"isNote": true,
 		"noteType": "WeaponStow"
 	},
+	// Elementalist - Lightning Rod (Trait)
+    "24305": {
+        "isNote": false
+    },
     // Renegade - Part of Unrelenting Assault
 	"28232": {
 		"isNote": false
@@ -425,7 +429,10 @@ var customSkills = {
 	"73955": {
 		"isNote": false
     },
-	
+	// Relic - Nourys's Hunger
+	"71431": {
+		"isNote": false
+	},
 
 
 	// Engineer - Incendiary Ammo
@@ -466,16 +473,6 @@ var customSkills = {
 	"76596": {
 		"isNote": false
 	},
-	// Amalgam - Offensive Protocol: Demolish
-	"76693": {
-		"isNote": true,
-		"noteType": "Profession2"
-	},
-	// Amalgam - Offensive Protocol: Obliterate
-	"76705": {
-		"isNote": true,
-		"noteType": "Profession2"
-	},
 	// Guardian - Effulgent Stance (Damage)
 	"76730": {
 		"isNote": false
@@ -484,10 +481,7 @@ var customSkills = {
 	"76783": {
 		"isNote": false
 	},
-	// Amalgam - Offensive Protocol: Demolish
-	"77013": {
-		"isNote": false
-	},
+
 	// Elementalist - Flame Expulsion (Trait)
 	"13334": {
 	    "isNote": false
@@ -509,14 +503,164 @@ var customSkills = {
     "76689": {
         "isNote": false
     },
+	// Revenant - Conduit - Form of the Dervish (Passive)
+    "76818": {
+        "isNote": false
+    },
+	// Revenant - Conduit - Mistfire (Trait)
+    "76818": {
+        "isNote": false
+    },
 	// Ranger - Wuthering Wind (Trait)
     "76905": {
+        "isNote": false
+    },
+	// Revenant - Conduit - Mistfire (Trait)
+	"77021": {
+		"isNote": false
+	},
+	// Revenant - Conduit - Beguiling Haze
+	"77047": {
+		"isNote": true,
+		"noteType": "Utility"
+	},
+	// Revenant - Conduit - Form of the Dervish (Passive)
+    "77116": {
         "isNote": false
     },
 	// Elementalist - Zap
     "77370": {
         "isNote": true,
 		"noteType": "Profession5"
+    },
+	// Elementalist - Evoker - Calcify
+	"77226": {
+        "isNote": true,
+		"noteType": "Profession5"
+    },
+	// Engineer - Amalgam - Plasmatic State
+	"77307": {
+		"isNote": true,
+		"noteType": "Utility"
+	},
+	// Elementalist - Evoker - Rejuvenate
+	"79315": {
+		"isNote": true,
+		"noteType": "Heal"
+	},
+	
+	// SPECIAL: Amalgam can set these profession skills to any of their 3 slots
+	//          It is NOT stored in the build chat codes, so there isn't really a way to figure these out.
+	//          So, marking all of them as Profession2, like the wiki
+    // Amalgam - Offensive Protocol: Obliterate
+    "76901": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Defensive Protocol: Thorns
+    "76640": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Obliterate
+    "76806": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Demolish
+    "76693": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Defensive Protocol: Thorns
+    "77163": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Defensive Protocol: Cleanse
+    "76713": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Demolish
+    "77013": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Obliterate
+    "76705": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Defensive Protocol: Cleanse
+    "76798": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Defensive Protocol: Protect
+    "77358": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Defensive Protocol: Protect
+    "77203": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Pierce
+    "76815": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Demolish
+    "76954": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Shred
+    "76568": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Defensive Protocol: Cleanse
+    "77285": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Pierce
+    "77015": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Shred
+    "77103": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Shred
+    "76866": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Demolish
+    "76927": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Defensive Protocol: Thorns
+    "77104": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Offensive Protocol: Pierce
+    "77005": {
+        "isNote": true,
+        "noteType": "Profession2"
+    },
+    // Amalgam - Defensive Protocol: Protect
+    "76959": {
+        "isNote": true,
+        "noteType": "Profession2"
     },
 
     // Ability Code for all weapon swaps
