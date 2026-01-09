@@ -542,6 +542,83 @@ function fixEngineer(build, notes) {
             });
         }
     }
+
+    // Amalgam Special
+    // It's not possible to know which slot the Amalgam's Profession2 through Profession4 are.
+    // They are settable in the game and don't seem to be part of the build chat code
+    // To make this a *bit* better for generated songs, iterate through the song list and
+    // find any note with one of the Amalgam abilities. The first one found will be given Profession2
+    // The next one found will be given Profession3, and the last one Profession4
+    if (build["specializations"][2]["id"] == 75) {
+        var amalgamProfessionMorphs = new Set([
+            // Amalgam - Offensive Protocol: Obliterate
+            76901,
+            // Amalgam - Defensive Protocol: Thorns
+            76640,
+            // Amalgam - Offensive Protocol: Obliterate
+            76806,
+            // Amalgam - Offensive Protocol: Demolish
+            76693,
+            // Amalgam - Defensive Protocol: Thorns
+            77163,
+            // Amalgam - Defensive Protocol: Cleanse
+            76713,
+            // Amalgam - Offensive Protocol: Demolish
+            77013,
+            // Amalgam - Offensive Protocol: Obliterate
+            76705,
+            // Amalgam - Defensive Protocol: Cleanse
+            76798,
+            // Amalgam - Defensive Protocol: Protect
+            77358,
+            // Amalgam - Defensive Protocol: Protect
+            77203,
+            // Amalgam - Offensive Protocol: Pierce
+            76815,
+            // Amalgam - Offensive Protocol: Demolish
+            76954,
+            // Amalgam - Offensive Protocol: Shred
+            76568,
+            // Amalgam - Defensive Protocol: Cleanse
+            77285,
+            // Amalgam - Offensive Protocol: Pierce
+            77015,
+            // Amalgam - Offensive Protocol: Shred
+            77103,
+            // Amalgam - Offensive Protocol: Shred
+            76866,
+            // Amalgam - Offensive Protocol: Demolish
+            76927,
+            // Amalgam - Defensive Protocol: Thorns
+            77104,
+            // Amalgam - Offensive Protocol: Pierce
+            77005,
+            // Amalgam - Defensive Protocol: Protect
+            76959
+        ])
+
+        // Logic to track assignments
+        let assignedAbilities = {}; // Maps abilityId -> "ProfessionX"
+        let slots = ["Profession2", "Profession3", "Profession4"];
+        let nextSlotIndex = 0;
+
+        for (let note of notes) {
+            // Check if the current note uses one of the targeted Amalgam IDs
+            if (amalgamProfessionMorphs.has(note.abilityId)) {
+
+                // If we haven't seen this specific ability yet, assign it to the next slot
+                if (!assignedAbilities[note.abilityId] && nextSlotIndex < slots.length) {
+                    assignedAbilities[note.abilityId] = slots[nextSlotIndex];
+                    nextSlotIndex++;
+                }
+
+                // If the ability has an assigned slot, update the noteType
+                if (assignedAbilities[note.abilityId]) {
+                    note.noteType = assignedAbilities[note.abilityId];
+                }
+            }
+        }
+    }
 }
 
 /**
@@ -657,6 +734,15 @@ function optimizeAbilityQueue(
     //     70: Mechanist
     //     71: Specter
     //     72: Untamed
+    //     73: Troubadour
+    //     74: Paragon
+    //     75: Amalgam
+    //     76: Ritualist
+    //     77: Antiquary
+    //     78: Galeshot
+    //     79: Conduit
+    //     80: Evoker
+    //     81: Luminary
     var elite = build["specializations"][2]["id"];
 
     var specialPrioritySkillId
