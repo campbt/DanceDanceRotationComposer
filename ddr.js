@@ -117,6 +117,32 @@ function getRevenantUtilityNoteType(abilityId, utilitySlots, revenantInfo) {
     return retval;
 }
 
+// Attempts to lookup the Utility slot based on the palette skills in the build
+function getUtilityNoteType(abilityId, utilitySlots, revenantInfo) {
+	var retval = "Unknown";
+	if (revenantInfo == null) {
+		// Special: Utility skills simply have "Utility" for their slot,
+		//          and can be placed in any Utility slot (1, 2, 3).
+		//          Use the BuildTemplate to find out which slot a utility skill is in
+		//          BuildTemlate skills are stored with their palette ID, so the abilityId
+		//          must first be converted to that.
+
+		retval = "Unknown"; // Value used if the lookup fails
+		var paletteId = skillToPaletteLookup[abilityId];
+		for (var i = 0; i < utilitySlots.length; i++) {
+			if (utilitySlots[i] === paletteId) {
+				retval = "Utility" + (i + 1);
+				break;
+			}
+		}
+	} else {
+		// Extra Special: Revenant needs more love here
+		retval = getRevenantUtilityNoteType(abilityId, utilitySlots, revenantInfo);
+	}
+	
+	return retval;
+}
+
 // Some skills come in with negative numbers but point to real skills
 // It seems like it could be one of multiple skills, but we'll just map to one
 function getActualAbilityId(abilityId) {
@@ -141,6 +167,11 @@ function getNoteType(abilityId, utilitySlots, revenantInfo) {
         const customSkillData = customSkills[abilityId];
         if (customSkillData.isNote === true) {
             retval = customSkillData.noteType;
+			
+			// If a custom skill maps to Utility, we still have to look up which slot it goes in.
+			if (retval === "Utility") {
+				retval = getUtilityNoteType(abilityId, utilitySlots, revenantInfo);
+			}
         } else {
             // Some abilityId's in the DPS reports are things like sigils or traits
             // No note needs to be generated for these
@@ -167,25 +198,8 @@ function getNoteType(abilityId, utilitySlots, revenantInfo) {
         } else if (slot === "Weapon_5" || slot === "Downed_5") {
             retval = "Weapon5";
         } else if (slot === "Utility") {
-            if (revenantInfo == null) {
-                // Special: Utility skills simply have "Utility" for their slot,
-                //          and can be placed in any Utility slot (1, 2, 3).
-                //          Use the BuildTemplate to find out which slot a utility skill is in
-                //          BuildTemlate skills are stored with their palette ID, so the abilityId
-                //          must first be converted to that.
-
-                retval = "Unknown"; // Value used if the lookup fails
-                var paletteId = skillToPaletteLookup[abilityId];
-                for (var i = 0; i < utilitySlots.length; i++) {
-                    if (utilitySlots[i] === paletteId) {
-                        retval = "Utility" + (i + 1);
-                        break;
-                    }
-                }
-            } else {
-                // Extra Special: Revenant needs more love here
-                retval = getRevenantUtilityNoteType(abilityId, utilitySlots, revenantInfo);
-            }
+			// Special: Lookup which utility slot it goes in
+			retval = getUtilityNoteType(abilityId, utilitySlots, revenantInfo);
         } else if (slot === "Heal") {
             retval = "Heal";
         } else if (slot === "Elite") {
